@@ -11,6 +11,7 @@
     <saved-with-version>16800</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
     </used-plugins>
     <used-behaviors>
@@ -45,15 +46,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-type name="SuperMarioBros3World1Area" sid="5947490103656992">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="160460546448743" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="SuperMarioBros3World1Area2" sid="7490041033544774">
+        <object-type name="SuperMarioBros3World1Area" sid="7490041033544774">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5022764217576779" speed="5">
@@ -61,7 +54,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="mario" sid="5704343719027084">
+        <object-type name="Mario" sid="5704343719027084">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Platform" sid="9255735361066924">
@@ -76,32 +69,10 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="pequeno" pingpong="0" repeatcount="1" repeatto="0" sid="2720968426118861" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <collision-poly>
-                            <point x="0.214286" y="0.15" />
-                            <point x="0.5" y="0" />
-                            <point x="0.857143" y="0.1" />
-                            <point x="0.857143" y="0.5" />
-                            <point x="0.785714" y="0.85" />
-                            <point x="0.5" y="1" />
-                            <point x="0.214286" y="0.85" />
-                            <point x="0.142857" y="0.5" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
                 </animation>
                 <animation framecount="1" loop="0" name="grande" pingpong="0" repeatcount="1" repeatto="0" sid="7688303281402588" speed="5">
-                    <frame duration="1" hotspotX="0.529412" hotspotY="1">
-                        <collision-poly>
-                            <point x="0.235294" y="0.142857" />
-                            <point x="0.470588" y="0" />
-                            <point x="0.823529" y="0.107143" />
-                            <point x="0.764706" y="0.5" />
-                            <point x="0.764706" y="0.857143" />
-                            <point x="0.470588" y="1" />
-                            <point x="0.235294" y="0.857143" />
-                            <point x="0.294118" y="0.5" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0.529412" hotspotY="1" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -140,84 +111,6 @@
                             <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Chão" sid="797294290044385">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Solid" sid="8787816443650028">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5294815672933757" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Plataforma3" sid="8095573409897205">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Jumpthru" sid="4873358807487648">
-                    <behavior id="jumpthru" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2693687816587572" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="muro" sid="1427135706072895">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Jumpthru" sid="2037466569868313">
-                    <behavior id="jumpthru" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3991679246857434" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Cano" sid="6444699938871143">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Solid" sid="513886168936634">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8201408779562174" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Plataforma2" sid="332816567826454">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Jumpthru" sid="6362354726841994">
-                    <behavior id="jumpthru" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5630114695021903" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Plataforma4" sid="2767494171373254">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Jumpthru" sid="6787756683929482">
-                    <behavior id="jumpthru" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4022633572048415" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -440,18 +333,9 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4484639362868758" speed="5">
-                    <frame duration="1" hotspotX="0.47619" hotspotY="0.791667">
-                        <collision-poly>
-                            <point x="0.285714" y="0.25" />
-                            <point x="0.47619" y="0.208333" />
-                            <point x="0.666667" y="0.291667" />
-                            <point x="0.857143" y="0.5" />
-                            <point x="0.761905" y="0.791667" />
-                            <point x="0.238095" y="0.791667" />
-                            <point x="0.0952381" y="0.5" />
-                        </collision-poly>
-                    </frame>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4484639362868758" speed="4">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.9375" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.9375" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -502,7 +386,7 @@
         <object-type name="Keyboard" sid="8681887663976495">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="marioPequeno" sid="1915403175652171">
+        <object-type name="MarioPequeno" sid="1915403175652171">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2377625067370334" speed="5">
@@ -521,7 +405,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="marioGrande" sid="2763920965125373">
+        <object-type name="MarioGrande" sid="2763920965125373">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1320916570123294" speed="5">
@@ -559,18 +443,59 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite3" sid="2606934401465628">
-            <plugin id="Sprite" />
+        <object-type name="Floor1" sid="8997980865464833">
+            <plugin id="NinePatch" />
             <behaviors>
-                <behavior-type name="Solid" sid="2496696658091275">
+                <behavior-type name="Solid" sid="2863143451577181">
                     <behavior id="solid" />
                 </behavior-type>
             </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3765721188231925" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
+            <texture />
+        </object-type>
+        <object-type name="PlatformPink" sid="1498803156206027">
+            <plugin id="NinePatch" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="4561716787583719">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="PlatformBlue" sid="6500981914972962">
+            <plugin id="NinePatch" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="6274513913602706">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="PlatformWhite" sid="9644250556423626">
+            <plugin id="NinePatch" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="9314212370389017">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="PlatformGreen" sid="3700349181663115">
+            <plugin id="NinePatch" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="1976933690239718">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Pipe" sid="533445546638381">
+            <plugin id="NinePatch" />
+            <behaviors>
+                <behavior-type name="Solid" sid="4006815677109467">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
         </object-type>
     </object-folder>
     <families />
