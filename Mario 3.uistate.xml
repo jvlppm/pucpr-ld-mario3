@@ -25,5 +25,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="SpritePlatforms" />
         <family expanded="0" name="Hurt" />
         <family expanded="0" name="MarioStates" />
+        <family expanded="0" name="Stompable" />
     </families-expanded>
 </c2uistate>
