@@ -5,6 +5,216 @@
     <events>
         <event-group description="" sid="5115914260203696" title="Mario">
             <sub-events>
+                <event-block sid="6895982527237359">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1849237904098663" type="Mario">
+                            <param id="0" name="Object">Moeda</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6455985237380273" type="Moeda" />
+                    </actions>
+                </event-block>
+                <event-block sid="6093432649572229">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8237098419691788" type="Mario">
+                            <param id="0" name="Object">Pena</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="7887388712553203" type="Pena" />
+                    </actions>
+                </event-block>
+                <event-block sid="566779265082759">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="6721532304265594" type="Mario">
+                            <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="9520263891035995" type="MarioPequeno">
+                            <param id="0" name="Object">Mario</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="4258974081636421" type="MarioGrande">
+                            <param id="0" name="Y">1000000</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9962957594086399">
+                    <conditions>
+                        <condition id="2" inverted="1" name="Is playing" sid="9790068549544749" type="Mario">
+                            <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="5558235547863557" type="MarioGrande">
+                            <param id="0" name="Object">Mario</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="3029347979534314" type="MarioPequeno">
+                            <param id="0" name="Y">1000000</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9454918499351548">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="7066692122673577" type="Mario" />
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="8690012259761999" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="5167900520537703">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2086691752180381" type="Mario">
+                            <param id="0" name="Object">Hurt</param>
+                        </condition>
+                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="2385092645626988" type="MarioStates" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="3959935000297098" type="MarioStates">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9581568772736283">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Is playing" sid="5018829414248071" type="Mario">
+                                    <param id="0" name="Animation">&quot;grande&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="6108944223164577" type="Mario" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="7787438823034404">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="2595874846301473" type="Mario">
+                                    <param id="0" name="Animation">&quot;grande&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="6933884458721815" type="Mario">
+                                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block collapsed="1" disabled="1" sid="1250548672559899">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="51585605403175" type="Mario">
+                    <param id="0" name="Object">Goomba</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block disabled="1" sid="6121619177855521">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="164839210069308" type="Mario">
+                            <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="1829420748834104" type="Mario">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">goomba.y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4386044559007139" type="Goomba" />
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="4432041875587635">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="7023547259081981" type="Mario">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">goomba.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="7721677108419005" type="Mario" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block disabled="1" sid="9785698662995216">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8155515959177045" type="Mario">
+                    <param id="0" name="Object">Goomba</param>
+                </condition>
+                <condition id="2" inverted="1" name="Is playing" sid="4728346384244902" type="Mario">
+                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1531898324014431" type="Mario">
+                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="327027653474942">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5165348133030891" type="Mario">
+                    <param id="0" name="Object">Flor</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="359159802968058" type="Mario">
+                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="6098514233625473" type="Mario" />
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="4031860684804406">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7670786394019203" type="Mario">
+                    <param id="0" name="Object">Flor</param>
+                </condition>
+                <condition id="2" inverted="1" name="Is playing" sid="9606514425079018" type="Mario">
+                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="9134887992575127" type="Mario">
+                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="353874130815692">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4252316963144785" type="Mario">
+                    <param id="0" name="Object">cogumelo</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="5855011736458894" type="Mario">
+                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="9440280716894322" type="Mario">
+                    <param id="0" name="Animation">&quot;grande&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="8821764072825236">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1238227779551853" type="Mario">
+                    <param id="0" name="Object">cogumelo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1976071550051913" type="cogumelo" />
+            </actions>
+        </event-block>
+        <event-group collapsed="1" description="" sid="4607093846203148" title="Blocos">
+            <sub-events>
                 <event-block sid="6276831065049553">
                     <conditions>
                         <condition id="9" name="Is overlapping at offset" sid="6230288087257783" type="Mario">
@@ -35,26 +245,6 @@
                             <param id="0" name="Instance variable">Destrói</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6895982527237359">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="1849237904098663" type="Mario">
-                            <param id="0" name="Object">Moeda</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="6455985237380273" type="Moeda" />
-                    </actions>
-                </event-block>
-                <event-block sid="6093432649572229">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="8237098419691788" type="Mario">
-                            <param id="0" name="Object">Pena</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="7887388712553203" type="Pena" />
                     </actions>
                 </event-block>
                 <event-block collapsed="1" sid="3383391602372665">
@@ -107,246 +297,205 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="566779265082759">
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="8779966539198683" title="Itens">
+            <sub-events>
+                <event-block sid="8659021631990124">
                     <conditions>
-                        <condition id="2" name="Is playing" sid="6721532304265594" type="Mario">
-                            <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                        <condition id="-7" name="Compare instance variable" sid="9515081041533689" type="Moeda">
+                            <param id="0" name="Instance variable">Tempo</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-4" name="Set position to another object" sid="9520263891035995" type="MarioPequeno">
-                            <param id="0" name="Object">Mario</param>
-                            <param id="1" name="Image point (optional)">0</param>
+                        <action id="-10" name="Set value" sid="3644191679576511" type="Moeda">
+                            <param id="0" name="Instance variable">Tempo</param>
+                            <param id="1" name="Value">moeda.Tempo-dt</param>
                         </action>
-                        <action id="-2" name="Set Y" sid="4258974081636421" type="MarioGrande">
-                            <param id="0" name="Y">1000000</param>
+                        <action id="-2" name="Set Y" sid="3110872819631634" type="Moeda">
+                            <param id="0" name="Y">moeda.Y-dt*50</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="9962957594086399">
+                <event-block sid="8280622246702694">
                     <conditions>
-                        <condition id="2" inverted="1" name="Is playing" sid="9790068549544749" type="Mario">
-                            <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                        <condition id="-7" name="Compare instance variable" sid="8073608156806655" type="Moeda">
+                            <param id="0" name="Instance variable">Tempo</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="6066582695680166" type="Moeda">
+                            <param id="0" name="Instance variable">Destrói</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-4" name="Set position to another object" sid="5558235547863557" type="MarioGrande">
-                            <param id="0" name="Object">Mario</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action id="-2" name="Set Y" sid="3029347979534314" type="MarioPequeno">
-                            <param id="0" name="Y">1000000</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9454918499351548">
-                    <conditions>
-                        <condition id="-19" name="On destroyed" sid="7066692122673577" type="Mario" />
-                    </conditions>
-                    <actions>
-                        <action id="-26" name="Restart layout" sid="8690012259761999" type="System" />
+                        <action id="-9" name="Destroy" sid="9423483696583447" type="Moeda" />
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="8659021631990124">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="9515081041533689" type="Moeda">
-                    <param id="0" name="Instance variable">Tempo</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="3644191679576511" type="Moeda">
-                    <param id="0" name="Instance variable">Tempo</param>
-                    <param id="1" name="Value">moeda.Tempo-dt</param>
-                </action>
-                <action id="-2" name="Set Y" sid="3110872819631634" type="Moeda">
-                    <param id="0" name="Y">moeda.Y-dt*50</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8280622246702694">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="8073608156806655" type="Moeda">
-                    <param id="0" name="Instance variable">Tempo</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-                <condition id="-8" name="Is boolean instance variable set" sid="6066582695680166" type="Moeda">
-                    <param id="0" name="Instance variable">Destrói</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="9423483696583447" type="Moeda" />
-            </actions>
-        </event-block>
-        <event-block sid="3801491495085855">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="3753516579502191" type="Goomba">
-                    <param id="0" name="Instance variable">direita</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="8" name="Set vector X" sid="264863670284914" type="Goomba">
-                    <param id="0" name="Vector X">500</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="2951940454943379">
-            <conditions>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5173116570507789" type="Goomba">
-                    <param id="0" name="Instance variable">direita</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="8" name="Set vector X" sid="2965949691540863" type="Goomba">
-                    <param id="0" name="Vector X">-500</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="1513539859359789">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="5001226835289976" type="Goomba">
-                    <param id="0" name="Object">volta</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-14" name="Toggle boolean" sid="1652848745075985" type="Goomba">
-                    <param id="0" name="Instance variable">direita</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="1350602460330534">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="9581041168542673" type="Goomba">
-                    <param id="0" name="Instance variable">direita</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="7" name="Set mirrored" sid="6319057731229742" type="Goomba">
-                    <param id="0" name="State">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="6744314326891452">
-            <conditions>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5450914475963831" type="Goomba">
-                    <param id="0" name="Instance variable">direita</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="7" name="Set mirrored" sid="1080926414144176" type="Goomba">
-                    <param id="0" name="State">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="1250548672559899">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="51585605403175" type="Mario">
-                    <param id="0" name="Object">Goomba</param>
-                </condition>
-            </conditions>
-            <actions />
+        <event-group collapsed="1" description="" sid="748998548870591" title="Inimigos">
             <sub-events>
-                <event-block sid="6121619177855521">
+                <event-block sid="3801491495085855">
                     <conditions>
-                        <condition id="2" name="Is playing" sid="164839210069308" type="Mario">
-                            <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="3753516579502191" type="VaiVolta">
+                            <param id="0" name="Instance variable">GoingRight</param>
                         </condition>
-                        <condition id="-2" name="Compare Y" sid="1829420748834104" type="Mario">
-                            <param id="0" name="Comparison">3</param>
-                            <param id="1" name="Y co-ordinate">goomba.y</param>
+                        <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="3287348303471662" type="VaiVolta">
+                            <param id="0" name="Side">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="4386044559007139" type="Goomba" />
+                        <action behavior="Platform" id="8" name="Set vector X" sid="8167859147696599" type="VaiVolta">
+                            <param id="0" name="Vector X">VaiVolta.Platform.MaxSpeed</param>
+                        </action>
                     </actions>
                 </event-block>
-                <event-block sid="4432041875587635">
+                <event-block sid="2951940454943379">
                     <conditions>
-                        <condition id="-2" name="Compare Y" sid="7023547259081981" type="Mario">
-                            <param id="0" name="Comparison">5</param>
-                            <param id="1" name="Y co-ordinate">goomba.Y</param>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5173116570507789" type="VaiVolta">
+                            <param id="0" name="Instance variable">GoingRight</param>
+                        </condition>
+                        <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="9819510483880648" type="VaiVolta">
+                            <param id="0" name="Side">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="7721677108419005" type="Mario" />
+                        <action behavior="Platform" id="8" name="Set vector X" sid="8506819791287391" type="VaiVolta">
+                            <param id="0" name="Vector X">-VaiVolta.Platform.MaxSpeed</param>
+                        </action>
                     </actions>
+                </event-block>
+                <event-block sid="1513539859359789">
+                    <conditions>
+                        <condition behavior="Platform" id="10" name="Is by wall" sid="5001226835289976" type="VaiVolta">
+                            <param id="0" name="Side">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="1652848745075985" type="VaiVolta">
+                            <param id="0" name="Instance variable">GoingRight</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2013746270279302">
+                    <conditions>
+                        <condition behavior="Platform" id="10" name="Is by wall" sid="4087151043795608" type="VaiVolta">
+                            <param id="0" name="Side">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="6928637535612162" type="VaiVolta">
+                            <param id="0" name="Instance variable">GoingRight</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1350602460330534">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="9581041168542673" type="VaiVolta">
+                            <param id="0" name="Instance variable">GoingRight</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="7894426956377606" type="VaiVolta">
+                            <param id="0" name="Instance variable">AutoMirror</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="6319057731229742" type="VaiVolta">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6744314326891452">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5450914475963831" type="VaiVolta">
+                            <param id="0" name="Instance variable">GoingRight</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="9121069050022944" type="VaiVolta">
+                            <param id="0" name="Instance variable">AutoMirror</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="1080926414144176" type="VaiVolta">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3294171854727859">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1303459082437466" type="VaiVolta">
+                            <param id="0" name="Instance variable">CanFall</param>
+                        </condition>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="9141261644012356" type="VaiVolta" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9737802188427426">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="1475578755387887" type="VaiVolta">
+                                    <param id="0" name="Instance variable">GoingRight</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3616362902854948">
+                                    <conditions>
+                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="3518275944319399" type="VaiVolta">
+                                            <param id="0" name="Object">SpritePlatforms</param>
+                                            <param id="1" name="Offset X">8</param>
+                                            <param id="2" name="Offset Y">4</param>
+                                        </condition>
+                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="6107195639966501" type="VaiVolta">
+                                            <param id="0" name="Object">BasePlatforms</param>
+                                            <param id="1" name="Offset X">8</param>
+                                            <param id="2" name="Offset Y">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="7834140093184369" type="VaiVolta">
+                                            <param id="0" name="Instance variable">GoingRight</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="7790467668951308">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6438878725452994" type="VaiVolta">
+                                    <param id="0" name="Instance variable">GoingRight</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4737714330916753">
+                                    <conditions>
+                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="5525451213110616" type="VaiVolta">
+                                            <param id="0" name="Object">SpritePlatforms</param>
+                                            <param id="1" name="Offset X">-8</param>
+                                            <param id="2" name="Offset Y">4</param>
+                                        </condition>
+                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="7662477538117571" type="VaiVolta">
+                                            <param id="0" name="Object">BasePlatforms</param>
+                                            <param id="1" name="Offset X">-8</param>
+                                            <param id="2" name="Offset Y">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="5395240266559031" type="VaiVolta">
+                                            <param id="0" name="Instance variable">GoingRight</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="9785698662995216">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="8155515959177045" type="Mario">
-                    <param id="0" name="Object">Goomba</param>
-                </condition>
-                <condition id="2" inverted="1" name="Is playing" sid="4728346384244902" type="Mario">
-                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="1531898324014431" type="Mario">
-                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="327027653474942">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="5165348133030891" type="Mario">
-                    <param id="0" name="Object">Flor</param>
-                </condition>
-                <condition id="2" name="Is playing" sid="359159802968058" type="Mario">
-                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="6098514233625473" type="Mario" />
-            </actions>
-        </event-block>
-        <event-block sid="4031860684804406">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="7670786394019203" type="Mario">
-                    <param id="0" name="Object">Flor</param>
-                </condition>
-                <condition id="2" inverted="1" name="Is playing" sid="9606514425079018" type="Mario">
-                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="9134887992575127" type="Mario">
-                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="353874130815692">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="4252316963144785" type="Mario">
-                    <param id="0" name="Object">cogumelo</param>
-                </condition>
-                <condition id="2" name="Is playing" sid="5855011736458894" type="Mario">
-                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="9440280716894322" type="Mario">
-                    <param id="0" name="Animation">&quot;grande&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8821764072825236">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="1238227779551853" type="Mario">
-                    <param id="0" name="Object">cogumelo</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="1976071550051913" type="cogumelo" />
-            </actions>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>

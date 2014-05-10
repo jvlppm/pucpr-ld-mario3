@@ -15,6 +15,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
@@ -42,10 +43,10 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D web</prop>
         <prop name="Preview browser">(default)</prop>
-        <prop name="Sampling">Linear</prop>
+        <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-type name="SuperMarioBros3World1Area" sid="7490041033544774">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
@@ -280,14 +281,6 @@
         </object-type>
         <object-type name="Goomba" sid="9082171431307416">
             <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="direita" sid="1225728229319122" type="boolean" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Platform" sid="6421086581424418">
-                    <behavior id="Platform" />
-                </behavior-type>
-            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4484639362868758" speed="4">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.9375" />
@@ -458,7 +451,59 @@
             <texture />
         </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="VaiVolta" plugin-id="Sprite" sid="6258472206151774">
+            <members>
+                <member>Goomba</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="GoingRight" sid="3255775171814651" type="boolean" />
+                <instance-variable name="CanFall" sid="3727220149457809" type="boolean" />
+                <instance-variable name="AutoMirror" sid="8281300768725585" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="9716185124420312">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="BasePlatforms" plugin-id="NinePatch" sid="9017931272044194">
+            <members>
+                <member>Floor1</member>
+                <member>Pipe</member>
+                <member>PlatformBlue</member>
+                <member>PlatformGreen</member>
+                <member>PlatformPink</member>
+                <member>PlatformWhite</member>
+            </members>
+        </family>
+        <family name="SpritePlatforms" plugin-id="Sprite" sid="1401377347163221">
+            <members>
+                <member>cubo</member>
+                <member>Cuboiten</member>
+                <member>Madeira</member>
+                <member>Núvem</member>
+                <member>Tijolo</member>
+            </members>
+        </family>
+        <family name="Hurt" plugin-id="Sprite" sid="9416779980886481">
+            <members>
+                <member>Flor</member>
+                <member>Goomba</member>
+            </members>
+        </family>
+        <family name="MarioStates" plugin-id="Sprite" sid="7575165103327263">
+            <members>
+                <member>MarioGrande</member>
+                <member>MarioPequeno</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Flash" sid="2968181261944117">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
     <layout-folder expanded="1">
         <layout>Layout 1.xml</layout>
     </layout-folder>

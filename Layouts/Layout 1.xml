@@ -54,8 +54,8 @@
         </layer>
         <layer name="Level" sid="6646581299431404">
             <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
+            <background-color>156,252,240</background-color>
+            <transparent>0</transparent>
             <parallax>
                 <x>1</x>
                 <y>1</y>
@@ -66,6 +66,32 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="SceneryBush" uid="125">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>0</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>160</x>
+                        <y>400</y>
+                        <z>0</z>
+                        <width>48</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="SceneryBush" uid="64">
                     <properties>
                         <left-margin>0</left-margin>
@@ -359,7 +385,7 @@
                 <instance type="Mario" uid="0">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>pequeno</initial-animation>
+                        <initial-animation>grande</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -389,10 +415,10 @@
                         <x>31.592041016</x>
                         <y>409.829711914</y>
                         <z>0</z>
-                        <width>14</width>
-                        <height>20</height>
+                        <width>17</width>
+                        <height>28</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.529411793</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>0.5</opacity>
@@ -2814,7 +2840,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <direita>false</direita>
+                        <GoingRight>false</GoingRight>
+                        <CanFall>false</CanFall>
+                        <AutoMirror>false</AutoMirror>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3552,12 +3580,14 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <direita>false</direita>
+                        <GoingRight>false</GoingRight>
+                        <CanFall>false</CanFall>
+                        <AutoMirror>false</AutoMirror>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
-                                <max-speed>50</max-speed>
+                                <max-speed>100</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>650</jump-strength>
@@ -3571,8 +3601,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>840</x>
-                        <y>400</y>
+                        <x>752</x>
+                        <y>376</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -3591,12 +3621,14 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <direita>false</direita>
+                        <GoingRight>false</GoingRight>
+                        <CanFall>false</CanFall>
+                        <AutoMirror>false</AutoMirror>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
-                                <max-speed>50</max-speed>
+                                <max-speed>100</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>650</jump-strength>
@@ -3610,8 +3642,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>888</x>
-                        <y>400</y>
+                        <x>800</x>
+                        <y>376</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -3619,32 +3651,6 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.9375</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SceneryBush" uid="125">
-                    <properties>
-                        <left-margin>0</left-margin>
-                        <right-margin>0</right-margin>
-                        <top-margin>0</top-margin>
-                        <bottom-margin>0</bottom-margin>
-                        <edges>Tile</edges>
-                        <fill>Tile</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>160</x>
-                        <y>400</y>
-                        <z>0</z>
-                        <width>48</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -3733,6 +3739,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -3755,6 +3764,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -3767,6 +3779,39 @@
                         <hotspotX>0.529411793</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Floor1" uid="129">
+                    <properties>
+                        <left-margin>16</left-margin>
+                        <right-margin>16</right-margin>
+                        <top-margin>16</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-24</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>24</width>
+                        <height>432</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <opacity>1</opacity>
                     </world>
                 </instance>
