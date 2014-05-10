@@ -66,6 +66,32 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="SceneryBush" uid="64">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>0</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>672</x>
+                        <y>384</y>
+                        <z>0</z>
+                        <width>96</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="Pipe" uid="66">
                     <properties>
                         <left-margin>8</left-margin>
@@ -553,8 +579,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>175.385101318</x>
-                        <y>466.146392822</y>
+                        <x>176</x>
+                        <y>512</y>
                         <z>0</z>
                         <width>12</width>
                         <height>16</height>
@@ -2710,8 +2736,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>204</x>
-                        <y>467</y>
+                        <x>200</x>
+                        <y>512</y>
                         <z>0</z>
                         <width>20</width>
                         <height>18</height>
@@ -2819,50 +2845,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MarioPequeno" uid="122">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>153.84085083</x>
-                        <y>473.772735596</y>
-                        <z>0</z>
-                        <width>14</width>
-                        <height>20</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="MarioGrande" uid="123">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>133.791946411</x>
-                        <y>475.420471191</y>
-                        <z>0</z>
-                        <width>17</width>
-                        <height>28</height>
-                        <depth>0</depth>
-                        <hotspotX>0.529411793</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="cogumelo" uid="124">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -2873,8 +2855,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>232.304229736</x>
-                        <y>465.730987549</y>
+                        <x>232</x>
+                        <y>512</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -3636,6 +3618,154 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.9375</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SceneryBush" uid="125">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>0</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>160</x>
+                        <y>400</y>
+                        <z>0</z>
+                        <width>48</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SceneryBush" uid="126">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>0</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1184</x>
+                        <y>400</y>
+                        <z>0</z>
+                        <width>48</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SceneryBush" uid="127">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>0</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1040</x>
+                        <y>384</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SceneryBush" uid="128">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>0</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1728</x>
+                        <y>400</y>
+                        <z>0</z>
+                        <width>48</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MarioPequeno" uid="122">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>152</x>
+                        <y>520</y>
+                        <z>0</z>
+                        <width>14</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MarioGrande" uid="123">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>136</x>
+                        <y>520</y>
+                        <z>0</z>
+                        <width>17</width>
+                        <height>28</height>
+                        <depth>0</depth>
+                        <hotspotX>0.529411793</hotspotX>
+                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
