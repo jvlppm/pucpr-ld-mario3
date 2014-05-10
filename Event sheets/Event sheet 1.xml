@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-group description="" sid="5115914260203696" title="Mario">
+            <sub-events>
+                <event-block sid="6276831065049553">
+                    <conditions>
+                        <condition id="9" name="Is overlapping at offset" sid="6230288087257783" type="mario">
+                            <param id="0" name="Object">cubo</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">-5</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="6230830110569481" type="cubo">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9948247190758783" type="cubo">
+                            <param id="0" name="Animation">&quot;Cor&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="6881293210187538" type="System">
+                            <param id="0" name="Object to create">Moeda</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">cubo.X</param>
+                            <param id="3" name="Y">cubo.Y -16</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9053559068216935" type="Moeda">
+                            <param id="0" name="Instance variable">Tempo</param>
+                            <param id="1" name="Value">0.3</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="565350236781492" type="Moeda">
+                            <param id="0" name="Instance variable">Destrói</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6895982527237359">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1849237904098663" type="mario">
+                            <param id="0" name="Object">Moeda</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6455985237380273" type="Moeda" />
+                    </actions>
+                </event-block>
+                <event-block sid="6093432649572229">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8237098419691788" type="mario">
+                            <param id="0" name="Object">Pena</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="7887388712553203" type="Pena" />
+                    </actions>
+                </event-block>
+                <event-block collapsed="1" sid="3383391602372665">
+                    <conditions>
+                        <condition id="9" name="Is overlapping at offset" sid="2245420316470074" type="mario">
+                            <param id="0" name="Object">Cuboiten</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">-5</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="6905168583892485" type="Cuboiten">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1658930402497996" type="Cuboiten">
+                            <param id="0" name="Animation">&quot;Cor&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5577904941984849">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="6534136632266532" type="mario">
+                                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="2084429310190378" type="System">
+                                    <param id="0" name="Object to create">cogumelo</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="X">Cuboiten.X</param>
+                                    <param id="3" name="Y">Cuboiten.Y -16</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2620476795399584">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Is playing" sid="9356646300356868" type="mario">
+                                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="720689355379432" type="System">
+                                    <param id="0" name="Object to create">Pena</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="X">Cuboiten.X</param>
+                                    <param id="3" name="Y">Cuboiten.Y -16</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="566779265082759">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="6721532304265594" type="mario">
+                            <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="9520263891035995" type="marioPequeno">
+                            <param id="0" name="Object">mario</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="4258974081636421" type="marioGrande">
+                            <param id="0" name="Y">1000000</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9962957594086399">
+                    <conditions>
+                        <condition id="2" inverted="1" name="Is playing" sid="9790068549544749" type="mario">
+                            <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="5558235547863557" type="marioGrande">
+                            <param id="0" name="Object">mario</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="3029347979534314" type="marioPequeno">
+                            <param id="0" name="Y">1000000</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9454918499351548">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="7066692122673577" type="mario" />
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="8690012259761999" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="8659021631990124">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="9515081041533689" type="Moeda">
+                    <param id="0" name="Instance variable">Tempo</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="3644191679576511" type="Moeda">
+                    <param id="0" name="Instance variable">Tempo</param>
+                    <param id="1" name="Value">moeda.Tempo-dt</param>
+                </action>
+                <action id="-2" name="Set Y" sid="3110872819631634" type="Moeda">
+                    <param id="0" name="Y">moeda.Y-dt*50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8280622246702694">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="8073608156806655" type="Moeda">
+                    <param id="0" name="Instance variable">Tempo</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="6066582695680166" type="Moeda">
+                    <param id="0" name="Instance variable">Destrói</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="9423483696583447" type="Moeda" />
+            </actions>
+        </event-block>
+        <event-block sid="3801491495085855">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="3753516579502191" type="Goomba">
+                    <param id="0" name="Instance variable">direita</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="8" name="Set vector X" sid="264863670284914" type="Goomba">
+                    <param id="0" name="Vector X">500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2951940454943379">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5173116570507789" type="Goomba">
+                    <param id="0" name="Instance variable">direita</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="8" name="Set vector X" sid="2965949691540863" type="Goomba">
+                    <param id="0" name="Vector X">-500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1513539859359789">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5001226835289976" type="Goomba">
+                    <param id="0" name="Object">volta</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-14" name="Toggle boolean" sid="1652848745075985" type="Goomba">
+                    <param id="0" name="Instance variable">direita</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1350602460330534">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="9581041168542673" type="Goomba">
+                    <param id="0" name="Instance variable">direita</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="6319057731229742" type="Goomba">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6744314326891452">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5450914475963831" type="Goomba">
+                    <param id="0" name="Instance variable">direita</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="1080926414144176" type="Goomba">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1250548672559899">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="51585605403175" type="mario">
+                    <param id="0" name="Object">Goomba</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6121619177855521">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="164839210069308" type="mario">
+                            <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="1829420748834104" type="mario">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">goomba.y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4386044559007139" type="Goomba" />
+                    </actions>
+                </event-block>
+                <event-block sid="4432041875587635">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="7023547259081981" type="mario">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">goomba.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="7721677108419005" type="mario" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9785698662995216">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8155515959177045" type="mario">
+                    <param id="0" name="Object">Goomba</param>
+                </condition>
+                <condition id="2" inverted="1" name="Is playing" sid="4728346384244902" type="mario">
+                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1531898324014431" type="mario">
+                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="327027653474942">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5165348133030891" type="mario">
+                    <param id="0" name="Object">Flor</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="359159802968058" type="mario">
+                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="6098514233625473" type="mario" />
+            </actions>
+        </event-block>
+        <event-block sid="4031860684804406">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7670786394019203" type="mario">
+                    <param id="0" name="Object">Flor</param>
+                </condition>
+                <condition id="2" inverted="1" name="Is playing" sid="9606514425079018" type="mario">
+                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="9134887992575127" type="mario">
+                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="353874130815692">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4252316963144785" type="mario">
+                    <param id="0" name="Object">cogumelo</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="5855011736458894" type="mario">
+                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="9440280716894322" type="mario">
+                    <param id="0" name="Animation">&quot;grande&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8821764072825236">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1238227779551853" type="mario">
+                    <param id="0" name="Object">cogumelo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1976071550051913" type="cogumelo" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
