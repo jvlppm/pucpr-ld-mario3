@@ -62,6 +62,7 @@
                 <instance-variable name="Running" sid="6657161388797091" type="boolean" />
                 <instance-variable name="RequiredRunTime" sid="731162661241641" type="number" />
                 <instance-variable name="MaxRunTime" sid="2192139122822577" type="number" />
+                <instance-variable name="GoingRight" sid="6460610714809156" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="9255735361066924">
@@ -350,6 +351,9 @@
                 <animation framecount="1" loop="0" name="RunningJumping" pingpong="0" repeatcount="1" repeatto="0" sid="7878853939049291" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" />
                 </animation>
+                <animation framecount="1" loop="0" name="Turning" pingpong="0" repeatcount="1" repeatto="0" sid="9843520828896776" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="MarioGrande" sid="2763920965125373">
@@ -375,6 +379,9 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="1" />
                 </animation>
                 <animation framecount="1" loop="0" name="RunningJumping" pingpong="0" repeatcount="1" repeatto="0" sid="1857352950285716" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+                <animation framecount="1" loop="0" name="Turning" pingpong="0" repeatcount="1" repeatto="0" sid="6020175783676136" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" />
                 </animation>
             </animation-folder>
@@ -475,6 +482,34 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Black" sid="5609123049156979">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6315291066401108" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Speedometer" sid="4141783050770664">
+            <plugin id="NinePatch" />
+            <texture />
+        </object-type>
+        <object-type name="RunningIndicator" sid="9286822128968695">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1513456148152204" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="2" loop="1" name="Running" pingpong="0" repeatcount="1" repeatto="0" sid="1657726269700017" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpeedometerActive" sid="1483666462237883">
+            <plugin id="NinePatch" />
+            <texture />
         </object-type>
     </object-folder>
     <families>
