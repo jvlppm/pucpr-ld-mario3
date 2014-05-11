@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
@@ -46,7 +47,7 @@
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-type name="SuperMarioBros3World1Area" sid="7490041033544774">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
@@ -491,7 +492,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Speedometer" sid="4141783050770664">
+        <object-type name="IndicatorSpeed" sid="4141783050770664">
             <plugin id="NinePatch" />
             <texture />
         </object-type>
@@ -507,8 +508,17 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="SpeedometerActive" sid="1483666462237883">
+        <object-type name="IndicatorSpeedActive" sid="1483666462237883">
             <plugin id="NinePatch" />
+            <texture />
+        </object-type>
+        <object-type name="NumberFont" sid="2770761974268449">
+            <plugin id="Spritefont2" />
+            <instance-variables>
+                <instance-variable name="Content" sid="4494636512774265" type="string" />
+                <instance-variable name="Value" sid="128114004093806" type="number" />
+                <instance-variable name="Digits" sid="8568501978347896" type="number" />
+            </instance-variables>
             <texture />
         </object-type>
     </object-folder>

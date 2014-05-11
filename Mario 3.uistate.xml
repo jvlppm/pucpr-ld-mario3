@@ -10,8 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1">Layout 1</layout>
-        <event-sheet>Event sheet 1</event-sheet>
+        <layout>Layout 1</layout>
+        <event-sheet active="1">Event sheet 1</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -19,7 +19,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1">
+    <families-expanded root="0">
         <family expanded="0" name="VaiVolta" />
         <family expanded="0" name="BasePlatforms" />
         <family expanded="0" name="SpritePlatforms" />

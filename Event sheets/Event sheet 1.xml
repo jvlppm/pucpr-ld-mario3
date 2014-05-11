@@ -3,10 +3,15 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <event-group description="" sid="5115914260203696" title="Mario">
+        <variable constant="0" name="Timer" sid="2849380820232914" static="0" type="number">300</variable>
+        <variable constant="0" name="Points" sid="5750279857023693" static="0" type="number">0</variable>
+        <variable constant="0" name="Lives" sid="8297701242012796" static="0" type="number">3</variable>
+        <variable constant="0" name="World" sid="1123216530591473" static="0" type="number">1</variable>
+        <variable constant="0" name="Coins" sid="2863490799107284" static="0" type="number">0</variable>
+        <event-group collapsed="1" description="" sid="5115914260203696" title="Mario">
             <sub-events>
                 <event-group description="" sid="2304413015275258" title="Controls" />
-                <event-group description="" sid="9203101228386901" title="Run">
+                <event-group collapsed="1" description="" sid="9203101228386901" title="Run">
                     <sub-events>
                         <event-block collapsed="1" sid="6921157781144777">
                             <conditions>
@@ -36,7 +41,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="6264929019738394">
+                        <event-block collapsed="1" sid="6264929019738394">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="7260080252952295" type="Mario">
                                     <param id="0" name="Instance variable">RunTime</param>
@@ -86,7 +91,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="8244074063351687">
+                        <event-block collapsed="1" sid="8244074063351687">
                             <conditions>
                                 <condition id="2" inverted="1" name="Key is down" sid="5196121679024195" type="Keyboard">
                                     <param id="0" name="Key">16 (Shift)</param>
@@ -207,7 +212,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="677378389262257" title="Animations">
+                <event-group collapsed="1" description="" sid="677378389262257" title="Animations">
                     <sub-events>
                         <event-group collapsed="1" description="" sid="915042074610917" title="Direction">
                             <sub-events>
@@ -269,7 +274,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="7943296425537845" title="Speed">
+                        <event-group collapsed="1" description="" sid="7943296425537845" title="Speed">
                             <sub-events>
                                 <event-block any="1" sid="1534594239648643">
                                     <conditions>
@@ -331,7 +336,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="9130376418275246" title="Jump">
+                        <event-group collapsed="1" description="" sid="9130376418275246" title="Jump">
                             <sub-events>
                                 <event-block sid="6004183434332175">
                                     <conditions>
@@ -466,6 +471,14 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="6455985237380273" type="Moeda" />
+                        <action id="-10" name="Add to" sid="3120861413540767" type="System">
+                            <param id="0" name="Variable">Coins</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="4540324100970658" type="System">
+                            <param id="0" name="Variable">Points</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="6093432649572229">
@@ -516,71 +529,11 @@
                     </conditions>
                     <actions>
                         <action id="-26" name="Restart layout" sid="8690012259761999" type="System" />
-                    </actions>
-                </event-block>
-                <event-block collapsed="1" sid="1250548672559899">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="51585605403175" type="Mario">
-                            <param id="0" name="Object">Stompable</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="6121619177855521">
-                            <conditions>
-                                <condition id="-2" name="Compare Y" sid="1829420748834104" type="Mario">
-                                    <param id="0" name="Comparison">3</param>
-                                    <param id="1" name="Y co-ordinate">Stompable.Y</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="4386044559007139" type="Stompable" />
-                                <action behavior="Platform" id="9" name="Set vector Y" sid="6902353809359497" type="Mario">
-                                    <param id="0" name="Vector Y">-Mario.Platform.JumpStrength / 2</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block collapsed="1" sid="5167900520537703">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="2086691752180381" type="Mario">
-                            <param id="0" name="Object">Hurt</param>
-                        </condition>
-                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="2385092645626988" type="MarioStates" />
-                    </conditions>
-                    <actions>
-                        <action behavior="Flash" id="0" name="Flash" sid="3959935000297098" type="MarioStates">
-                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                            <param id="2" name="Duration">1.0</param>
+                        <action id="-11" name="Subtract from" sid="1610016061530851" type="System">
+                            <param id="0" name="Variable">Lives</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="9581568772736283">
-                            <conditions>
-                                <condition id="2" inverted="1" name="Is playing" sid="5018829414248071" type="Mario">
-                                    <param id="0" name="Animation">&quot;grande&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="6108944223164577" type="Mario" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="7787438823034404">
-                            <conditions>
-                                <condition id="2" name="Is playing" sid="2595874846301473" type="Mario">
-                                    <param id="0" name="Animation">&quot;grande&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="6933884458721815" type="Mario">
-                                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -642,6 +595,14 @@
                             <param id="0" name="Instance variable">Destrói</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-10" name="Add to" sid="9613347351419725" type="System">
+                            <param id="0" name="Variable">Coins</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="2864806603163111" type="System">
+                            <param id="0" name="Variable">Points</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="3383391602372665">
@@ -696,7 +657,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8779966539198683" title="Itens">
+        <event-group description="" sid="8779966539198683" title="Itens">
             <sub-events>
                 <event-block sid="8659021631990124">
                     <conditions>
@@ -735,6 +696,74 @@
         </event-group>
         <event-group collapsed="1" description="" sid="748998548870591" title="Inimigos">
             <sub-events>
+                <event-block sid="1250548672559899">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="51585605403175" type="Mario">
+                            <param id="0" name="Object">Stompable</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6121619177855521">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="1829420748834104" type="Mario">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">Stompable.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="4386044559007139" type="Stompable" />
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="6902353809359497" type="Mario">
+                                    <param id="0" name="Vector Y">-Mario.Platform.JumpStrength / 2</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="7000071533099026" type="System">
+                                    <param id="0" name="Variable">Points</param>
+                                    <param id="1" name="Value">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block collapsed="1" sid="5167900520537703">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2086691752180381" type="Mario">
+                            <param id="0" name="Object">Hurt</param>
+                        </condition>
+                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="2385092645626988" type="MarioStates" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="3959935000297098" type="MarioStates">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9581568772736283">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Is playing" sid="5018829414248071" type="Mario">
+                                    <param id="0" name="Animation">&quot;grande&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="6108944223164577" type="Mario" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="7787438823034404">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="2595874846301473" type="Mario">
+                                    <param id="0" name="Animation">&quot;grande&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="6933884458721815" type="Mario">
+                                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="3801491495085855">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="3753516579502191" type="VaiVolta">
@@ -894,18 +923,8 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6801123633094392" title="HUD">
+        <event-group description="" sid="6801123633094392" title="HUD">
             <sub-events>
-                <event-block sid="8255968136286198">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="1290071695325245" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-5" name="Set width" sid="4071501623687797" type="SpeedometerActive">
-                            <param id="0" name="Width">floor(clamp(Mario.RunTime / Mario.RequiredRunTime, 0, 1) * 6) * 8</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="8846351411309227">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="8202353696577643" type="Mario">
@@ -930,6 +949,176 @@
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2565752840787682">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2031546995714847" type="NumberFont">
+                            <param id="0" name="Instance variable">Content</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Coins&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="6229868027772021" type="NumberFont">
+                            <param id="0" name="Instance variable">Value</param>
+                            <param id="1" name="Value">Coins</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="124019750990537">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3790742740987202" type="NumberFont">
+                            <param id="0" name="Instance variable">Content</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;World&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="81437693934887" type="NumberFont">
+                            <param id="0" name="Instance variable">Value</param>
+                            <param id="1" name="Value">World</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4383965801629251">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6929586833079109" type="NumberFont">
+                            <param id="0" name="Instance variable">Content</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Timer&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="9647572986670351" type="NumberFont">
+                            <param id="0" name="Instance variable">Value</param>
+                            <param id="1" name="Value">Timer</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5698605503010767">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4673246498641975" type="NumberFont">
+                            <param id="0" name="Instance variable">Content</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Lives&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="7921298890502562" type="NumberFont">
+                            <param id="0" name="Instance variable">Value</param>
+                            <param id="1" name="Value">Lives</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5500345038010678">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5081096396328922" type="NumberFont">
+                            <param id="0" name="Instance variable">Content</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Points&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="4459737413707296" type="NumberFont">
+                            <param id="0" name="Instance variable">Value</param>
+                            <param id="1" name="Value">Points</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8255968136286198">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="1290071695325245" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="4071501623687797" type="IndicatorSpeedActive">
+                            <param id="0" name="Width">floor(clamp(Mario.RunTime / Mario.RequiredRunTime, 0, 1) * 6) * 8</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3822882396424895" type="NumberFont">
+                            <param id="0" name="Text">zeropad(NumberFont.Value, NumberFont.Digits)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="5318515743762829" title="Global">
+            <sub-events>
+                <event-block sid="1604368739676953">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2135589027342173" type="System">
+                            <param id="0" name="Variable">Coins</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="4544199430754537" type="System">
+                            <param id="0" name="Variable">Coins</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="8750745409094487" type="System">
+                            <param id="0" name="Variable">Lives</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="901282066030572">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1450416274921878" type="System">
+                            <param id="0" name="Variable">Lives</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="829883570039619" type="System">
+                            <param id="0" name="Variable">Points</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2879816064570748" type="System">
+                            <param id="0" name="Variable">Lives</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1841841324545494" type="System">
+                            <param id="0" name="Variable">Coins</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2552031052676913">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="2439634643039755" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2279733012050567" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">300</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9482111611904989">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="2017291512212623" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="1459641240788689" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3443005620093536">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6044641479814119" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9447906162385037" type="Mario" />
                     </actions>
                 </event-block>
             </sub-events>
