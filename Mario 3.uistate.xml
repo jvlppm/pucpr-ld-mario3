@@ -23,7 +23,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="VaiVolta" />
         <family expanded="0" name="BasePlatforms" />
         <family expanded="0" name="SpritePlatforms" />
-        <family expanded="0" name="Hurt" />
+        <family expanded="1" name="Hurt" />
         <family expanded="0" name="MarioStates" />
         <family expanded="0" name="Stompable" />
         <family expanded="0" name="Turtle" />

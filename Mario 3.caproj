@@ -10,6 +10,7 @@
     <unique-id>1ghi6ey7etrq9</unique-id>
     <saved-with-version>16800</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -47,7 +48,7 @@
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-type name="SuperMarioBros3World1Area" sid="7490041033544774">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
@@ -604,6 +605,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Function" sid="2131010694619834">
+            <plugin id="Function" />
+        </object-type>
     </object-folder>
     <families>
         <family name="VaiVolta" plugin-id="Sprite" sid="6258472206151774">
@@ -650,7 +654,6 @@
             <members>
                 <member>Flor</member>
                 <member>Goomba</member>
-                <member>TurtleGreen</member>
             </members>
             <instance-variables>
                 <instance-variable name="CanHurt" sid="2948607015652062" type="boolean" />
@@ -696,6 +699,7 @@
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="121" />
+        <global-instance type="Function" uid="143" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

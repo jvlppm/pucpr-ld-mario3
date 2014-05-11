@@ -3848,7 +3848,6 @@
                         <AutoMirror>true</AutoMirror>
                         <JumpHeight>0</JumpHeight>
                         <InitialMaxSpeed>0</InitialMaxSpeed>
-                        <CanHurt>true</CanHurt>
                         <ShouldDestroy>false</ShouldDestroy>
                         <Wings>false</Wings>
                         <Hidden>false</Hidden>
@@ -3898,7 +3897,6 @@
                         <AutoMirror>true</AutoMirror>
                         <JumpHeight>0</JumpHeight>
                         <InitialMaxSpeed>0</InitialMaxSpeed>
-                        <CanHurt>true</CanHurt>
                         <ShouldDestroy>false</ShouldDestroy>
                         <Wings>true</Wings>
                         <Hidden>false</Hidden>
@@ -3948,7 +3946,6 @@
                         <AutoMirror>true</AutoMirror>
                         <JumpHeight>0</JumpHeight>
                         <InitialMaxSpeed>0</InitialMaxSpeed>
-                        <CanHurt>true</CanHurt>
                         <ShouldDestroy>false</ShouldDestroy>
                         <Wings>true</Wings>
                         <Hidden>false</Hidden>
@@ -3998,7 +3995,6 @@
                         <AutoMirror>true</AutoMirror>
                         <JumpHeight>0</JumpHeight>
                         <InitialMaxSpeed>0</InitialMaxSpeed>
-                        <CanHurt>true</CanHurt>
                         <ShouldDestroy>false</ShouldDestroy>
                         <Wings>true</Wings>
                         <Hidden>false</Hidden>
