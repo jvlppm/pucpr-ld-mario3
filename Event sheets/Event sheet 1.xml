@@ -8,7 +8,7 @@
         <variable constant="0" name="Lives" sid="8297701242012796" static="0" type="number">3</variable>
         <variable constant="0" name="World" sid="1123216530591473" static="0" type="number">1</variable>
         <variable constant="0" name="Coins" sid="2863490799107284" static="0" type="number">0</variable>
-        <event-group description="" sid="5115914260203696" title="Mario">
+        <event-group collapsed="1" description="" sid="5115914260203696" title="Mario">
             <sub-events>
                 <event-group description="" sid="2304413015275258" title="Controls" />
                 <event-group collapsed="1" description="" sid="9203101228386901" title="Run">
@@ -696,9 +696,9 @@
         </event-group>
         <event-group description="" sid="748998548870591" title="Inimigos">
             <sub-events>
-                <event-group description="" sid="8204904164989713" title="Stompable">
+                <event-group collapsed="1" description="" sid="8204904164989713" title="Stompable">
                     <sub-events>
-                        <event-block sid="1250548672559899">
+                        <event-block collapsed="1" sid="1250548672559899">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="51585605403175" type="Mario">
                                     <param id="0" name="Object">Stompable</param>
@@ -710,7 +710,7 @@
                                     <conditions>
                                         <condition id="-2" name="Compare Y" sid="1829420748834104" type="Mario">
                                             <param id="0" name="Comparison">3</param>
-                                            <param id="1" name="Y co-ordinate">Stompable.Y - Stompable.Height / 2</param>
+                                            <param id="1" name="Y co-ordinate">Stompable.Y - Stompable.Height / 4</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -736,6 +736,9 @@
                                     <param id="0" name="Object">Hurt</param>
                                 </condition>
                                 <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="2385092645626988" type="MarioStates" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="3062931263130867" type="Hurt">
+                                    <param id="0" name="Instance variable">CanHurt</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="Flash" id="0" name="Flash" sid="3959935000297098" type="MarioStates">
@@ -948,7 +951,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="410246311320999" title="Turtle">
+                <event-group collapsed="1" description="" sid="410246311320999" title="Turtle">
                     <sub-events>
                         <event-block sid="3789689492511113">
                             <conditions>
@@ -1013,17 +1016,13 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block collapsed="1" sid="5714017972438575">
+                        <event-block sid="5714017972438575">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="1002047336245662" type="Turtle">
                                     <param id="0" name="Instance variable">Hidden</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="9452897998133206" type="Turtle">
-                                    <param id="0" name="Animation">&quot;Shell&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
                                 <action id="-11" name="Add to" sid="6419288299134885" type="Turtle">
                                     <param id="0" name="Instance variable">TimeHidden</param>
                                     <param id="1" name="Value">dt</param>
@@ -1034,12 +1033,27 @@
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="1356978641936942" type="Turtle">
                                             <param id="0" name="Instance variable">TimeHidden</param>
-                                            <param id="1" name="Comparison">4</param>
+                                            <param id="1" name="Comparison">2</param>
                                             <param id="2" name="Value">Turtle.MaxTimeHidden * 0.8</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="4" name="Set animation" sid="4243823633332877" type="Turtle">
+                                            <param id="0" name="Animation">&quot;Shell&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2634752679331516">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="9341924986689807" type="Turtle">
+                                            <param id="0" name="Instance variable">TimeHidden</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">Turtle.MaxTimeHidden * 0.8</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="9635825468733644" type="Turtle">
                                             <param id="0" name="Animation">&quot;ShellLeaving&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
@@ -1062,49 +1076,153 @@
                                             <param id="0" name="Instance variable">TimeHidden</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
+                                        <action id="4" name="Set animation" sid="2504333730477213" type="Turtle">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="1614089788569274">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="5317532510296829" type="System">
+                                                    <param id="0" name="Object">Turtle</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="5619503420971834">
+                                                    <conditions>
+                                                        <condition id="-14" name="Pick by unique ID" sid="9792111922246031" type="VaiVolta">
+                                                            <param id="0" name="Unique ID">Turtle.UID</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Platform" id="1" name="Set max speed" sid="6626651276104115" type="VaiVolta">
+                                                            <param id="0" name="Max Speed">VaiVolta.InitialMaxSpeed</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block collapsed="1" sid="4492616686325853">
+                        <event-block sid="4492616686325853">
                             <conditions>
                                 <condition id="-19" name="On destroyed" sid="1515558271058589" type="Turtle" />
-                                <condition id="-8" name="Is boolean instance variable set" sid="1254851512376192" type="Turtle">
-                                    <param id="0" name="Instance variable">Wings</param>
-                                </condition>
                                 <condition id="-2" name="Compare Y" sid="6112987084630487" type="Mario">
                                     <param id="0" name="Comparison">4</param>
                                     <param id="1" name="Y co-ordinate">0</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-3" name="Create object" sid="4590881776740847" type="System">
-                                    <param id="0" name="Object to create">Turtle</param>
-                                    <param id="1" name="Layer">1</param>
-                                    <param id="2" name="X">Turtle.X</param>
-                                    <param id="3" name="Y">Mario.Y + Turtle.Height</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
-                                <event-block sid="6793270707474284">
+                                <event-block sid="5947553948613221">
                                     <conditions>
-                                        <condition id="-11" name="For Each" sid="5843837070745202" type="System">
-                                            <param id="0" name="Object">Turtle</param>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="1254851512376192" type="Turtle">
+                                            <param id="0" name="Instance variable">Wings</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="4590881776740847" type="System">
+                                            <param id="0" name="Object to create">Turtle</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="X">Turtle.X</param>
+                                            <param id="3" name="Y">Turtle.Y + (Mario.BBoxBottom - Turtle.BBoxTop) + 1</param>
+                                        </action>
+                                    </actions>
                                     <sub-events>
-                                        <event-block sid="6466364967842885">
+                                        <event-block sid="6793270707474284">
                                             <conditions>
-                                                <condition id="-14" name="Pick by unique ID" sid="9542720268124678" type="VaiVolta">
-                                                    <param id="0" name="Unique ID">Turtle.UID</param>
+                                                <condition id="-11" name="For Each" sid="5843837070745202" type="System">
+                                                    <param id="0" name="Object">Turtle</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action behavior="Platform" id="9" name="Set vector Y" sid="3863952612125477" type="VaiVolta">
-                                                    <param id="0" name="Vector Y">100</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="6466364967842885">
+                                                    <conditions>
+                                                        <condition id="-14" name="Pick by unique ID" sid="9542720268124678" type="VaiVolta">
+                                                            <param id="0" name="Unique ID">Turtle.UID</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Platform" id="9" name="Set vector Y" sid="3863952612125477" type="VaiVolta">
+                                                            <param id="0" name="Vector Y">100</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="7783080223946097" type="VaiVolta">
+                                                            <param id="0" name="Instance variable">InitialMaxSpeed</param>
+                                                            <param id="1" name="Value">VaiVolta.Platform.MaxSpeed</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <variable constant="0" name="maxSpeed" sid="2809643462473071" static="0" type="number">0</variable>
+                                <event-block sid="2420874752443523">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2187335695580842" type="Turtle">
+                                            <param id="0" name="Instance variable">Wings</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="2211875667845242" type="System">
+                                            <param id="0" name="Variable">maxSpeed</param>
+                                            <param id="1" name="Value">VaiVolta(Turtle.UID).InitialMaxSpeed</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="5366859185419698" type="System">
+                                            <param id="0" name="Object to create">Turtle</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="X">Turtle.X</param>
+                                            <param id="3" name="Y">Turtle.Y</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="4455456398921021" type="Turtle">
+                                            <param id="0" name="Instance variable">Hidden</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="9847346339956073">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="1892043431428276" type="System">
+                                                    <param id="0" name="Object">Turtle</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="4624315232754052">
+                                                    <conditions>
+                                                        <condition id="-14" name="Pick by unique ID" sid="6677826900495916" type="VaiVolta">
+                                                            <param id="0" name="Unique ID">Turtle.UID</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Platform" id="1" name="Set max speed" sid="8074958960711437" type="VaiVolta">
+                                                            <param id="0" name="Max Speed">0</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="2670131638796648" type="VaiVolta">
+                                                            <param id="0" name="Instance variable">InitialMaxSpeed</param>
+                                                            <param id="1" name="Value">maxSpeed</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="8525608511110831">
+                                                    <conditions>
+                                                        <condition id="-14" name="Pick by unique ID" sid="7931313223533119" type="Hurt">
+                                                            <param id="0" name="Unique ID">Turtle.UID</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="6200921241809569" type="Hurt">
+                                                            <param id="0" name="Instance variable">CanHurt</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -1314,5 +1432,16 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="833288381658232">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4358376215092602" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="2069603379404373" type="VaiVolta">
+                    <param id="0" name="Instance variable">InitialMaxSpeed</param>
+                    <param id="1" name="Value">VaiVolta.Platform.MaxSpeed</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

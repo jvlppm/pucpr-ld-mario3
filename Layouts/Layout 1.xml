@@ -422,6 +422,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <CanHurt>true</CanHurt>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
                             <properties>
@@ -2872,6 +2875,8 @@
                         <CanFall>false</CanFall>
                         <AutoMirror>false</AutoMirror>
                         <JumpHeight>0</JumpHeight>
+                        <InitialMaxSpeed>0</InitialMaxSpeed>
+                        <CanHurt>true</CanHurt>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3514,6 +3519,8 @@
                         <CanFall>false</CanFall>
                         <AutoMirror>false</AutoMirror>
                         <JumpHeight>0</JumpHeight>
+                        <InitialMaxSpeed>0</InitialMaxSpeed>
+                        <CanHurt>true</CanHurt>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3556,6 +3563,8 @@
                         <CanFall>false</CanFall>
                         <AutoMirror>false</AutoMirror>
                         <JumpHeight>0</JumpHeight>
+                        <InitialMaxSpeed>0</InitialMaxSpeed>
+                        <CanHurt>true</CanHurt>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3832,10 +3841,12 @@
                         <CanFall>true</CanFall>
                         <AutoMirror>true</AutoMirror>
                         <JumpHeight>0</JumpHeight>
+                        <InitialMaxSpeed>0</InitialMaxSpeed>
+                        <CanHurt>true</CanHurt>
                         <Wings>false</Wings>
                         <Hidden>false</Hidden>
                         <TimeHidden>0</TimeHidden>
-                        <MaxTimeHidden>5</MaxTimeHidden>
+                        <MaxTimeHidden>10</MaxTimeHidden>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3878,10 +3889,12 @@
                         <CanFall>true</CanFall>
                         <AutoMirror>true</AutoMirror>
                         <JumpHeight>0</JumpHeight>
+                        <InitialMaxSpeed>0</InitialMaxSpeed>
+                        <CanHurt>true</CanHurt>
                         <Wings>true</Wings>
                         <Hidden>false</Hidden>
                         <TimeHidden>0</TimeHidden>
-                        <MaxTimeHidden>5</MaxTimeHidden>
+                        <MaxTimeHidden>10</MaxTimeHidden>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3924,10 +3937,12 @@
                         <CanFall>true</CanFall>
                         <AutoMirror>true</AutoMirror>
                         <JumpHeight>0</JumpHeight>
+                        <InitialMaxSpeed>0</InitialMaxSpeed>
+                        <CanHurt>true</CanHurt>
                         <Wings>true</Wings>
                         <Hidden>false</Hidden>
                         <TimeHidden>0</TimeHidden>
-                        <MaxTimeHidden>5</MaxTimeHidden>
+                        <MaxTimeHidden>10</MaxTimeHidden>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3970,10 +3985,12 @@
                         <CanFall>true</CanFall>
                         <AutoMirror>true</AutoMirror>
                         <JumpHeight>0</JumpHeight>
+                        <InitialMaxSpeed>0</InitialMaxSpeed>
+                        <CanHurt>true</CanHurt>
                         <Wings>true</Wings>
                         <Hidden>false</Hidden>
                         <TimeHidden>0</TimeHidden>
-                        <MaxTimeHidden>5</MaxTimeHidden>
+                        <MaxTimeHidden>10</MaxTimeHidden>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">

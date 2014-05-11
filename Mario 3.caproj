@@ -578,7 +578,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="2" loop="0" name="ShellLeaving" pingpong="0" repeatcount="1" repeatto="0" sid="4449902888956429" speed="5">
+                <animation framecount="2" loop="1" name="ShellLeaving" pingpong="0" repeatcount="1" repeatto="0" sid="4449902888956429" speed="10">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.964286">
                         <collision-poly>
                             <point x="0" y="0.428571" />
@@ -616,6 +616,7 @@
                 <instance-variable name="CanFall" sid="3727220149457809" type="boolean" />
                 <instance-variable name="AutoMirror" sid="8281300768725585" type="boolean" />
                 <instance-variable name="JumpHeight" sid="5531662528890491" type="number" />
+                <instance-variable name="InitialMaxSpeed" sid="8959919684119206" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="9716185124420312">
@@ -648,6 +649,9 @@
                 <member>Goomba</member>
                 <member>TurtleGreen</member>
             </members>
+            <instance-variables>
+                <instance-variable name="CanHurt" sid="2948607015652062" type="boolean" />
+            </instance-variables>
         </family>
         <family name="MarioStates" plugin-id="Sprite" sid="7575165103327263">
             <members>
