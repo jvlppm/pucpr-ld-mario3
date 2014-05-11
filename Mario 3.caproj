@@ -47,7 +47,7 @@
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-type name="SuperMarioBros3World1Area" sid="7490041033544774">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
@@ -280,8 +280,22 @@
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4484639362868758" speed="4">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.9375" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.9375" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.9375">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.9375" />
+                            <point x="0" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.9375">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.9375" />
+                            <point x="0" y="0.9375" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -488,7 +502,7 @@
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6315291066401108" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0" hotspotY="-0.0526316" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -521,16 +535,87 @@
             </instance-variables>
             <texture />
         </object-type>
+        <object-type name="TurtleGreen" sid="5177572831505542">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="859712189696929" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.964286" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.964286" />
+                </animation>
+                <animation framecount="1" loop="1" name="Shell" pingpong="0" repeatcount="1" repeatto="0" sid="4250220122758248" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.964286">
+                        <collision-poly>
+                            <point x="0" y="0.428571" />
+                            <point x="1" y="0.428571" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="1" name="ShellRunning" pingpong="0" repeatcount="1" repeatto="0" sid="7781704418227764" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.964286">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.428571" />
+                            <point x="1" y="0.428571" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.964286">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.428571" />
+                            <point x="1" y="0.428571" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.964286">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.428571" />
+                            <point x="1" y="0.428571" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ShellLeaving" pingpong="0" repeatcount="1" repeatto="0" sid="4449902888956429" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.964286">
+                        <collision-poly>
+                            <point x="0" y="0.428571" />
+                            <point x="1" y="0.428571" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.964286">
+                        <collision-poly>
+                            <point x="0" y="0.428571" />
+                            <point x="1" y="0.428571" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="Wings" pingpong="0" repeatcount="1" repeatto="0" sid="2984598561017003" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.964286" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.964286" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.964286" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.964286" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="VaiVolta" plugin-id="Sprite" sid="6258472206151774">
             <members>
                 <member>Goomba</member>
+                <member>TurtleGreen</member>
             </members>
             <instance-variables>
                 <instance-variable name="GoingRight" sid="3255775171814651" type="boolean" />
                 <instance-variable name="CanFall" sid="3727220149457809" type="boolean" />
                 <instance-variable name="AutoMirror" sid="8281300768725585" type="boolean" />
+                <instance-variable name="JumpHeight" sid="5531662528890491" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="9716185124420312">
@@ -561,6 +646,7 @@
             <members>
                 <member>Flor</member>
                 <member>Goomba</member>
+                <member>TurtleGreen</member>
             </members>
         </family>
         <family name="MarioStates" plugin-id="Sprite" sid="7575165103327263">
@@ -577,7 +663,19 @@
         <family name="Stompable" plugin-id="Sprite" sid="7473387983642362">
             <members>
                 <member>Goomba</member>
+                <member>TurtleGreen</member>
             </members>
+        </family>
+        <family name="Turtle" plugin-id="Sprite" sid="9859939318582368">
+            <members>
+                <member>TurtleGreen</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Wings" sid="5369982495870444" type="boolean" />
+                <instance-variable name="Hidden" sid="3615819415669295" type="boolean" />
+                <instance-variable name="TimeHidden" sid="1956785297567639" type="number" />
+                <instance-variable name="MaxTimeHidden" sid="5650505897009346" type="number" />
+            </instance-variables>
         </family>
     </families>
     <layout-folder expanded="1">

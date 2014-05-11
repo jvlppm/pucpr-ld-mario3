@@ -5,7 +5,7 @@
     <event-sheet>Event sheet 1</event-sheet>
     <size>
         <width>2816</width>
-        <height>464</height>
+        <height>472</height>
     </size>
     <margins>
         <horizontal>128</horizontal>
@@ -586,7 +586,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>2264</x>
-                        <y>312.088500977</y>
+                        <y>312</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -2871,6 +2871,7 @@
                         <GoingRight>false</GoingRight>
                         <CanFall>false</CanFall>
                         <AutoMirror>false</AutoMirror>
+                        <JumpHeight>0</JumpHeight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -2879,7 +2880,7 @@
                                 <acceleration>1500</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>650</jump-strength>
-                                <gravity>1500</gravity>
+                                <gravity>500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
                                 <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
@@ -3512,6 +3513,7 @@
                         <GoingRight>false</GoingRight>
                         <CanFall>false</CanFall>
                         <AutoMirror>false</AutoMirror>
+                        <JumpHeight>0</JumpHeight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3520,7 +3522,7 @@
                                 <acceleration>1500</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>650</jump-strength>
-                                <gravity>1500</gravity>
+                                <gravity>500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
                                 <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
@@ -3553,6 +3555,7 @@
                         <GoingRight>false</GoingRight>
                         <CanFall>false</CanFall>
                         <AutoMirror>false</AutoMirror>
+                        <JumpHeight>0</JumpHeight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3561,7 +3564,7 @@
                                 <acceleration>1500</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>650</jump-strength>
-                                <gravity>1500</gravity>
+                                <gravity>500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
                                 <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
@@ -3805,14 +3808,198 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>56</x>
-                        <y>408</y>
+                        <x>1168</x>
+                        <y>416</y>
                         <z>0</z>
                         <width>28</width>
                         <height>28</height>
                         <depth>0</depth>
                         <hotspotX>0.535714269</hotspotX>
                         <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TurtleGreen" uid="139">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <GoingRight>false</GoingRight>
+                        <CanFall>true</CanFall>
+                        <AutoMirror>true</AutoMirror>
+                        <JumpHeight>0</JumpHeight>
+                        <Wings>false</Wings>
+                        <Hidden>false</Hidden>
+                        <TimeHidden>0</TimeHidden>
+                        <MaxTimeHidden>5</MaxTimeHidden>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1480</x>
+                        <y>416</y>
+                        <z>0</z>
+                        <width>18</width>
+                        <height>28</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.964285731</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TurtleGreen" uid="140">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <GoingRight>false</GoingRight>
+                        <CanFall>true</CanFall>
+                        <AutoMirror>true</AutoMirror>
+                        <JumpHeight>0</JumpHeight>
+                        <Wings>true</Wings>
+                        <Hidden>false</Hidden>
+                        <TimeHidden>0</TimeHidden>
+                        <MaxTimeHidden>5</MaxTimeHidden>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1432</x>
+                        <y>320</y>
+                        <z>0</z>
+                        <width>18</width>
+                        <height>28</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.964285731</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TurtleGreen" uid="141">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <GoingRight>false</GoingRight>
+                        <CanFall>true</CanFall>
+                        <AutoMirror>true</AutoMirror>
+                        <JumpHeight>0</JumpHeight>
+                        <Wings>true</Wings>
+                        <Hidden>false</Hidden>
+                        <TimeHidden>0</TimeHidden>
+                        <MaxTimeHidden>5</MaxTimeHidden>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1384</x>
+                        <y>320</y>
+                        <z>0</z>
+                        <width>18</width>
+                        <height>28</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.964285731</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TurtleGreen" uid="142">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <GoingRight>false</GoingRight>
+                        <CanFall>true</CanFall>
+                        <AutoMirror>true</AutoMirror>
+                        <JumpHeight>0</JumpHeight>
+                        <Wings>true</Wings>
+                        <Hidden>false</Hidden>
+                        <TimeHidden>0</TimeHidden>
+                        <MaxTimeHidden>5</MaxTimeHidden>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1336</x>
+                        <y>320</y>
+                        <z>0</z>
+                        <width>18</width>
+                        <height>28</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.964285731</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -3844,14 +4031,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
-                        <y>208</y>
+                        <x>0</x>
+                        <y>184</y>
                         <z>0</z>
                         <width>256</width>
-                        <height>32</height>
+                        <height>38</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>-0.052631579</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -3872,7 +4059,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>64</x>
-                        <y>197</y>
+                        <y>194</y>
                         <z>0</z>
                         <width>48</width>
                         <height>8</height>
@@ -3893,7 +4080,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>112</x>
-                        <y>197</y>
+                        <y>194</y>
                         <z>0</z>
                         <width>16</width>
                         <height>8</height>
@@ -3920,7 +4107,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>64</x>
-                        <y>197</y>
+                        <y>194</y>
                         <z>0</z>
                         <width>48</width>
                         <height>8</height>
@@ -3954,7 +4141,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>144</x>
-                        <y>197</y>
+                        <y>194</y>
                         <z>0</z>
                         <width>16</width>
                         <height>8</height>
@@ -3989,7 +4176,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>48</x>
-                        <y>197</y>
+                        <y>194</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -4024,7 +4211,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>48</x>
-                        <y>205</y>
+                        <y>202</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -4059,7 +4246,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>136</x>
-                        <y>205</y>
+                        <y>202</y>
                         <z>0</z>
                         <width>24</width>
                         <height>8</height>
@@ -4094,7 +4281,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>64</x>
-                        <y>205</y>
+                        <y>202</y>
                         <z>0</z>
                         <width>56</width>
                         <height>8</height>
