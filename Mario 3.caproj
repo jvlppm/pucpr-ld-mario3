@@ -57,12 +57,15 @@
         </object-type>
         <object-type name="Mario" sid="5704343719027084">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="RunTime" sid="8805930701242614" type="number" />
+                <instance-variable name="Running" sid="6657161388797091" type="boolean" />
+                <instance-variable name="RequiredRunTime" sid="731162661241641" type="number" />
+                <instance-variable name="MaxRunTime" sid="2192139122822577" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="9255735361066924">
                     <behavior id="Platform" />
-                </behavior-type>
-                <behavior-type name="ScrollTo" sid="3099889736630397">
-                    <behavior id="scrollto" />
                 </behavior-type>
                 <behavior-type name="DestroyOutsideLayout" sid="7107786805985203">
                     <behavior id="destroy" />
@@ -82,10 +85,10 @@
                 <animation framecount="1" loop="0" name="grande" pingpong="0" repeatcount="1" repeatto="0" sid="7688303281402588" speed="5">
                     <frame duration="1" hotspotX="0.535714" hotspotY="1">
                         <collision-poly>
-                            <point x="0.214286" y="0.0714286" />
-                            <point x="0.8125" y="0.0803572" />
-                            <point x="0.8125" y="1" />
-                            <point x="0.214286" y="1" />
+                            <point x="0.285714" y="0.0714286" />
+                            <point x="0.785714" y="0.0714286" />
+                            <point x="0.785714" y="1" />
+                            <point x="0.285714" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -330,7 +333,7 @@
         <object-type name="MarioPequeno" sid="1915403175652171">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2377625067370334" speed="5">
+                <animation framecount="1" loop="0" name="Stopped" pingpong="0" repeatcount="1" repeatto="0" sid="2377625067370334" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" />
                 </animation>
                 <animation framecount="2" loop="1" name="Walking" pingpong="0" repeatcount="1" repeatto="0" sid="6099827142177312" speed="5">
@@ -352,7 +355,7 @@
         <object-type name="MarioGrande" sid="2763920965125373">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1320916570123294" speed="5">
+                <animation framecount="1" loop="0" name="Stopped" pingpong="0" repeatcount="1" repeatto="0" sid="1320916570123294" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" />
                 </animation>
                 <animation framecount="2" loop="1" name="Walking" pingpong="0" repeatcount="1" repeatto="0" sid="9476792187725724" speed="5">
@@ -452,6 +455,26 @@
         <object-type name="SceneryBush" sid="4864075434810352">
             <plugin id="NinePatch" />
             <texture />
+        </object-type>
+        <object-type name="MarioScrollTarget" sid="826914144758657">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="8919422383499974">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1599434072500197" speed="5">
+                    <frame duration="1" hotspotX="0.466667" hotspotY="0.466667">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.875" y="0" />
+                            <point x="0.875" y="0.875" />
+                            <point x="0" y="0.875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>

@@ -5,6 +5,295 @@
     <events>
         <event-group description="" sid="5115914260203696" title="Mario">
             <sub-events>
+                <event-group description="" sid="9203101228386901" title="Run">
+                    <sub-events>
+                        <event-block sid="2694967961578494">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="8487178202225682" type="Keyboard">
+                                    <param id="0" name="Key">16 (Shift)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="5103022360678947" type="Mario">
+                                    <param id="0" name="Max Speed">150</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="4277345169077533">
+                                    <conditions>
+                                        <condition behavior="Platform" id="1" name="Compare speed" sid="135060491531274" type="Mario">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="Speed">100</param>
+                                        </condition>
+                                        <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="6296451659522835" type="Mario" />
+                                        <condition id="-7" name="Compare instance variable" sid="3478312362664716" type="Mario">
+                                            <param id="0" name="Instance variable">RunTime</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">Mario.MaxRunTime</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="5423651084288869" type="Mario">
+                                            <param id="0" name="Instance variable">RunTime</param>
+                                            <param id="1" name="Value">dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8244074063351687">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Key is down" sid="5196121679024195" type="Keyboard">
+                                    <param id="0" name="Key">16 (Shift)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="3218276943687501" type="Mario">
+                                    <param id="0" name="Max Speed">100</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="6264929019738394">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="7260080252952295" type="Mario">
+                                            <param id="0" name="Instance variable">RunTime</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="2790160775730767" type="Mario">
+                                            <param id="0" name="Instance variable">RunTime</param>
+                                            <param id="1" name="Value">dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6988713711107838">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3186584874374276" type="Mario">
+                                    <param id="0" name="Instance variable">RunTime</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition behavior="Platform" id="3" name="Is jumping" sid="4067131881899916" type="Mario" />
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="2495163336189216" type="Mario">
+                                    <param id="0" name="Instance variable">RunTime</param>
+                                    <param id="1" name="Value">dt</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block any="1" sid="1838514200874713">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3928525465098427">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6172507388109869" type="Mario">
+                                    <param id="0" name="Instance variable">RunTime</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">Mario.RequiredRunTime</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="3997982947489253" type="Mario">
+                                    <param id="0" name="Instance variable">Running</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5834584967049418">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1288530802046767" type="Mario">
+                                    <param id="0" name="Instance variable">RunTime</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">Mario.RequiredRunTime</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="2592039551502676" type="Mario">
+                                    <param id="0" name="Instance variable">Running</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9191786447334264">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="2725519925222271" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="2411513986968788" type="MarioScrollTarget">
+                                    <param id="0" name="X">Mario.X</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="878343169496416">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7128023059155769" type="Mario">
+                                            <param id="0" name="Instance variable">Running</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="2531579802997514">
+                                            <conditions>
+                                                <condition id="-2" name="Compare Y" sid="2597708468100615" type="Mario">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="Y co-ordinate">LayoutHeight - 112 + 32</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-2" name="Set Y" sid="6006150075878193" type="MarioScrollTarget">
+                                                    <param id="0" name="Y">LayoutHeight - 32</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block any="1" sid="8223506794970273">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="3829624077550805" type="Mario">
+                                            <param id="0" name="Instance variable">Running</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="3888156409558773" type="MarioScrollTarget">
+                                            <param id="0" name="Y">Mario.Y</param>
+                                        </action>
+                                        <action disabled="1" id="-2" name="Set Y" sid="929241560194989" type="MarioScrollTarget">
+                                            <param id="0" name="Y">MarioScrollTarget.Y + clamp(Mario.Y - MarioScrollTarget.Y, -2, 2)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="6450081742875668">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="2651019543751379" type="MarioScrollTarget">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">LayoutHeight - 112 + 32</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="726593827794938" type="MarioScrollTarget">
+                                            <param id="0" name="Y">Mario.Y</param>
+                                        </action>
+                                        <action disabled="1" id="-2" name="Set Y" sid="4932701647608879" type="MarioScrollTarget">
+                                            <param id="0" name="Y">MarioScrollTarget.Y + clamp(Mario.Y - MarioScrollTarget.Y, -2, 2)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="677378389262257" title="Animations">
+                    <sub-events>
+                        <event-block any="1" sid="1534594239648643">
+                            <conditions>
+                                <condition behavior="Platform" id="7" name="On stopped" sid="4685523092809774" type="Mario" />
+                                <condition behavior="Platform" id="9" name="On landed" sid="2326681869420824" type="Mario" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="2144654656901493" type="MarioPequeno">
+                                    <param id="0" name="Animation">&quot;Stopped&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="5318129162866229" type="MarioGrande">
+                                    <param id="0" name="Animation">&quot;Stopped&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9605172985590216">
+                            <conditions>
+                                <condition behavior="Platform" id="0" name="Is moving" sid="6508071446769671" type="Mario" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2034674833937604">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5784290353456275" type="Mario">
+                                            <param id="0" name="Instance variable">Running</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="2815078202486494" type="MarioPequeno">
+                                            <param id="0" name="Animation">&quot;Walking&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="6804758918787125" type="MarioGrande">
+                                            <param id="0" name="Animation">&quot;Walking&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3312058179454252">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="1450638977741553" type="Mario">
+                                            <param id="0" name="Instance variable">Running</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="2466231427491546" type="MarioPequeno">
+                                            <param id="0" name="Animation">&quot;Running&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="6489269656852784" type="MarioGrande">
+                                            <param id="0" name="Animation">&quot;Running&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6004183434332175">
+                            <conditions>
+                                <condition behavior="Platform" id="3" name="Is jumping" sid="2410122412710017" type="Mario" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3806041476729617">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8219375354774732" type="Mario">
+                                            <param id="0" name="Instance variable">Running</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="7551862634834197" type="MarioPequeno">
+                                            <param id="0" name="Animation">&quot;Jumping&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="9175317838949848" type="MarioGrande">
+                                            <param id="0" name="Animation">&quot;Jumping&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9527237974029952">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="938351682964103" type="Mario">
+                                            <param id="0" name="Instance variable">Running</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="4666586306877295" type="MarioPequeno">
+                                            <param id="0" name="Animation">&quot;JumpingRunning&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="3557252779531162" type="MarioGrande">
+                                            <param id="0" name="Animation">&quot;JumpingRunning&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-block sid="6895982527237359">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="1849237904098663" type="Mario">
@@ -65,7 +354,7 @@
                         <action id="-26" name="Restart layout" sid="8690012259761999" type="System" />
                     </actions>
                 </event-block>
-                <event-block sid="1250548672559899">
+                <event-block collapsed="1" sid="1250548672559899">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="51585605403175" type="Mario">
                             <param id="0" name="Object">Stompable</param>
@@ -280,7 +569,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="748998548870591" title="Inimigos">
+        <event-group collapsed="1" description="" sid="748998548870591" title="Inimigos">
             <sub-events>
                 <event-block sid="3801491495085855">
                     <conditions>
