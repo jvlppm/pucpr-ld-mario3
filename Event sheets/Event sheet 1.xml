@@ -694,7 +694,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="748998548870591" title="Inimigos">
+        <event-group collapsed="1" description="" sid="748998548870591" title="Inimigos">
             <sub-events>
                 <event-group collapsed="1" description="" sid="8204904164989713" title="Stompable">
                     <sub-events>
@@ -726,12 +726,30 @@
                                             <param id="1" name="Value">100</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="302850110877148">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="5924783235650656" type="System">
+                                                    <param id="0" name="Object">Hurt</param>
+                                                </condition>
+                                                <condition id="-14" name="Pick by unique ID" sid="8321612625247133" type="Hurt">
+                                                    <param id="0" name="Unique ID">Stompable.UID</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="1485243818999558" type="Hurt">
+                                                    <param id="0" name="Instance variable">CanHurt</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="4174781749143904" title="Hurt">
+                <event-group collapsed="1" description="" sid="4174781749143904" title="Hurt">
                     <sub-events>
                         <event-block sid="5167900520537703">
                             <conditions>
@@ -954,7 +972,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="410246311320999" title="Turtle">
+                <event-group collapsed="1" description="" sid="410246311320999" title="Turtle">
                     <sub-events>
                         <event-block sid="3789689492511113">
                             <conditions>
@@ -1075,10 +1093,6 @@
                                             <param id="0" name="Instance variable">Hidden</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="757695273048732" type="Turtle">
-                                            <param id="0" name="Instance variable">TimeHidden</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
                                         <action id="4" name="Set animation" sid="2504333730477213" type="Turtle">
                                             <param id="0" name="Animation">&quot;Default&quot;</param>
                                             <param id="1" name="From">1</param>
@@ -1090,22 +1104,31 @@
                                                 <condition id="-11" name="For Each" sid="5317532510296829" type="System">
                                                     <param id="0" name="Object">Turtle</param>
                                                 </condition>
+                                                <condition id="-14" name="Pick by unique ID" sid="9792111922246031" type="VaiVolta">
+                                                    <param id="0" name="Unique ID">Turtle.UID</param>
+                                                </condition>
                                             </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="5619503420971834">
-                                                    <conditions>
-                                                        <condition id="-14" name="Pick by unique ID" sid="9792111922246031" type="VaiVolta">
-                                                            <param id="0" name="Unique ID">Turtle.UID</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action behavior="Platform" id="1" name="Set max speed" sid="6626651276104115" type="VaiVolta">
-                                                            <param id="0" name="Max Speed">VaiVolta.InitialMaxSpeed</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
+                                            <actions>
+                                                <action behavior="Platform" id="1" name="Set max speed" sid="6626651276104115" type="VaiVolta">
+                                                    <param id="0" name="Max Speed">VaiVolta.InitialMaxSpeed</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="9933588009780821">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="3773261748356024" type="System">
+                                                    <param id="0" name="Object">Hurt</param>
+                                                </condition>
+                                                <condition id="-14" name="Pick by unique ID" sid="3925868380393503" type="Hurt">
+                                                    <param id="0" name="Unique ID">Turtle.UID</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="1692145028446837" type="Hurt">
+                                                    <param id="0" name="Instance variable">CanHurt</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -1155,10 +1178,25 @@
                                                     <param id="0" name="Instance variable">Wings</param>
                                                     <param id="1" name="Value">0</param>
                                                 </action>
-                                                <action id="-2" name="Set Y" sid="7281725315434446" type="Turtle">
-                                                    <param id="0" name="Y">Mario.Y + (Turtle.BBoxBottom - Turtle.BBoxTop) + 1</param>
-                                                </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="863433363560953">
+                                                    <conditions>
+                                                        <condition id="-11" name="For Each" sid="8373285514131291" type="System">
+                                                            <param id="0" name="Object">Hurt</param>
+                                                        </condition>
+                                                        <condition id="-14" name="Pick by unique ID" sid="3957029245314565" type="Hurt">
+                                                            <param id="0" name="Unique ID">Stompable.UID</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="2320965461005919" type="Hurt">
+                                                            <param id="0" name="Instance variable">CanHurt</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="1065879572689632">
                                             <conditions>
@@ -1171,12 +1209,12 @@
                                                     <param id="0" name="Instance variable">Hidden</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
+                                                <action id="-10" name="Set value" sid="9686957908821452" type="Turtle">
+                                                    <param id="0" name="Instance variable">TimeHidden</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
                                                 <action behavior="Platform" id="1" name="Set max speed" sid="8575326440032729" type="VaiVolta">
                                                     <param id="0" name="Max Speed">0</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="4557717782311826" type="Hurt">
-                                                    <param id="0" name="Instance variable">CanHurt</param>
-                                                    <param id="1" name="Value">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>

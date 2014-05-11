@@ -622,6 +622,9 @@
                 <behavior-type name="Platform" sid="9716185124420312">
                     <behavior id="Platform" />
                 </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="9870997427695727">
+                    <behavior id="destroy" />
+                </behavior-type>
             </behaviors>
         </family>
         <family name="BasePlatforms" plugin-id="NinePatch" sid="9017931272044194">
