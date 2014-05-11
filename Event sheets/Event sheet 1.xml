@@ -8,9 +8,29 @@
         <variable constant="0" name="Lives" sid="8297701242012796" static="0" type="number">3</variable>
         <variable constant="0" name="World" sid="1123216530591473" static="0" type="number">1</variable>
         <variable constant="0" name="Coins" sid="2863490799107284" static="0" type="number">0</variable>
-        <event-group collapsed="1" description="" sid="5115914260203696" title="Mario">
+        <event-group description="" sid="5115914260203696" title="Mario">
             <sub-events>
-                <event-group description="" sid="2304413015275258" title="Controls" />
+                <event-group collapsed="1" description="" sid="2304413015275258" title="Controls">
+                    <sub-events>
+                        <event-block sid="1141143265688858">
+                            <conditions>
+                                <condition id="3" name="On key released" sid="2274101978051831" type="Keyboard">
+                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="7665568342840262" type="System">
+                                    <param id="0" name="First value">Mario.Platform.VectorY</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">-90</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="8758612811138994" type="Mario">
+                                    <param id="0" name="Vector Y">-90</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group collapsed="1" description="" sid="9203101228386901" title="Run">
                     <sub-events>
                         <event-block collapsed="1" sid="6921157781144777">
@@ -87,7 +107,7 @@
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="1" name="Set max speed" sid="5103022360678947" type="Mario">
-                                    <param id="0" name="Max Speed">150</param>
+                                    <param id="0" name="Max Speed">101 + (Mario.RunTime / Mario.MaxRunTime) * 49</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -790,7 +810,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="748998548870591" title="Inimigos">
+        <event-group collapsed="1" description="" sid="748998548870591" title="Inimigos">
             <sub-events>
                 <event-group collapsed="1" description="" sid="8204904164989713" title="Stompable">
                     <sub-events>
@@ -865,7 +885,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="2821346092156377" title="VaiVolta">
+                <event-group description="" sid="2821346092156377" title="VaiVolta">
                     <sub-events>
                         <event-block collapsed="1" sid="389994062875012">
                             <conditions>
@@ -1088,7 +1108,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="410246311320999" title="Turtle">
+                <event-group collapsed="1" description="" sid="410246311320999" title="Turtle">
                     <sub-events>
                         <event-block collapsed="1" sid="3789689492511113">
                             <conditions>
@@ -1168,6 +1188,9 @@
                                 <condition behavior="Platform" id="1" name="Compare speed" sid="5819268432575661" type="VaiVolta">
                                     <param id="0" name="Comparison">0</param>
                                     <param id="1" name="Speed">0</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="7728279402285795" type="VaiVolta">
+                                    <param id="0" name="Instance variable">Enabled</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1331,7 +1354,7 @@
                                     </sub-events>
                                 </event-block>
                                 <comment>Se Mario atingiu tartaruga</comment>
-                                <event-block sid="63193128737748">
+                                <event-block collapsed="1" sid="63193128737748">
                                     <conditions>
                                         <condition id="-2" name="Compare Y" sid="6013198560531462" type="Mario">
                                             <param id="0" name="Comparison">3</param>

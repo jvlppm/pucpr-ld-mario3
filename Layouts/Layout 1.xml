@@ -3835,6 +3835,7 @@
                         <RequiredRunTime>2</RequiredRunTime>
                         <MaxRunTime>3</MaxRunTime>
                         <GoingRight>true</GoingRight>
+                        <Item></Item>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">

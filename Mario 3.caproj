@@ -65,6 +65,7 @@
                 <instance-variable name="RequiredRunTime" sid="731162661241641" type="number" />
                 <instance-variable name="MaxRunTime" sid="2192139122822577" type="number" />
                 <instance-variable name="GoingRight" sid="6460610714809156" type="boolean" />
+                <instance-variable name="Item" sid="8564338116134208" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="9255735361066924">
