@@ -2877,6 +2877,7 @@
                         <JumpHeight>0</JumpHeight>
                         <InitialMaxSpeed>0</InitialMaxSpeed>
                         <CanHurt>true</CanHurt>
+                        <ShouldDestroy>false</ShouldDestroy>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3521,6 +3522,7 @@
                         <JumpHeight>0</JumpHeight>
                         <InitialMaxSpeed>0</InitialMaxSpeed>
                         <CanHurt>true</CanHurt>
+                        <ShouldDestroy>false</ShouldDestroy>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3565,6 +3567,7 @@
                         <JumpHeight>0</JumpHeight>
                         <InitialMaxSpeed>0</InitialMaxSpeed>
                         <CanHurt>true</CanHurt>
+                        <ShouldDestroy>false</ShouldDestroy>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3843,6 +3846,7 @@
                         <JumpHeight>0</JumpHeight>
                         <InitialMaxSpeed>0</InitialMaxSpeed>
                         <CanHurt>true</CanHurt>
+                        <ShouldDestroy>false</ShouldDestroy>
                         <Wings>false</Wings>
                         <Hidden>false</Hidden>
                         <TimeHidden>0</TimeHidden>
@@ -3891,6 +3895,7 @@
                         <JumpHeight>0</JumpHeight>
                         <InitialMaxSpeed>0</InitialMaxSpeed>
                         <CanHurt>true</CanHurt>
+                        <ShouldDestroy>false</ShouldDestroy>
                         <Wings>true</Wings>
                         <Hidden>false</Hidden>
                         <TimeHidden>0</TimeHidden>
@@ -3939,6 +3944,7 @@
                         <JumpHeight>0</JumpHeight>
                         <InitialMaxSpeed>0</InitialMaxSpeed>
                         <CanHurt>true</CanHurt>
+                        <ShouldDestroy>false</ShouldDestroy>
                         <Wings>true</Wings>
                         <Hidden>false</Hidden>
                         <TimeHidden>0</TimeHidden>
@@ -3987,6 +3993,7 @@
                         <JumpHeight>0</JumpHeight>
                         <InitialMaxSpeed>0</InitialMaxSpeed>
                         <CanHurt>true</CanHurt>
+                        <ShouldDestroy>false</ShouldDestroy>
                         <Wings>true</Wings>
                         <Hidden>false</Hidden>
                         <TimeHidden>0</TimeHidden>
