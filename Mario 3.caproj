@@ -135,18 +135,7 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3373321279508425" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.5" y="0" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="1" y="0.5" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.5" y="1" />
-                            <point x="0.0625" y="0.9375" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -553,7 +542,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="3" loop="1" name="ShellRunning" pingpong="0" repeatcount="1" repeatto="0" sid="7781704418227764" speed="5">
+                <animation framecount="3" loop="1" name="ShellRunning" pingpong="0" repeatcount="1" repeatto="0" sid="7781704418227764" speed="10">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.964286">
                         <collision-poly>
                             <point x="1" y="1" />
@@ -608,12 +597,82 @@
         <object-type name="Function" sid="2131010694619834">
             <plugin id="Function" />
         </object-type>
+        <object-type name="TurtleRed" sid="4592887369913923">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4573284665339242" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+                <animation framecount="1" loop="1" name="Shell" pingpong="0" repeatcount="1" repeatto="0" sid="6706340182347186" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0.428571" />
+                            <point x="1" y="0.428571" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="1" name="ShellRunning" pingpong="0" repeatcount="1" repeatto="0" sid="8788332425219868" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.428571" />
+                            <point x="1" y="0.428571" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0.428571" />
+                            <point x="1" y="0.428571" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.428571" />
+                            <point x="1" y="0.428571" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="1" name="ShellLeaving" pingpong="0" repeatcount="1" repeatto="0" sid="5478378232333278" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0.428571" />
+                            <point x="1" y="0.428571" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0.428571" />
+                            <point x="1" y="0.428571" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="Wings" pingpong="0" repeatcount="1" repeatto="0" sid="86430195237854" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="VaiVolta" plugin-id="Sprite" sid="6258472206151774">
             <members>
                 <member>Goomba</member>
                 <member>TurtleGreen</member>
+                <member>TurtleRed</member>
             </members>
             <instance-variables>
                 <instance-variable name="GoingRight" sid="3255775171814651" type="boolean" />
@@ -621,6 +680,9 @@
                 <instance-variable name="AutoMirror" sid="8281300768725585" type="boolean" />
                 <instance-variable name="JumpHeight" sid="5531662528890491" type="number" />
                 <instance-variable name="InitialMaxSpeed" sid="8959919684119206" type="number" />
+                <instance-variable name="ReturnOnSign" sid="7667089607073653" type="boolean" />
+                <instance-variable name="LastMaxSpeed" sid="5706298564544752" type="number" />
+                <instance-variable name="Enabled" sid="5051193659464859" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="9716185124420312">
@@ -673,7 +735,6 @@
         <family name="Stompable" plugin-id="Sprite" sid="7473387983642362">
             <members>
                 <member>Goomba</member>
-                <member>TurtleGreen</member>
             </members>
             <instance-variables>
                 <instance-variable name="ShouldDestroy" sid="6549205445855288" type="boolean" />
@@ -682,6 +743,7 @@
         <family name="Turtle" plugin-id="Sprite" sid="9859939318582368">
             <members>
                 <member>TurtleGreen</member>
+                <member>TurtleRed</member>
             </members>
             <instance-variables>
                 <instance-variable name="Wings" sid="5369982495870444" type="boolean" />
