@@ -66,6 +66,46 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="Flor" uid="118">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <CanHurt>true</CanHurt>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>45</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>368</x>
+                        <y>400</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="volta" uid="145">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -434,46 +474,6 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Flor" uid="118">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <CanHurt>true</CanHurt>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Sine">
-                            <properties>
-                                <active-on-start>Yes</active-on-start>
-                                <movement>Vertical</movement>
-                                <wave>Sine</wave>
-                                <period>4</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>45</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>368</x>
-                        <y>400</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -3850,7 +3850,6 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -4194,6 +4193,86 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Flor" uid="148">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <CanHurt>true</CanHurt>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>45</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1872</x>
+                        <y>400</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Flor" uid="149">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <CanHurt>true</CanHurt>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>45</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1808</x>
+                        <y>416</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

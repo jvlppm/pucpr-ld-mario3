@@ -71,9 +71,6 @@
                 <behavior-type name="Platform" sid="9255735361066924">
                     <behavior id="Platform" />
                 </behavior-type>
-                <behavior-type name="DestroyOutsideLayout" sid="7107786805985203">
-                    <behavior id="destroy" />
-                </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="pequeno" pingpong="0" repeatcount="1" repeatto="0" sid="2720968426118861" speed="5">
