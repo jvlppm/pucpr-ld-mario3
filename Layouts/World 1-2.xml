@@ -280,35 +280,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MarioScrollTarget" uid="159">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="ScrollTo">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>64</x>
-                        <y>496</y>
-                        <z>0</z>
-                        <width>15</width>
-                        <height>15</height>
-                        <depth>0</depth>
-                        <hotspotX>0.466666669</hotspotX>
-                        <hotspotY>0.466666669</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Mario" uid="160">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -374,6 +345,38 @@
                         <depth>0</depth>
                         <hotspotX>0.666666687</hotspotX>
                         <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MarioScrollTarget" uid="159">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <TrackingHeight>false</TrackingHeight>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>48</x>
+                        <y>536</y>
+                        <z>0</z>
+                        <width>15</width>
+                        <height>15</height>
+                        <depth>0</depth>
+                        <hotspotX>0.466666669</hotspotX>
+                        <hotspotY>0.466666669</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -569,7 +569,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="References">
+        <object-folder expanded="0" name="References">
             <object-type name="Level1" sid="7490041033544774">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -709,7 +709,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="Helpers">
+        <object-folder expanded="1" name="Helpers">
             <object-type name="Sprite2" sid="5903152010121387">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -739,6 +739,9 @@
             </object-type>
             <object-type name="MarioScrollTarget" sid="826914144758657">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="TrackingHeight" sid="1302264082304924" type="boolean" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="ScrollTo" sid="8919422383499974">
                         <behavior id="scrollto" />

@@ -86,7 +86,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="9203101228386901" title="Run">
+                <event-group collapsed="1" description="" sid="9203101228386901" title="Run">
                     <sub-events>
                         <event-block collapsed="1" sid="6921157781144777">
                             <conditions>
@@ -254,66 +254,6 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="9191786447334264">
-                            <conditions>
-                                <condition id="-1" name="Every tick" sid="2725519925222271" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-1" name="Set X" sid="2411513986968788" type="MarioScrollTarget">
-                                    <param id="0" name="X">Mario.X</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="878343169496416">
-                                    <conditions>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7128023059155769" type="Mario">
-                                            <param id="0" name="Instance variable">Running</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="2531579802997514">
-                                            <conditions>
-                                                <condition id="-2" name="Compare Y" sid="2597708468100615" type="Mario">
-                                                    <param id="0" name="Comparison">4</param>
-                                                    <param id="1" name="Y co-ordinate">LayoutHeight - 112 + 32</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-2" name="Set Y" sid="6006150075878193" type="MarioScrollTarget">
-                                                    <param id="0" name="Y">LayoutHeight - 32</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block any="1" sid="8223506794970273">
-                                    <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="3829624077550805" type="Mario">
-                                            <param id="0" name="Instance variable">Running</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-2" name="Set Y" sid="3888156409558773" type="MarioScrollTarget">
-                                            <param id="0" name="Y">Mario.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block any="1" sid="6450081742875668">
-                                    <conditions>
-                                        <condition id="-2" name="Compare Y" sid="2651019543751379" type="MarioScrollTarget">
-                                            <param id="0" name="Comparison">2</param>
-                                            <param id="1" name="Y co-ordinate">LayoutHeight - 112 + 32</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-2" name="Set Y" sid="726593827794938" type="MarioScrollTarget">
-                                            <param id="0" name="Y">Mario.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -2280,5 +2220,116 @@
                 </action>
             </actions>
         </event-block>
+        <event-group collapsed="1" description="" sid="6728220366541151" title="Camera">
+            <sub-events>
+                <event-block sid="3214168021449811">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="8205288933528406" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="214965930722121" type="MarioScrollTarget">
+                            <param id="0" name="X">Mario.X</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1701860118826781">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="5542845890644474" type="Mario">
+                            <param id="0" name="Instance variable">Running</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5736756619083437" type="MarioScrollTarget">
+                            <param id="0" name="Instance variable">TrackingHeight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="6559582212245204" type="MarioScrollTarget">
+                            <param id="0" name="Y">MarioScrollTarget.Y - dt * 128</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2643417055011139">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="7148092147432549" type="MarioScrollTarget">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">Mario.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="8386017625174029" type="MarioScrollTarget">
+                                    <param id="0" name="Instance variable">TrackingHeight</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9374186418511748">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3391435046540092" type="System" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6431721003389405" type="Mario">
+                            <param id="0" name="Instance variable">Running</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-2" name="Set Y" sid="6925363738642726" type="MarioScrollTarget">
+                            <param id="0" name="Y">MarioScrollTarget.Y + dt * 64</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1319635625596631">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="9530426394795364" type="Mario">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">LayoutHeight - 112</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="5576103402566127" type="MarioScrollTarget">
+                                    <param id="0" name="Instance variable">TrackingHeight</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="63103245422181">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="9841317341767902" type="MarioScrollTarget">
+                            <param id="0" name="Instance variable">TrackingHeight</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="7628473802124688" type="MarioScrollTarget">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">Mario.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="3473986884006192" type="MarioScrollTarget">
+                            <param id="0" name="Y">Mario.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7033443683594504">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="8604798423065068" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1753022197825493">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="217537218384588" type="MarioScrollTarget">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">LayoutHeight - 112</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="537674861163903" type="MarioScrollTarget">
+                                    <param id="0" name="Y">LayoutHeight - 112</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
