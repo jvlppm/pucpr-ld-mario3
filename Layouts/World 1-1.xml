@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Layout 1</name>
+    <name>World 1-1</name>
     <sid>6158797024295319</sid>
-    <event-sheet>Event sheet 1</event-sheet>
+    <event-sheet>GamePlayEvents</event-sheet>
     <size>
         <width>2816</width>
         <height>472</height>
@@ -27,7 +27,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="SuperMarioBros3World1Area" uid="1">
+                <instance type="Level1" uid="1">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -260,7 +260,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SceneryBush" uid="125">
+                <instance type="Bush" uid="125">
                     <properties>
                         <left-margin>0</left-margin>
                         <right-margin>0</right-margin>
@@ -286,7 +286,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SceneryBush" uid="64">
+                <instance type="Bush" uid="64">
                     <properties>
                         <left-margin>0</left-margin>
                         <right-margin>0</right-margin>
@@ -564,7 +564,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Estrela" uid="71">
+                <instance type="EndOfLevel" uid="71">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2747,39 +2747,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Floor1" uid="15">
-                    <properties>
-                        <left-margin>16</left-margin>
-                        <right-margin>16</right-margin>
-                        <top-margin>16</top-margin>
-                        <bottom-margin>0</bottom-margin>
-                        <edges>Tile</edges>
-                        <fill>Tile</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1664</x>
-                        <y>416</y>
-                        <z>0</z>
-                        <width>576</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Floor1" uid="16">
                     <properties>
                         <left-margin>16</left-margin>
@@ -3142,7 +3109,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SceneryBush" uid="126">
+                <instance type="Bush" uid="126">
                     <properties>
                         <left-margin>0</left-margin>
                         <right-margin>0</right-margin>
@@ -3168,7 +3135,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SceneryBush" uid="127">
+                <instance type="Bush" uid="127">
                     <properties>
                         <left-margin>0</left-margin>
                         <right-margin>0</right-margin>
@@ -3194,7 +3161,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SceneryBush" uid="128">
+                <instance type="Bush" uid="128">
                     <properties>
                         <left-margin>0</left-margin>
                         <right-margin>0</right-margin>
@@ -3353,8 +3320,8 @@
                                 <max-speed>100</max-speed>
                                 <acceleration>200</acceleration>
                                 <deceleration>200</deceleration>
-                                <jump-strength>250</jump-strength>
-                                <gravity>500</gravity>
+                                <jump-strength>320</jump-strength>
+                                <gravity>800</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
                                 <default-controls>Yes</default-controls>
                                 <initial-state>Enabled</initial-state>
@@ -3685,7 +3652,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FlyingGoomba" uid="150">
+                <instance type="NPC_FlyingGoomba" uid="150">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4166,6 +4133,72 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Floor1" uid="15">
+                    <properties>
+                        <left-margin>16</left-margin>
+                        <right-margin>16</right-margin>
+                        <top-margin>16</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1664</x>
+                        <y>416</y>
+                        <z>0</z>
+                        <width>576</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Floor1" uid="36">
+                    <properties>
+                        <left-margin>16</left-margin>
+                        <right-margin>16</right-margin>
+                        <top-margin>16</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2816</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>24</width>
+                        <height>432</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -4183,7 +4216,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Black" uid="25">
+                <instance type="StatusBar" uid="25">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

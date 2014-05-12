@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Event sheet 1</name>
+    <name>GamePlayEvents</name>
     <events>
-        <variable constant="0" name="Timer" sid="2849380820232914" static="0" type="number">300</variable>
+        <variable constant="0" name="World" sid="1123216530591473" static="0" type="number">1</variable>
+        <variable constant="0" name="Level" sid="2135691049198608" static="0" type="number">1</variable>
         <variable constant="0" name="Points" sid="5750279857023693" static="0" type="number">0</variable>
         <variable constant="0" name="Lives" sid="8297701242012796" static="0" type="number">3</variable>
-        <variable constant="0" name="World" sid="1123216530591473" static="0" type="number">1</variable>
         <variable constant="0" name="Coins" sid="2863490799107284" static="0" type="number">0</variable>
-        <event-group collapsed="1" description="" sid="5115914260203696" title="Mario">
+        <variable constant="0" name="Timer" sid="2849380820232914" static="0" type="number">300</variable>
+        <event-group description="" sid="5115914260203696" title="Mario">
             <sub-events>
                 <event-group collapsed="1" description="" sid="2304413015275258" title="Controls">
                     <sub-events>
@@ -85,7 +86,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="9203101228386901" title="Run">
+                <event-group description="" sid="9203101228386901" title="Run">
                     <sub-events>
                         <event-block collapsed="1" sid="6921157781144777">
                             <conditions>
@@ -254,7 +255,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block collapsed="1" sid="9191786447334264">
+                        <event-block sid="9191786447334264">
                             <conditions>
                                 <condition id="-1" name="Every tick" sid="2725519925222271" type="System" />
                             </conditions>
@@ -629,9 +630,9 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4607093846203148" title="Blocos">
+        <event-group collapsed="1" description="" sid="4607093846203148" title="Blocos">
             <sub-events>
-                <event-block sid="840130739477035">
+                <event-block collapsed="1" sid="840130739477035">
                     <conditions>
                         <condition id="0" name="On function" sid="2272285741163069" type="Function">
                             <param id="0" name="Name">&quot;HitBlock&quot;</param>
@@ -1801,39 +1802,39 @@
                     <sub-events>
                         <event-block sid="2180600070395272">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="8961751542465025" type="FlyingGoomba">
+                                <condition id="-8" name="Is boolean instance variable set" sid="8961751542465025" type="NPC_FlyingGoomba">
                                     <param id="0" name="Instance variable">ShouldDestroy</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="7227422196950481" type="FlyingGoomba">
+                                <condition id="-7" name="Compare instance variable" sid="7227422196950481" type="NPC_FlyingGoomba">
                                     <param id="0" name="Instance variable">JumpHeight</param>
                                     <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="7620752055685917" type="FlyingGoomba">
+                                <action id="-13" name="Set boolean" sid="7620752055685917" type="NPC_FlyingGoomba">
                                     <param id="0" name="Instance variable">ShouldDestroy</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="8269638390427197" type="FlyingGoomba">
+                                <action id="-10" name="Set value" sid="8269638390427197" type="NPC_FlyingGoomba">
                                     <param id="0" name="Instance variable">JumpHeight</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action behavior="Platform" id="5" name="Set gravity" sid="2234578843256227" type="FlyingGoomba">
+                                <action behavior="Platform" id="5" name="Set gravity" sid="2234578843256227" type="NPC_FlyingGoomba">
                                     <param id="0" name="Gravity">500</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="244955204765299">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="7710095319640613" type="FlyingGoomba">
+                                <condition id="-7" name="Compare instance variable" sid="7710095319640613" type="NPC_FlyingGoomba">
                                     <param id="0" name="Instance variable">JumpHeight</param>
                                     <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="5851247347421011" type="FlyingGoomba">
+                                <action id="4" name="Set animation" sid="5851247347421011" type="NPC_FlyingGoomba">
                                     <param id="0" name="Animation">&quot;Jumping&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
@@ -1841,14 +1842,14 @@
                         </event-block>
                         <event-block sid="2360593640543579">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="8484319798403165" type="FlyingGoomba">
+                                <condition id="-7" name="Compare instance variable" sid="8484319798403165" type="NPC_FlyingGoomba">
                                     <param id="0" name="Instance variable">JumpHeight</param>
                                     <param id="1" name="Comparison">3</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="6289181884721348" type="FlyingGoomba">
+                                <action id="4" name="Set animation" sid="6289181884721348" type="NPC_FlyingGoomba">
                                     <param id="0" name="Animation">&quot;Default&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
@@ -2040,7 +2041,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5318515743762829" title="Global">
+        <event-group collapsed="1" description="" sid="5318515743762829" title="Global">
             <sub-events>
                 <event-block sid="1604368739676953">
                     <conditions>
@@ -2070,17 +2071,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="829883570039619" type="System">
-                            <param id="0" name="Variable">Points</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="2879816064570748" type="System">
-                            <param id="0" name="Variable">Lives</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="1841841324545494" type="System">
-                            <param id="0" name="Variable">Coins</param>
-                            <param id="1" name="Value">0</param>
+                        <action id="0" name="Call function" sid="4944973413413469" type="Function">
+                            <param id="0" name="Name">&quot;GameOver&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -2220,7 +2213,72 @@
                         <action id="-9" name="Destroy" sid="5137772602276989" type="Mario" />
                     </actions>
                 </event-block>
+                <event-block sid="680810680820674">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2549817382262483" type="Mario">
+                            <param id="0" name="Object">EndOfLevel</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9138115429043002">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7878632139178332" type="System">
+                                    <param id="0" name="Variable">World</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4393864971514508">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="9857396904735962" type="System">
+                                            <param id="0" name="Variable">Level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="8908994954537918" type="System">
+                                            <param id="0" name="Layout">World 1-1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="3852645975958675">
+            <conditions>
+                <condition id="0" name="On function" sid="1971407342710576" type="Function">
+                    <param id="0" name="Name">&quot;GameOver&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="829883570039619" type="System">
+                    <param id="0" name="Variable">Points</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="2879816064570748" type="System">
+                    <param id="0" name="Variable">Lives</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-9" name="Set value" sid="1841841324545494" type="System">
+                    <param id="0" name="Variable">Coins</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="8570410688269278" type="System">
+                    <param id="0" name="Variable">Level</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="3666391374465034" type="System">
+                    <param id="0" name="Variable">World</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
