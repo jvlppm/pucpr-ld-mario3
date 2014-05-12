@@ -260,39 +260,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pipe" uid="63">
-                    <properties>
-                        <left-margin>8</left-margin>
-                        <right-margin>8</right-margin>
-                        <top-margin>32</top-margin>
-                        <bottom-margin>0</bottom-margin>
-                        <edges>Stretch</edges>
-                        <fill>Stretch</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1792</x>
-                        <y>384</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>48</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="SceneryBush" uid="125">
                     <properties>
                         <left-margin>0</left-margin>
@@ -368,39 +335,6 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>2256</x>
-                        <y>368</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>48</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Pipe" uid="23">
-                    <properties>
-                        <left-margin>8</left-margin>
-                        <right-margin>8</right-margin>
-                        <top-margin>32</top-margin>
-                        <bottom-margin>0</bottom-margin>
-                        <edges>Stretch</edges>
-                        <fill>Stretch</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>352</x>
                         <y>368</y>
                         <z>0</z>
                         <width>32</width>
@@ -2612,6 +2546,31 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <GoingRight>false</GoingRight>
+                        <CanFall>true</CanFall>
+                        <AutoMirror>true</AutoMirror>
+                        <JumpHeight>0</JumpHeight>
+                        <InitialMaxSpeed>0</InitialMaxSpeed>
+                        <ReturnOnSign>true</ReturnOnSign>
+                        <LastMaxSpeed>0</LastMaxSpeed>
+                        <Enabled>true</Enabled>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -3085,39 +3044,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pipe" uid="62">
-                    <properties>
-                        <left-margin>8</left-margin>
-                        <right-margin>8</right-margin>
-                        <top-margin>32</top-margin>
-                        <bottom-margin>0</bottom-margin>
-                        <edges>Stretch</edges>
-                        <fill>Stretch</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1856</x>
-                        <y>368</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>48</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Goomba" uid="119">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -3438,8 +3364,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>104</x>
-                        <y>416</y>
+                        <x>56</x>
+                        <y>400</y>
                         <z>0</z>
                         <width>28</width>
                         <height>28</height>
@@ -3541,108 +3467,6 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1432</x>
-                        <y>320</y>
-                        <z>0</z>
-                        <width>18</width>
-                        <height>28</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.964285731</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TurtleGreen" uid="141">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <GoingRight>false</GoingRight>
-                        <CanFall>true</CanFall>
-                        <AutoMirror>true</AutoMirror>
-                        <JumpHeight>0</JumpHeight>
-                        <InitialMaxSpeed>0</InitialMaxSpeed>
-                        <ReturnOnSign>true</ReturnOnSign>
-                        <LastMaxSpeed>0</LastMaxSpeed>
-                        <Enabled>true</Enabled>
-                        <Wings>true</Wings>
-                        <Hidden>false</Hidden>
-                        <TimeHidden>0</TimeHidden>
-                        <MaxTimeHidden>10</MaxTimeHidden>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Platform">
-                            <properties>
-                                <max-speed>50</max-speed>
-                                <acceleration>1500</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>650</jump-strength>
-                                <gravity>500</gravity>
-                                <max-fall-speed>1000</max-fall-speed>
-                                <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="DestroyOutsideLayout" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1384</x>
-                        <y>320</y>
-                        <z>0</z>
-                        <width>18</width>
-                        <height>28</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.964285731</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TurtleGreen" uid="142">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <GoingRight>false</GoingRight>
-                        <CanFall>true</CanFall>
-                        <AutoMirror>true</AutoMirror>
-                        <JumpHeight>0</JumpHeight>
-                        <InitialMaxSpeed>0</InitialMaxSpeed>
-                        <ReturnOnSign>true</ReturnOnSign>
-                        <LastMaxSpeed>0</LastMaxSpeed>
-                        <Enabled>true</Enabled>
-                        <Wings>true</Wings>
-                        <Hidden>false</Hidden>
-                        <TimeHidden>0</TimeHidden>
-                        <MaxTimeHidden>10</MaxTimeHidden>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Platform">
-                            <properties>
-                                <max-speed>50</max-speed>
-                                <acceleration>1500</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>650</jump-strength>
-                                <gravity>500</gravity>
-                                <max-fall-speed>1000</max-fall-speed>
-                                <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="DestroyOutsideLayout" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1336</x>
                         <y>320</y>
                         <z>0</z>
                         <width>18</width>
@@ -4135,6 +3959,207 @@
                         <z>0</z>
                         <width>32</width>
                         <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TurtleGreen" uid="34">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <GoingRight>false</GoingRight>
+                        <CanFall>true</CanFall>
+                        <AutoMirror>true</AutoMirror>
+                        <JumpHeight>0</JumpHeight>
+                        <InitialMaxSpeed>0</InitialMaxSpeed>
+                        <ReturnOnSign>true</ReturnOnSign>
+                        <LastMaxSpeed>0</LastMaxSpeed>
+                        <Enabled>true</Enabled>
+                        <Wings>true</Wings>
+                        <Hidden>false</Hidden>
+                        <TimeHidden>0</TimeHidden>
+                        <MaxTimeHidden>10</MaxTimeHidden>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1384</x>
+                        <y>320</y>
+                        <z>0</z>
+                        <width>18</width>
+                        <height>28</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.964285731</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TurtleGreen" uid="35">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <GoingRight>false</GoingRight>
+                        <CanFall>true</CanFall>
+                        <AutoMirror>true</AutoMirror>
+                        <JumpHeight>0</JumpHeight>
+                        <InitialMaxSpeed>0</InitialMaxSpeed>
+                        <ReturnOnSign>true</ReturnOnSign>
+                        <LastMaxSpeed>0</LastMaxSpeed>
+                        <Enabled>true</Enabled>
+                        <Wings>true</Wings>
+                        <Hidden>false</Hidden>
+                        <TimeHidden>0</TimeHidden>
+                        <MaxTimeHidden>10</MaxTimeHidden>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1336</x>
+                        <y>320</y>
+                        <z>0</z>
+                        <width>18</width>
+                        <height>28</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.964285731</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Pipe" uid="62">
+                    <properties>
+                        <left-margin>8</left-margin>
+                        <right-margin>8</right-margin>
+                        <top-margin>32</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Stretch</edges>
+                        <fill>Stretch</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1856</x>
+                        <y>368</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>48</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Pipe" uid="63">
+                    <properties>
+                        <left-margin>8</left-margin>
+                        <right-margin>8</right-margin>
+                        <top-margin>32</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Stretch</edges>
+                        <fill>Stretch</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1792</x>
+                        <y>384</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>48</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Pipe" uid="23">
+                    <properties>
+                        <left-margin>8</left-margin>
+                        <right-margin>8</right-margin>
+                        <top-margin>32</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Stretch</edges>
+                        <fill>Stretch</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>352</x>
+                        <y>368</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>48</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

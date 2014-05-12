@@ -391,18 +391,7 @@
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6711389864713214" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.125" y="0.125" />
-                            <point x="0.5" y="0" />
-                            <point x="0.875" y="0.125" />
-                            <point x="1" y="0.5" />
-                            <point x="0.875" y="0.875" />
-                            <point x="0.5" y="1" />
-                            <point x="0.125" y="0.875" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -771,6 +760,7 @@
     <families>
         <family name="VaiVolta" plugin-id="Sprite" sid="6258472206151774">
             <members>
+                <member>cogumelo</member>
                 <member>FlyingGoomba</member>
                 <member>Goomba</member>
                 <member>TurtleGreen</member>
@@ -855,6 +845,14 @@
                 <instance-variable name="TimeHidden" sid="1956785297567639" type="number" />
                 <instance-variable name="MaxTimeHidden" sid="5650505897009346" type="number" />
             </instance-variables>
+        </family>
+        <family name="CanDie" plugin-id="Sprite" sid="796746259943752">
+            <members>
+                <member>FlyingGoomba</member>
+                <member>Goomba</member>
+                <member>TurtleGreen</member>
+                <member>TurtleRed</member>
+            </members>
         </family>
     </families>
     <layout-folder expanded="1">
