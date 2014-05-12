@@ -216,8 +216,8 @@
         <object-type name="Núvem" sid="4067881961418574">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Solid" sid="3778866058943408">
-                    <behavior id="solid" />
+                <behavior-type name="Jumpthru" sid="1389391959863897">
+                    <behavior id="jumpthru" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -667,6 +667,45 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="MarioFeather" sid="8481909943334061">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Stopped" pingpong="0" repeatcount="1" repeatto="0" sid="5086212699722656" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+                <animation framecount="2" loop="1" name="Walking" pingpong="0" repeatcount="1" repeatto="0" sid="4490539515476893" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+                <animation framecount="3" loop="1" name="Running" pingpong="0" repeatcount="1" repeatto="0" sid="9941752683393266" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+                <animation framecount="1" loop="0" name="Jumping" pingpong="0" repeatcount="1" repeatto="0" sid="7879717519816681" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+                <animation framecount="1" loop="0" name="Falling" pingpong="0" repeatcount="1" repeatto="0" sid="3723709484884663" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+                <animation framecount="1" loop="0" name="RunningJumping" pingpong="0" repeatcount="1" repeatto="0" sid="5783782318336495" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Turning" pingpong="0" repeatcount="1" repeatto="0" sid="8199817782913385" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+                <animation framecount="3" loop="0" name="FallingSlowly" pingpong="1" repeatcount="1" repeatto="0" sid="9729142496784777" speed="36">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+                <animation framecount="3" loop="1" name="Flying" pingpong="1" repeatcount="1" repeatto="0" sid="5642004893825721" speed="12">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="VaiVolta" plugin-id="Sprite" sid="6258472206151774">
@@ -724,6 +763,7 @@
         </family>
         <family name="MarioStates" plugin-id="Sprite" sid="7575165103327263">
             <members>
+                <member>MarioFeather</member>
                 <member>MarioGrande</member>
                 <member>MarioPequeno</member>
             </members>
