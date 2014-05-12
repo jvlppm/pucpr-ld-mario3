@@ -3438,8 +3438,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>888</x>
-                        <y>360</y>
+                        <x>104</x>
+                        <y>416</y>
                         <z>0</z>
                         <width>28</width>
                         <height>28</height>
@@ -3662,7 +3662,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <GoingRight>false</GoingRight>
+                        <GoingRight>true</GoingRight>
                         <CanFall>false</CanFall>
                         <AutoMirror>true</AutoMirror>
                         <JumpHeight>0</JumpHeight>
@@ -3775,7 +3775,7 @@
                         <width>24</width>
                         <height>28</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.666666687</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

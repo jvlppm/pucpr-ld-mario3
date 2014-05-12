@@ -1013,56 +1013,73 @@
         </event-group>
         <event-group description="" sid="748998548870591" title="Inimigos">
             <sub-events>
-                <event-group collapsed="1" description="" sid="8204904164989713" title="Stompable">
+                <event-group description="" sid="8204904164989713" title="Stompable">
                     <sub-events>
-                        <event-block collapsed="1" sid="1250548672559899">
+                        <event-block sid="1250548672559899">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="51585605403175" type="Mario">
                                     <param id="0" name="Object">Stompable</param>
                                 </condition>
+                                <condition id="-2" name="Compare Y" sid="1829420748834104" type="Mario">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">Stompable.Y - Stompable.Height / 4</param>
+                                </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block collapsed="1" sid="6121619177855521">
-                                    <conditions>
-                                        <condition id="-2" name="Compare Y" sid="1829420748834104" type="Mario">
-                                            <param id="0" name="Comparison">3</param>
-                                            <param id="1" name="Y co-ordinate">Stompable.Y - Stompable.Height / 4</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="4386044559007139" type="Stompable">
-                                            <param id="0" name="Instance variable">ShouldDestroy</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action behavior="Platform" id="9" name="Set vector Y" sid="6902353809359497" type="Mario">
-                                            <param id="0" name="Vector Y">-Mario.Platform.JumpStrength * 0.75</param>
-                                        </action>
-                                        <action id="-10" name="Add to" sid="7000071533099026" type="System">
-                                            <param id="0" name="Variable">Points</param>
-                                            <param id="1" name="Value">100</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="302850110877148">
-                                            <conditions>
-                                                <condition id="-11" name="For Each" sid="5924783235650656" type="System">
-                                                    <param id="0" name="Object">Hurt</param>
-                                                </condition>
-                                                <condition id="-14" name="Pick by unique ID" sid="8321612625247133" type="Hurt">
-                                                    <param id="0" name="Unique ID">Stompable.UID</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-13" name="Set boolean" sid="1485243818999558" type="Hurt">
-                                                    <param id="0" name="Instance variable">CanHurt</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="0" name="Call function" sid="8831511139514572" type="Function">
+                                    <param id="0" name="Name">&quot;Kill&quot;</param>
+                                    <param id="1" name="Parameter {n}">Stompable.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8261350456528397">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="1524697913977127" type="Turtle">
+                                    <param id="0" name="Object">Stompable</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="9596758052724141" type="Turtle">
+                                    <param id="0" name="Animation">&quot;ShellRunning&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5206106595205554" type="Function">
+                                    <param id="0" name="Name">&quot;Kill&quot;</param>
+                                    <param id="1" name="Parameter {n}">Stompable.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6528588247974667">
+                            <conditions>
+                                <condition id="0" name="On function" sid="636952509711306" type="Function">
+                                    <param id="0" name="Name">&quot;Kill&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="8321612625247133" type="Hurt">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="6842452004783882" type="Stompable">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="1087318363062467" type="Hurt">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="4386044559007139" type="Stompable">
+                                    <param id="0" name="Instance variable">ShouldDestroy</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="6902353809359497" type="Mario">
+                                    <param id="0" name="Vector Y">-Mario.Platform.JumpStrength * 0.75</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="7000071533099026" type="System">
+                                    <param id="0" name="Variable">Points</param>
+                                    <param id="1" name="Value">100</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="1485243818999558" type="Hurt">
+                                    <param id="0" name="Instance variable">CanHurt</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -1468,7 +1485,7 @@
                             </sub-events>
                         </event-block>
                         <comment>Controle de colisão</comment>
-                        <event-block sid="865293201126038">
+                        <event-block collapsed="1" sid="865293201126038">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="1806379980546806" type="Mario">
                                     <param id="0" name="Object">Turtle</param>
@@ -1571,7 +1588,7 @@
                                     <actions />
                                     <sub-events>
                                         <comment>Se Mario está na mesma altura da tartaruga</comment>
-                                        <event-block any="1" collapsed="1" sid="2620678160587021">
+                                        <event-block any="1" sid="2620678160587021">
                                             <conditions>
                                                 <condition id="-2" name="Compare Y" sid="1472772664333533" type="Mario">
                                                     <param id="0" name="Comparison">4</param>
@@ -1612,29 +1629,29 @@
                                                             <sub-events>
                                                                 <event-block sid="7213885171515573">
                                                                     <conditions>
-                                                                        <condition id="-1" name="Compare X" sid="9517974673969179" type="Mario">
+                                                                        <condition id="-1" name="Compare X" sid="9517974673969179" type="Turtle">
                                                                             <param id="0" name="Comparison">2</param>
-                                                                            <param id="1" name="X co-ordinate">Turtle.X</param>
+                                                                            <param id="1" name="X co-ordinate">Mario.X</param>
                                                                         </condition>
                                                                     </conditions>
                                                                     <actions>
                                                                         <action id="-13" name="Set boolean" sid="5844289992395495" type="VaiVolta">
                                                                             <param id="0" name="Instance variable">GoingRight</param>
-                                                                            <param id="1" name="Value">1</param>
+                                                                            <param id="1" name="Value">0</param>
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>
                                                                 <event-block sid="9470548157416489">
                                                                     <conditions>
-                                                                        <condition id="-1" name="Compare X" sid="9316159739857064" type="Mario">
+                                                                        <condition id="-1" name="Compare X" sid="6777825400429253" type="Turtle">
                                                                             <param id="0" name="Comparison">5</param>
-                                                                            <param id="1" name="X co-ordinate">Turtle.X</param>
+                                                                            <param id="1" name="X co-ordinate">Mario.X</param>
                                                                         </condition>
                                                                     </conditions>
                                                                     <actions>
                                                                         <action id="-13" name="Set boolean" sid="355594372012995" type="VaiVolta">
                                                                             <param id="0" name="Instance variable">GoingRight</param>
-                                                                            <param id="1" name="Value">0</param>
+                                                                            <param id="1" name="Value">1</param>
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>
@@ -1756,8 +1773,37 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="6194515511656608" type="Stompable" />
+                        <action id="8" name="Set flipped" sid="6194515511656608" type="Stompable">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="2050349706267989" type="Stompable">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="4214010018402708" type="Stompable">
+                            <param id="0" name="Instance variable">ShouldDestroy</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="8946875014735682" type="Stompable">
+                            <param id="0" name="Y">Stompable.Y + Stompable.Height</param>
+                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="4253545541492535">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="2897776966916958" type="System">
+                                    <param id="0" name="Object">VaiVolta</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="7935057396614989" type="VaiVolta">
+                                    <param id="0" name="Unique ID">Stompable.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="7946008524305682" type="VaiVolta">
+                                    <param id="0" name="Vector Y">-150</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -1970,7 +2016,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="117407398332286">
+                <event-block sid="117407398332286">
                     <conditions>
                         <condition id="0" name="On function" sid="4559989034948008" type="Function">
                             <param id="0" name="Name">&quot;HitMario&quot;</param>
