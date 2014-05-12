@@ -111,19 +111,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Madeira" sid="5133455275069232">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Solid" sid="7822040909597151">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8717025352888191" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Tijolo" sid="7564011489238934">
             <plugin id="Sprite" />
             <behaviors>
@@ -225,6 +212,17 @@
         </object-type>
         <object-type name="Pena" sid="250202288427261">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="5307267664218122">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="HSine" sid="8148253638619231">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="VSine" sid="3340318014943482">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8917671886877498" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -703,10 +701,77 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="FlyingGoomba" sid="6145286977905536">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4783990727289502" speed="4">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="1" y="0.958333" />
+                            <point x="0" y="0.958333" />
+                            <point x="0" y="0.333333" />
+                            <point x="1" y="0.333333" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="1" y="0.958333" />
+                            <point x="0" y="0.958333" />
+                            <point x="0" y="0.333333" />
+                            <point x="1" y="0.333333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="Jumping" pingpong="0" repeatcount="1" repeatto="0" sid="988105533847863" speed="12">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="1" y="0.958333" />
+                            <point x="0" y="0.958333" />
+                            <point x="0" y="0.333333" />
+                            <point x="1" y="0.333333" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="1" y="0.958333" />
+                            <point x="0" y="0.958333" />
+                            <point x="0" y="0.333333" />
+                            <point x="1" y="0.333333" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="1" y="0.958333" />
+                            <point x="0" y="0.958333" />
+                            <point x="0" y="0.333333" />
+                            <point x="1" y="0.333333" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="1" y="0.958333" />
+                            <point x="0" y="0.958333" />
+                            <point x="0" y="0.333333" />
+                            <point x="1" y="0.333333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BlockWood" sid="8926877800790454">
+            <plugin id="NinePatch" />
+            <behaviors>
+                <behavior-type name="Solid" sid="972413680708941">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="VaiVolta" plugin-id="Sprite" sid="6258472206151774">
             <members>
+                <member>FlyingGoomba</member>
                 <member>Goomba</member>
                 <member>TurtleGreen</member>
                 <member>TurtleRed</member>
@@ -744,7 +809,6 @@
             <members>
                 <member>cubo</member>
                 <member>Cuboiten</member>
-                <member>Madeira</member>
                 <member>Núvem</member>
                 <member>Tijolo</member>
             </members>
@@ -752,6 +816,7 @@
         <family name="Hurt" plugin-id="Sprite" sid="9416779980886481">
             <members>
                 <member>Flor</member>
+                <member>FlyingGoomba</member>
                 <member>Goomba</member>
             </members>
             <instance-variables>
@@ -772,6 +837,7 @@
         </family>
         <family name="Stompable" plugin-id="Sprite" sid="7473387983642362">
             <members>
+                <member>FlyingGoomba</member>
                 <member>Goomba</member>
             </members>
             <instance-variables>
