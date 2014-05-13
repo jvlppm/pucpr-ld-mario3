@@ -23,7 +23,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="Level" />
+    <active-layer name="Reference" />
     <layers>
         <layer locked="1" name="Reference" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Level" parallax-in-editor="0" visible="1" />

@@ -14,7 +14,7 @@
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
         <layer name="Reference" sid="5408170367949846">
-            <initially-visible>0</initially-visible>
+            <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
@@ -22,7 +22,7 @@
                 <y>1</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
-            <opacity>0.3</opacity>
+            <opacity>0.5</opacity>
             <force-own-texture>0</force-own-texture>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>

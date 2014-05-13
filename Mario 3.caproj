@@ -49,7 +49,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="1" name="NPC">
+        <object-folder expanded="0" name="NPC">
             <object-type name="Goomba" sid="9082171431307416">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -374,10 +374,10 @@
                     <animation framecount="1" loop="0" name="grande" pingpong="0" repeatcount="1" repeatto="0" sid="7688303281402588" speed="5">
                         <frame duration="1" hotspotX="0.535714" hotspotY="1">
                             <collision-poly>
-                                <point x="0.357143" y="0.0714286" />
-                                <point x="0.642857" y="0.0714286" />
-                                <point x="0.642857" y="1" />
-                                <point x="0.357143" y="1" />
+                                <point x="0.285714" y="0.0714286" />
+                                <point x="0.785714" y="0.0714286" />
+                                <point x="0.785714" y="1" />
+                                <point x="0.285714" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -478,7 +478,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="Platforms">
+        <object-folder expanded="1" name="Platforms">
             <object-type name="BlockWood" sid="8926877800790454">
                 <plugin id="NinePatch" />
                 <behaviors>
@@ -659,8 +659,8 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
                                 <point x="0" y="0.833333" />
-                                <point x="0.0482639" y="0.682292" />
-                                <point x="0.139236" y="0" />
+                                <point x="0.0541667" y="0.679688" />
+                                <point x="0.146701" y="0" />
                                 <point x="0.194097" y="0" />
                                 <point x="0.412847" y="0.830729" />
                                 <point x="1" y="0.833333" />
@@ -679,6 +679,27 @@
                     </behavior-type>
                 </behaviors>
                 <texture />
+            </object-type>
+            <object-type name="SongBlock" sid="6831213611399789">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="State" sid="7532148918886725" type="string" />
+                    <instance-variable name="Counter" sid="4416825533600753" type="number" />
+                    <instance-variable name="MaxSlideTime" sid="9243183028635762" type="number" />
+                    <instance-variable name="InitialY" sid="229873423406716" type="number" />
+                    <instance-variable name="Direction" sid="8754363691062815" type="number" />
+                    <instance-variable name="SlideSpeed" sid="6558559369726636" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="5668724898408756">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7369440021074021" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder expanded="0" name="References">
