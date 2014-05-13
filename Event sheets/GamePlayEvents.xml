@@ -984,7 +984,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="748998548870591" title="Inimigos">
+        <event-group description="" sid="748998548870591" title="Inimigos">
             <sub-events>
                 <event-group collapsed="1" description="" sid="8204904164989713" title="Stompable">
                     <sub-events>
@@ -1147,7 +1147,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="2821346092156377" title="VaiVolta">
+                <event-group description="" sid="2821346092156377" title="VaiVolta">
                     <sub-events>
                         <event-block collapsed="1" sid="389994062875012">
                             <conditions>
@@ -1761,7 +1761,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="8422656694119811" title="FlyingGoomba">
+                <event-group description="" sid="8422656694119811" title="FlyingGoomba">
                     <sub-events>
                         <event-block sid="2180600070395272">
                             <conditions>
@@ -1820,6 +1820,116 @@
                                     <param id="0" name="Animation">&quot;Default&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="5149017173574432" title="GoombaSpawner">
+                    <sub-events>
+                        <event-block sid="5980496056092753">
+                            <conditions>
+                                <condition id="-3" name="Is on-screen" sid="7597456877512132" type="GoombaSpawner" />
+                                <condition id="-7" name="Compare instance variable" sid="5949900382723609" type="GoombaSpawner">
+                                    <param id="0" name="Instance variable">SpawningId</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-6" name="Every X seconds" sid="5298505605610585" type="System">
+                                    <param id="0" name="Interval (seconds)">GoombaSpawner.Delay</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="3931458311622967" type="System">
+                                    <param id="0" name="Object to create">Goomba</param>
+                                    <param id="1" name="Layer">GoombaSpawner.LayerNumber</param>
+                                    <param id="2" name="X">GoombaSpawner.X</param>
+                                    <param id="3" name="Y">GoombaSpawner.Y</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="2884425696750317" type="Goomba">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Object">GoombaSpawner</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="2076998207844203" type="Goomba">
+                                    <param id="0" name="Instance variable">AutoTurn</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="3186016082101397" type="Goomba">
+                                    <param id="0" name="Instance variable">CanFall</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7169562143236689" type="GoombaSpawner">
+                                    <param id="0" name="Instance variable">SpawningId</param>
+                                    <param id="1" name="Value">Goomba.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6219701862713953">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="1425312947685085" type="System">
+                                    <param id="0" name="Object">GoombaSpawner</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9215173985256151">
+                                    <conditions>
+                                        <condition id="-31" inverted="1" name="Object UID exists" sid="3991101963336988" type="System">
+                                            <param id="0" name="UID">GoombaSpawner.SpawningId</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="7073833623833419" type="GoombaSpawner">
+                                            <param id="0" name="Instance variable">SpawningId</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3655229519976037">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="7017455813416071" type="System">
+                                            <param id="0" name="Object">Goomba</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="6649153208054457" type="GoombaSpawner">
+                                            <param id="0" name="Instance variable">SpawningId</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">Goomba.UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="1233276032154842">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="4463995169047332" type="Goomba">
+                                                    <param id="0" name="Object">GoombaSpawner</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-1" name="Set X" sid="5038904438147558" type="Goomba">
+                                                    <param id="0" name="X">Goomba.X + GoombaSpawner.XSpeed * dt</param>
+                                                </action>
+                                                <action id="-2" name="Set Y" sid="5586371775207676" type="Goomba">
+                                                    <param id="0" name="Y">Goomba.Y + GoombaSpawner.YSpeed * dt</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="9505472770468966">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="5282386549323639" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-24" name="Move to top" sid="3792041290781255" type="Goomba" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="2576618092289753">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="5144360814270709" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-25" name="Move to bottom" sid="3291998965780613" type="GoombaSpawner" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -2008,7 +2118,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5318515743762829" title="Global">
+        <event-group collapsed="1" description="" sid="5318515743762829" title="Global">
             <sub-events>
                 <event-block sid="1604368739676953">
                     <conditions>
