@@ -11,7 +11,7 @@
         <variable constant="0" name="Timer" sid="2849380820232914" static="0" type="number">300</variable>
         <event-group description="" sid="5115914260203696" title="Mario">
             <sub-events>
-                <event-group collapsed="1" description="" sid="2304413015275258" title="Controls">
+                <event-group description="" sid="2304413015275258" title="Controls">
                     <sub-events>
                         <event-block sid="1141143265688858">
                             <conditions>
@@ -33,7 +33,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block collapsed="1" sid="6368221568250601">
+                        <event-block sid="6368221568250601">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="4141550879110788" type="Keyboard">
                                     <param id="0" name="Key">38 (Up arrow)</param>
@@ -70,7 +70,7 @@
                                     </conditions>
                                     <actions>
                                         <action behavior="Platform" id="9" name="Set vector Y" sid="9511271203794913" type="Mario">
-                                            <param id="0" name="Vector Y">-Mario.Platform.JumpStrength * 0.75</param>
+                                            <param id="0" name="Vector Y">-Mario.Platform.JumpStrength * 0.55</param>
                                         </action>
                                         <action id="4" name="Set animation" sid="8816843415730146" type="MarioFeather">
                                             <param id="0" name="Animation">&quot;Flying&quot;</param>
@@ -86,7 +86,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="9203101228386901" title="Run">
+                <event-group description="" sid="9203101228386901" title="Run">
                     <sub-events>
                         <event-block collapsed="1" sid="6921157781144777">
                             <conditions>
@@ -570,9 +570,9 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4607093846203148" title="Blocos">
+        <event-group collapsed="1" description="" sid="4607093846203148" title="Blocos">
             <sub-events>
-                <event-group description="" sid="9395876816556035" title="SongBlock">
+                <event-group collapsed="1" description="" sid="9395876816556035" title="SongBlock">
                     <sub-events>
                         <event-block sid="142420477216781">
                             <conditions>
@@ -585,7 +585,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="2453655139455621">
+                        <event-block collapsed="1" sid="2453655139455621">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="4048905309371269" type="SongBlock">
                                     <param id="0" name="Instance variable">State</param>
@@ -649,7 +649,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="9023833241866306">
+                        <event-block collapsed="1" sid="9023833241866306">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="5987290099196911" type="SongBlock">
                                     <param id="0" name="Instance variable">State</param>
@@ -688,7 +688,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="6813086835748718">
+                        <event-block collapsed="1" sid="6813086835748718">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="4079558242922525" type="SongBlock">
                                     <param id="0" name="Instance variable">State</param>
@@ -734,6 +734,160 @@
                                             </conditions>
                                             <actions>
                                                 <action behavior="Platform" id="9" name="Set vector Y" sid="8858321114389226" type="Mario">
+                                                    <param id="0" name="Vector Y">-200</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group collapsed="1" description="" sid="1659742495593519" title="BrickBlock">
+                    <sub-events>
+                        <event-block sid="4895374918524696">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="9171409894717594" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="7614598607348461" type="BrickBlock">
+                                    <param id="0" name="Instance variable">InitialY</param>
+                                    <param id="1" name="Value">BrickBlock.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block collapsed="1" sid="9465687990168308">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1234544170297053" type="BrickBlock">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Stopped&quot;</param>
+                                </condition>
+                                <condition id="9" name="Is overlapping at offset" sid="6134334767453021" type="Mario">
+                                    <param id="0" name="Object">BrickBlock</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4382954611297345">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="3364187385074986" type="Mario">
+                                            <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="3113590311223546" type="BrickBlock">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Value">&quot;Sliding&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7830622194133612" type="BrickBlock">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="5770511010030158" type="BrickBlock">
+                                            <param id="0" name="Instance variable">Counter</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5357593600338958">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="8325965950351255" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="8433869665311078" type="BrickBlock" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block collapsed="1" sid="9185174513658645">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1893799481832723" type="BrickBlock">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Sliding&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="6926292302543664" type="BrickBlock">
+                                    <param id="0" name="Instance variable">Counter</param>
+                                    <param id="1" name="Value">dt</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="6176035313983551" type="BrickBlock">
+                                    <param id="0" name="Y">BrickBlock.InitialY + BrickBlock.Counter * BrickBlock.Direction * BrickBlock.SlideSpeed</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="3952268875872553">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="2640037312775731" type="BrickBlock">
+                                            <param id="0" name="Instance variable">Counter</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">BrickBlock.MaxSlideTime</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="2058619194401512" type="BrickBlock">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Value">&quot;Returning&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1199781168026238" type="BrickBlock">
+                                            <param id="0" name="Instance variable">Counter</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block collapsed="1" sid="1855375927931384">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5816428935576929" type="BrickBlock">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Returning&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="7047729695792344" type="BrickBlock">
+                                    <param id="0" name="Instance variable">Counter</param>
+                                    <param id="1" name="Value">dt</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="4989740302347617" type="BrickBlock">
+                                    <param id="0" name="Y">BrickBlock.InitialY + (BrickBlock.MaxSlideTime - BrickBlock.Counter) * BrickBlock.Direction * BrickBlock.SlideSpeed</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="2606965240443276">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="3352000231998506" type="BrickBlock">
+                                            <param id="0" name="Instance variable">Counter</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">BrickBlock.MaxSlideTime</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="3721631730704471" type="BrickBlock">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Value">&quot;Stopped&quot;</param>
+                                        </action>
+                                        <action id="-2" name="Set Y" sid="6306418837145713" type="BrickBlock">
+                                            <param id="0" name="Y">BrickBlock.InitialY</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="2266953991364554">
+                                            <conditions>
+                                                <condition id="9" name="Is overlapping at offset" sid="3596726865312297" type="BrickBlock">
+                                                    <param id="0" name="Object">Mario</param>
+                                                    <param id="1" name="Offset X">0</param>
+                                                    <param id="2" name="Offset Y">-3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="9" name="Set vector Y" sid="6280850113727278" type="Mario">
                                                     <param id="0" name="Vector Y">-200</param>
                                                 </action>
                                             </actions>
@@ -952,9 +1106,112 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>Colisão com blocos</comment>
+                <event-block collapsed="1" sid="9112141263960371">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="3857536949852995" type="Turtle">
+                            <param id="0" name="Instance variable">Hidden</param>
+                        </condition>
+                        <condition id="12" name="Compare speed" sid="9621874290483846" type="Turtle">
+                            <param id="0" name="Comparison">1</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="4070260602484097" type="System">
+                            <param id="0" name="Object">Turtle</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="6605269488060664" type="VaiVolta">
+                            <param id="0" name="Unique ID">Turtle.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block collapsed="1" sid="8772683248126767">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="5259991655524605" type="VaiVolta">
+                                    <param id="0" name="Instance variable">GoingRight</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4441268266339371">
+                                    <conditions>
+                                        <condition id="9" name="Is overlapping at offset" sid="7359586817970202" type="Turtle">
+                                            <param id="0" name="Object">BrickBlock</param>
+                                            <param id="1" name="Offset X">-2</param>
+                                            <param id="2" name="Offset Y">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="2130975680027875" type="BrickBlock" />
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="525075808157274">
+                                    <conditions>
+                                        <condition id="9" name="Is overlapping at offset" sid="3777789845796238" type="Turtle">
+                                            <param id="0" name="Object">cubo</param>
+                                            <param id="1" name="Offset X">Turtle.BBoxLeft -2</param>
+                                            <param id="2" name="Offset Y">Turtle.Y</param>
+                                        </condition>
+                                        <condition id="9" name="Is overlapping at offset" sid="9867351342446696" type="Turtle">
+                                            <param id="0" name="Object">CuboItem</param>
+                                            <param id="1" name="Offset X">Turtle.BBoxLeft -2</param>
+                                            <param id="2" name="Offset Y">Turtle.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="8083679243785623" type="Function">
+                                            <param id="0" name="Name">&quot;HitBlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">cubo.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block collapsed="1" sid="3684156538547226">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="2015846392288309" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9399348052837866">
+                                    <conditions>
+                                        <condition id="9" name="Is overlapping at offset" sid="3604100886062024" type="Turtle">
+                                            <param id="0" name="Object">BrickBlock</param>
+                                            <param id="1" name="Offset X">2</param>
+                                            <param id="2" name="Offset Y">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="5333765399732464" type="BrickBlock" />
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="6647821706900175">
+                                    <conditions>
+                                        <condition id="9" name="Is overlapping at offset" sid="4390160180878413" type="Turtle">
+                                            <param id="0" name="Object">cubo</param>
+                                            <param id="1" name="Offset X">Turtle.BBoxRight + 2</param>
+                                            <param id="2" name="Offset Y">Turtle.Y</param>
+                                        </condition>
+                                        <condition id="9" name="Is overlapping at offset" sid="5023996836379919" type="Turtle">
+                                            <param id="0" name="Object">CuboItem</param>
+                                            <param id="1" name="Offset X">Turtle.BBoxRight + 2</param>
+                                            <param id="2" name="Offset Y">Turtle.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="2349347135767444" type="Function">
+                                            <param id="0" name="Name">&quot;HitBlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">cubo.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8779966539198683" title="Itens">
+        <event-group collapsed="1" description="" sid="8779966539198683" title="Itens">
             <sub-events>
                 <event-block sid="9454918499351548">
                     <conditions>
@@ -1156,7 +1413,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="748998548870591" title="Inimigos">
+        <event-group description="" sid="748998548870591" title="Inimigos">
             <sub-events>
                 <event-group collapsed="1" description="" sid="8204904164989713" title="Stompable">
                     <sub-events>
@@ -1319,9 +1576,20 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="2821346092156377" title="VaiVolta">
+                <event-group collapsed="1" description="" sid="2821346092156377" title="VaiVolta">
                     <sub-events>
-                        <event-block collapsed="1" sid="389994062875012">
+                        <event-block sid="833288381658232">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="4358376215092602" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="2069603379404373" type="VaiVolta">
+                                    <param id="0" name="Instance variable">InitialMaxSpeed</param>
+                                    <param id="1" name="Value">VaiVolta.Platform.MaxSpeed</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="389994062875012">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="415080183143652" type="VaiVolta">
                                     <param id="0" name="Instance variable">Enabled</param>
@@ -1425,7 +1693,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block collapsed="1" sid="3294171854727859">
+                                <event-block sid="3294171854727859">
                                     <conditions>
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1303459082437466" type="VaiVolta">
                                             <param id="0" name="Instance variable">CanFall</param>
@@ -1552,7 +1820,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="410246311320999" title="Turtle">
+                <event-group description="" sid="410246311320999" title="Turtle">
                     <sub-events>
                         <event-block sid="3789689492511113">
                             <conditions>
@@ -1711,7 +1979,7 @@
                             </sub-events>
                         </event-block>
                         <comment>Controle de colisão</comment>
-                        <event-block collapsed="1" sid="865293201126038">
+                        <event-block sid="865293201126038">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="1806379980546806" type="Mario">
                                     <param id="0" name="Object">Turtle</param>
@@ -1736,7 +2004,7 @@
                                         </action>
                                     </actions>
                                     <sub-events>
-                                        <event-block sid="7308418754065128">
+                                        <event-block collapsed="1" sid="7308418754065128">
                                             <conditions>
                                                 <condition id="-11" name="For Each" sid="1897237025084288" type="System">
                                                     <param id="0" name="Object">VaiVolta</param>
@@ -1845,7 +2113,7 @@
                                                             </conditions>
                                                             <actions>
                                                                 <action behavior="Platform" id="1" name="Set max speed" sid="5807541124857242" type="VaiVolta">
-                                                                    <param id="0" name="Max Speed">200</param>
+                                                                    <param id="0" name="Max Speed">140</param>
                                                                 </action>
                                                                 <action id="4" name="Set animation" sid="2976638939860684" type="Turtle">
                                                                     <param id="0" name="Animation">&quot;ShellRunning&quot;</param>
@@ -2290,7 +2558,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5318515743762829" title="Global">
+        <event-group collapsed="1" description="" sid="5318515743762829" title="Global">
             <sub-events>
                 <event-block sid="1604368739676953">
                     <conditions>
@@ -2326,17 +2594,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="2552031052676913">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="2439634643039755" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="2279733012050567" type="System">
-                            <param id="0" name="Variable">Timer</param>
-                            <param id="1" name="Value">300</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="9482111611904989">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="2017291512212623" type="System">
@@ -2362,14 +2619,14 @@
                         <action id="-9" name="Destroy" sid="9447906162385037" type="Mario" />
                     </actions>
                 </event-block>
-                <event-block sid="833288381658232">
+                <event-block sid="2552031052676913">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="4358376215092602" type="System" />
+                        <condition id="-2" name="On start of layout" sid="2439634643039755" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="2069603379404373" type="VaiVolta">
-                            <param id="0" name="Instance variable">InitialMaxSpeed</param>
-                            <param id="1" name="Value">VaiVolta.Platform.MaxSpeed</param>
+                        <action id="-9" name="Set value" sid="2279733012050567" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">300</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2486,12 +2743,12 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-2" name="Go to layout" sid="8908994954537918" type="System">
-                                            <param id="0" name="Layout">World 1-2</param>
-                                        </action>
                                         <action id="-9" name="Set value" sid="7664430635070434" type="System">
                                             <param id="0" name="Variable">Level</param>
                                             <param id="1" name="Value">2</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="8908994954537918" type="System">
+                                            <param id="0" name="Layout">World 1-2</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -2505,13 +2762,36 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Call function" sid="4877682787089712" type="Function">
-                                            <param id="0" name="Name">&quot;GameOver&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
+                                        <action id="-2" name="Go to layout" sid="6427474062733847" type="System">
+                                            <param id="0" name="Layout">CustomLevel</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="9549598154516214" type="System">
+                                            <param id="0" name="Variable">World</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="3593030721918411" type="System">
+                                            <param id="0" name="Variable">Level</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="8894837313708899">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8019635739534356" type="System" />
+                                <condition id="-14" name="Compare variable" sid="4917971154495537" type="System">
+                                    <param id="0" name="Variable">World</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="4877682787089712" type="Function">
+                                    <param id="0" name="Name">&quot;GameOver&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -2524,6 +2804,9 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-2" name="Go to layout" sid="2305894119109072" type="System">
+                    <param id="0" name="Layout">World 1-1</param>
+                </action>
                 <action id="-9" name="Set value" sid="829883570039619" type="System">
                     <param id="0" name="Variable">Points</param>
                     <param id="1" name="Value">0</param>
@@ -2543,9 +2826,6 @@
                 <action id="-9" name="Set value" sid="3666391374465034" type="System">
                     <param id="0" name="Variable">World</param>
                     <param id="1" name="Value">1</param>
-                </action>
-                <action id="-2" name="Go to layout" sid="2305894119109072" type="System">
-                    <param id="0" name="Layout">World 1-1</param>
                 </action>
             </actions>
         </event-block>
@@ -2657,6 +2937,72 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="1418648498937071" title="Platforms">
+            <sub-events>
+                <event-block sid="3392479233237644">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="2193745764701724" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="3474025784694463" type="VerticalPlatformSpawner">
+                            <param id="0" name="Instance variable">DelayCount</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1433633975587835">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1763271083756205" type="VerticalPlatformSpawner">
+                            <param id="0" name="Instance variable">PlatformYDirection</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="4861091049793952" type="System">
+                            <param id="0" name="Object">VerticalPlatformSpawner</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4044800478791594" type="VerticalPlatformSpawner">
+                            <param id="0" name="Instance variable">DelayCount</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">VerticalPlatformSpawner.MaxDelay</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="7990664124509928" type="VerticalPlatformSpawner">
+                            <param id="0" name="Instance variable">DelayCount</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="9767720504046376" type="System">
+                            <param id="0" name="Object to create">VerticalPlatform</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">VerticalPlatformSpawner.X</param>
+                            <param id="3" name="Y">VerticalPlatformSpawner.Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4818000041437368" type="VerticalPlatform">
+                            <param id="0" name="Instance variable">MoveY</param>
+                            <param id="1" name="Value">clamp(VerticalPlatformSpawner.PlatformYDirection, -1, 1) * VerticalPlatformSpawner.PlatformYSpeed</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="1702523995817906" type="VerticalPlatform">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">VerticalPlatformSpawner</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="466353976186088">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8669306685257334" type="VerticalPlatform">
+                            <param id="0" name="Instance variable">MoveY</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="8439852838157486" type="VerticalPlatform">
+                            <param id="0" name="Y">VerticalPlatform.Y + VerticalPlatform.MoveY * dt</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

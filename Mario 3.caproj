@@ -48,7 +48,7 @@
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-folder expanded="0" name="NPC">
             <object-type name="Goomba" sid="9082171431307416">
                 <plugin id="Sprite" />
@@ -150,26 +150,26 @@
                     <animation framecount="3" loop="1" name="ShellRunning" pingpong="0" repeatcount="1" repeatto="0" sid="7781704418227764" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.964286">
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0.428571" />
-                                <point x="1" y="0.428571" />
+                                <point x="0.888889" y="1" />
+                                <point x="0.111111" y="1" />
+                                <point x="0.111111" y="0.428571" />
+                                <point x="0.888889" y="0.428571" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.964286">
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0.428571" />
-                                <point x="1" y="0.428571" />
+                                <point x="0.888889" y="1" />
+                                <point x="0.111111" y="1" />
+                                <point x="0.111111" y="0.428571" />
+                                <point x="0.888889" y="0.428571" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.964286">
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0.428571" />
-                                <point x="1" y="0.428571" />
+                                <point x="0.888889" y="1" />
+                                <point x="0.111111" y="1" />
+                                <point x="0.111111" y="0.428571" />
+                                <point x="0.888889" y="0.428571" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -219,26 +219,32 @@
                     <animation framecount="3" loop="1" name="ShellRunning" pingpong="0" repeatcount="1" repeatto="0" sid="8788332425219868" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0.428571" />
-                                <point x="1" y="0.428571" />
+                                <point x="0.777778" y="1" />
+                                <point x="0.222222" y="1" />
+                                <point x="0.222222" y="0.714286" />
+                                <point x="0.222222" y="0.428571" />
+                                <point x="0.777778" y="0.428571" />
+                                <point x="0.777778" y="0.714286" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <collision-poly>
-                                <point x="0" y="0.428571" />
-                                <point x="1" y="0.428571" />
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
+                                <point x="0.777778" y="1" />
+                                <point x="0.222222" y="1" />
+                                <point x="0.222222" y="0.714286" />
+                                <point x="0.222222" y="0.428571" />
+                                <point x="0.777778" y="0.428571" />
+                                <point x="0.777778" y="0.714286" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0.428571" />
-                                <point x="1" y="0.428571" />
+                                <point x="0.777778" y="1" />
+                                <point x="0.222222" y="1" />
+                                <point x="0.222222" y="0.714286" />
+                                <point x="0.222222" y="0.428571" />
+                                <point x="0.777778" y="0.428571" />
+                                <point x="0.777778" y="0.714286" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -478,7 +484,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="Platforms">
+        <object-folder expanded="0" name="Platforms">
             <object-type name="BlockWood" sid="8926877800790454">
                 <plugin id="NinePatch" />
                 <behaviors>
@@ -701,6 +707,55 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="VerticalPlatform" sid="1533710780207318">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="MoveY" sid="1718068889597216" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Jumpthru" sid="7213983254500007">
+                        <behavior id="jumpthru" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="2838837641767812">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5790188397067996" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MetalBlock" sid="5895560144168369">
+                <plugin id="NinePatch" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="1964023349831288">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
+            <object-type name="BrickBlock" sid="8241014226806736">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="State" sid="7000497519924518" type="string" />
+                    <instance-variable name="Counter" sid="4688631343109196" type="number" />
+                    <instance-variable name="MaxSlideTime" sid="4405253669608608" type="number" />
+                    <instance-variable name="InitialY" sid="8486270508892305" type="number" />
+                    <instance-variable name="Direction" sid="6632172071195315" type="number" />
+                    <instance-variable name="SlideSpeed" sid="3838673653410679" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="9499442530570438">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5410784062283802" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder expanded="0" name="References">
             <object-type name="Level1" sid="7490041033544774">
@@ -818,20 +873,13 @@
                     <behavior-type name="Jumpthru" sid="9461896503590343">
                         <behavior id="jumpthru" />
                     </behavior-type>
+                    <behavior-type name="Platform" sid="2968157022395335">
+                        <behavior id="Platform" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3266573959202605" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <collision-poly>
-                                <point x="0.1875" y="0.1875" />
-                                <point x="0.5" y="0" />
-                                <point x="0.8125" y="0.1875" />
-                                <point x="1" y="0.5" />
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0.5" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -842,7 +890,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="Helpers">
+        <object-folder expanded="0" name="Helpers">
             <object-type name="Sprite2" sid="5903152010121387">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -915,6 +963,20 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="VerticalPlatformSpawner" sid="725417095962827">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="PlatformYDirection" sid="5502075638965253" type="number" />
+                    <instance-variable name="MaxDelay" sid="2106238938007624" type="number" />
+                    <instance-variable name="DelayCount" sid="2463452740238828" type="number" />
+                    <instance-variable name="PlatformYSpeed" sid="8234044335988235" type="number" />
+                </instance-variables>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7888595258410159" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="Sprite" sid="7225862206003501">
             <plugin id="Sprite" />
@@ -963,6 +1025,8 @@
         <family name="BasePlatforms" plugin-id="NinePatch" sid="9017931272044194">
             <members>
                 <member>Floor1</member>
+                <member>Grass</member>
+                <member>MetalBlock</member>
                 <member>Pipe</member>
                 <member>PipeHorizontal</member>
                 <member>PlatformBlue</member>
@@ -973,6 +1037,7 @@
         </family>
         <family name="SpritePlatforms" plugin-id="Sprite" sid="1401377347163221">
             <members>
+                <member>BrickBlock</member>
                 <member>cubo</member>
                 <member>CuboItem</member>
                 <member>Núvem</member>
@@ -1034,6 +1099,7 @@
     <layout-folder expanded="1">
         <layout>World 1-1.xml</layout>
         <layout>World 1-2.xml</layout>
+        <layout>CustomLevel.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>GamePlayEvents.xml</event-sheet>

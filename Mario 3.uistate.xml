@@ -11,8 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>World 1-1</layout>
-        <layout active="1">World 1-2</layout>
-        <event-sheet>GamePlayEvents</event-sheet>
+        <layout>World 1-2</layout>
+        <layout>CustomLevel</layout>
+        <event-sheet active="1">GamePlayEvents</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -20,14 +21,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="0">
+    <families-expanded root="1">
         <family expanded="0" name="VaiVolta" />
         <family expanded="0" name="BasePlatforms" />
         <family expanded="0" name="SpritePlatforms" />
         <family expanded="0" name="Hurt" />
         <family expanded="0" name="MarioStates" />
         <family expanded="0" name="Stompable" />
-        <family expanded="0" name="Turtle" />
+        <family expanded="1" name="Turtle" />
         <family expanded="0" name="CanDie" />
     </families-expanded>
 </c2uistate>
