@@ -173,6 +173,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1776,6 +1778,8 @@
                         <InitialY>0</InitialY>
                         <Direction>0</Direction>
                         <SlideSpeed>30</SlideSpeed>
+                        <IsCoinTransformed>false</IsCoinTransformed>
+                        <CoinTimeOut>15</CoinTimeOut>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1813,6 +1817,8 @@
                         <InitialY>0</InitialY>
                         <Direction>0</Direction>
                         <SlideSpeed>30</SlideSpeed>
+                        <IsCoinTransformed>false</IsCoinTransformed>
+                        <CoinTimeOut>15</CoinTimeOut>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1850,6 +1856,8 @@
                         <InitialY>0</InitialY>
                         <Direction>0</Direction>
                         <SlideSpeed>30</SlideSpeed>
+                        <IsCoinTransformed>false</IsCoinTransformed>
+                        <CoinTimeOut>15</CoinTimeOut>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1887,6 +1895,8 @@
                         <InitialY>0</InitialY>
                         <Direction>0</Direction>
                         <SlideSpeed>30</SlideSpeed>
+                        <IsCoinTransformed>false</IsCoinTransformed>
+                        <CoinTimeOut>15</CoinTimeOut>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1924,6 +1934,8 @@
                         <InitialY>0</InitialY>
                         <Direction>0</Direction>
                         <SlideSpeed>30</SlideSpeed>
+                        <IsCoinTransformed>false</IsCoinTransformed>
+                        <CoinTimeOut>15</CoinTimeOut>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1961,6 +1973,8 @@
                         <InitialY>0</InitialY>
                         <Direction>0</Direction>
                         <SlideSpeed>30</SlideSpeed>
+                        <IsCoinTransformed>false</IsCoinTransformed>
+                        <CoinTimeOut>15</CoinTimeOut>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1998,6 +2012,8 @@
                         <InitialY>0</InitialY>
                         <Direction>0</Direction>
                         <SlideSpeed>30</SlideSpeed>
+                        <IsCoinTransformed>false</IsCoinTransformed>
+                        <CoinTimeOut>15</CoinTimeOut>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -2035,6 +2051,8 @@
                         <InitialY>0</InitialY>
                         <Direction>0</Direction>
                         <SlideSpeed>30</SlideSpeed>
+                        <IsCoinTransformed>false</IsCoinTransformed>
+                        <CoinTimeOut>15</CoinTimeOut>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -2068,6 +2086,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2094,6 +2114,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2120,6 +2142,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2146,6 +2170,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2172,6 +2198,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2198,6 +2226,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2228,6 +2258,8 @@
                         <InitialY>0</InitialY>
                         <Direction>0</Direction>
                         <SlideSpeed>30</SlideSpeed>
+                        <IsCoinTransformed>false</IsCoinTransformed>
+                        <CoinTimeOut>15</CoinTimeOut>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -2265,6 +2297,8 @@
                         <InitialY>0</InitialY>
                         <Direction>0</Direction>
                         <SlideSpeed>30</SlideSpeed>
+                        <IsCoinTransformed>false</IsCoinTransformed>
+                        <CoinTimeOut>15</CoinTimeOut>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -2302,6 +2336,8 @@
                         <InitialY>0</InitialY>
                         <Direction>0</Direction>
                         <SlideSpeed>30</SlideSpeed>
+                        <IsCoinTransformed>false</IsCoinTransformed>
+                        <CoinTimeOut>15</CoinTimeOut>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -2339,6 +2375,8 @@
                         <InitialY>0</InitialY>
                         <Direction>0</Direction>
                         <SlideSpeed>30</SlideSpeed>
+                        <IsCoinTransformed>false</IsCoinTransformed>
+                        <CoinTimeOut>15</CoinTimeOut>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -2376,6 +2414,8 @@
                         <InitialY>0</InitialY>
                         <Direction>0</Direction>
                         <SlideSpeed>30</SlideSpeed>
+                        <IsCoinTransformed>false</IsCoinTransformed>
+                        <CoinTimeOut>15</CoinTimeOut>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -2413,6 +2453,8 @@
                         <InitialY>0</InitialY>
                         <Direction>0</Direction>
                         <SlideSpeed>30</SlideSpeed>
+                        <IsCoinTransformed>false</IsCoinTransformed>
+                        <CoinTimeOut>15</CoinTimeOut>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -2446,6 +2488,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2472,6 +2516,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2498,6 +2544,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2524,6 +2572,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2550,6 +2600,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2576,6 +2628,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2606,6 +2660,8 @@
                         <InitialY>0</InitialY>
                         <Direction>0</Direction>
                         <SlideSpeed>30</SlideSpeed>
+                        <IsCoinTransformed>false</IsCoinTransformed>
+                        <CoinTimeOut>15</CoinTimeOut>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -2643,6 +2699,8 @@
                         <InitialY>0</InitialY>
                         <Direction>0</Direction>
                         <SlideSpeed>30</SlideSpeed>
+                        <IsCoinTransformed>false</IsCoinTransformed>
+                        <CoinTimeOut>15</CoinTimeOut>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -2676,6 +2734,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2702,6 +2762,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

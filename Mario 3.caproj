@@ -48,7 +48,7 @@
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-folder expanded="0" name="NPC">
             <object-type name="Goomba" sid="9082171431307416">
                 <plugin id="Sprite" />
@@ -744,6 +744,8 @@
                     <instance-variable name="InitialY" sid="8486270508892305" type="number" />
                     <instance-variable name="Direction" sid="6632172071195315" type="number" />
                     <instance-variable name="SlideSpeed" sid="3838673653410679" type="number" />
+                    <instance-variable name="IsCoinTransformed" sid="2027977547136151" type="boolean" />
+                    <instance-variable name="CoinTimeOut" sid="9625369311486472" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Solid" sid="9499442530570438">
@@ -775,7 +777,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="Items">
+        <object-folder expanded="1" name="Items">
             <object-type name="cogumelo" sid="6862354282984705">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -817,6 +819,8 @@
                 <instance-variables>
                     <instance-variable name="Tempo" sid="92775381414806" type="number" />
                     <instance-variable name="Destrói" sid="1439107912847049" type="boolean" />
+                    <instance-variable name="IsBlockTransformed" sid="3275915439917863" type="boolean" />
+                    <instance-variable name="BlockTimeOut" sid="8940312985231056" type="number" />
                 </instance-variables>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5059451805862828" speed="5">

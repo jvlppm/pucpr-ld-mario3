@@ -66,6 +66,47 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="P" uid="273">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Jumpthru">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>330</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1192</x>
+                        <y>384</y>
+                        <z>0</z>
+                        <width>15.906659126</width>
+                        <height>15.679639816</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="Flor" uid="203">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -203,6 +244,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -747,6 +790,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -773,6 +818,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -799,6 +846,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -825,6 +874,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -851,6 +902,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -877,6 +930,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -903,6 +958,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -929,6 +986,8 @@
                     <instance-variables>
                         <Tempo>0</Tempo>
                         <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2118,6 +2177,84 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="BrickBlock" uid="271">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <State>Stopped</State>
+                        <Counter>0</Counter>
+                        <MaxSlideTime>0.1</MaxSlideTime>
+                        <InitialY>0</InitialY>
+                        <Direction>0</Direction>
+                        <SlideSpeed>30</SlideSpeed>
+                        <IsCoinTransformed>false</IsCoinTransformed>
+                        <CoinTimeOut>15</CoinTimeOut>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1208</x>
+                        <y>376</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="BrickBlock" uid="272">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <State>Stopped</State>
+                        <Counter>0</Counter>
+                        <MaxSlideTime>0.1</MaxSlideTime>
+                        <InitialY>0</InitialY>
+                        <Direction>0</Direction>
+                        <SlideSpeed>30</SlideSpeed>
+                        <IsCoinTransformed>false</IsCoinTransformed>
+                        <CoinTimeOut>15</CoinTimeOut>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1192</x>
+                        <y>376</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>

@@ -260,7 +260,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="677378389262257" title="Animations">
+                <event-group description="" sid="677378389262257" title="Animations">
                     <sub-events>
                         <event-group collapsed="1" description="" sid="7439610593452538" title="States">
                             <sub-events>
@@ -515,7 +515,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group collapsed="1" description="" sid="1508817693464832" title="Slide">
+                        <event-group description="" sid="1508817693464832" title="Slide">
                             <sub-events>
                                 <event-block sid="8007849784790859">
                                     <conditions>
@@ -1222,7 +1222,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8779966539198683" title="Itens">
+        <event-group description="" sid="8779966539198683" title="Itens">
             <sub-events>
                 <event-block sid="9454918499351548">
                     <conditions>
@@ -1451,6 +1451,142 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="9915798958321101">
+                    <conditions>
+                        <condition id="9" name="Is overlapping at offset" sid="2396465578439212" type="Mario">
+                            <param id="0" name="Object">P</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">4</param>
+                        </condition>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="6304546033123724" type="Mario" />
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="1836009759110026" type="P">
+                            <param id="0" name="Object">BrickBlock</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="7939380894426843" type="P" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="7050362315147707">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="447153234927142" type="System">
+                                    <param id="0" name="Object">Moeda</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3728249243099828" type="Moeda">
+                                    <param id="0" name="Instance variable">IsBlockTransformed</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="2132182757992631" type="System">
+                                    <param id="0" name="Object to create">BrickBlock</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">Moeda.X</param>
+                                    <param id="3" name="Y">Moeda.Y</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="1262353207861105" type="BrickBlock">
+                                    <param id="0" name="Instance variable">IsCoinTransformed</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="4063941604297692" type="Moeda" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="7701724262098034">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="439622478161774" type="System">
+                                    <param id="0" name="Object">BrickBlock</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="838744717312963" type="BrickBlock">
+                                    <param id="0" name="Instance variable">IsCoinTransformed</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="3175562625737601" type="System">
+                                    <param id="0" name="Object to create">Moeda</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">BrickBlock.X</param>
+                                    <param id="3" name="Y">BrickBlock.Y</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="2976717226879912" type="Moeda">
+                                    <param id="0" name="Instance variable">IsBlockTransformed</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="2972970449741838" type="BrickBlock" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3012166139145076">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="5824124667374602" type="Moeda">
+                            <param id="0" name="Instance variable">IsBlockTransformed</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="1614401544580552" type="Moeda">
+                            <param id="0" name="Instance variable">BlockTimeOut</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1774864654637392">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1224883529524075" type="Moeda">
+                                    <param id="0" name="Instance variable">BlockTimeOut</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-11" name="For Each" sid="3106700910951404" type="System">
+                                    <param id="0" name="Object">Moeda</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="9500158709683543" type="System">
+                                    <param id="0" name="Object to create">BrickBlock</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">Moeda.X</param>
+                                    <param id="3" name="Y">Moeda.Y</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="6630313456437919" type="Moeda" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="675972798541545">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="5572416044256363" type="BrickBlock">
+                            <param id="0" name="Instance variable">IsCoinTransformed</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="1548183078350742" type="BrickBlock">
+                            <param id="0" name="Instance variable">CoinTimeOut</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="7971955258730158">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9954188943749481" type="BrickBlock">
+                                    <param id="0" name="Instance variable">CoinTimeOut</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-11" name="For Each" sid="6696735861746408" type="System">
+                                    <param id="0" name="Object">BrickBlock</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="4748151625957507" type="System">
+                                    <param id="0" name="Object to create">Moeda</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">Moeda.X</param>
+                                    <param id="3" name="Y">Moeda.Y</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="6583637350170775" type="BrickBlock" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="748998548870591" title="Inimigos">
@@ -1560,9 +1696,6 @@
                                         <condition id="-8" name="Is boolean instance variable set" sid="3753516579502191" type="VaiVolta">
                                             <param id="0" name="Instance variable">GoingRight</param>
                                         </condition>
-                                        <condition behavior="Platform" disabled="1" id="10" inverted="1" name="Is by wall" sid="3287348303471662" type="VaiVolta">
-                                            <param id="0" name="Side">1</param>
-                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action behavior="Platform" id="8" name="Set vector X" sid="8167859147696599" type="VaiVolta">
@@ -1574,9 +1707,6 @@
                                     <conditions>
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5173116570507789" type="VaiVolta">
                                             <param id="0" name="Instance variable">GoingRight</param>
-                                        </condition>
-                                        <condition behavior="Platform" disabled="1" id="10" inverted="1" name="Is by wall" sid="9819510483880648" type="VaiVolta">
-                                            <param id="0" name="Side">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1791,7 +1921,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="410246311320999" title="Turtle">
+                <event-group description="" sid="410246311320999" title="Turtle">
                     <sub-events>
                         <event-block sid="8261350456528397">
                             <conditions>
@@ -2125,7 +2255,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>Controle de colisão</comment>
+                        <comment>Controle de colisão com o Mario</comment>
                         <event-block collapsed="1" sid="865293201126038">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="1806379980546806" type="Mario">
@@ -2450,7 +2580,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="6219701862713953">
+                        <event-block collapsed="1" sid="6219701862713953">
                             <conditions>
                                 <condition id="-11" name="For Each" sid="1425312947685085" type="System">
                                     <param id="0" name="Object">GoombaSpawner</param>
@@ -2534,7 +2664,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="7684062520144482">
+                <event-block collapsed="1" sid="7684062520144482">
                     <conditions>
                         <condition id="0" name="On function" sid="785559591547587" type="Function">
                             <param id="0" name="Name">&quot;InstantKill&quot;</param>
@@ -2726,7 +2856,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5318515743762829" title="Global">
+        <event-group collapsed="1" description="" sid="5318515743762829" title="Global">
             <sub-events>
                 <event-block sid="1604368739676953">
                     <conditions>
