@@ -1117,6 +1117,14 @@
                 <member>Tijolo</member>
             </members>
         </family>
+        <family name="Item" plugin-id="Sprite" sid="7587719599629641">
+            <members>
+                <member>cogumelo</member>
+                <member>Moeda</member>
+                <member>P</member>
+                <member>Pena</member>
+            </members>
+        </family>
     </families>
     <layout-folder expanded="1">
         <layout>World 1-1.xml</layout>

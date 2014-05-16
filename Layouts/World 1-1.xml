@@ -1903,8 +1903,8 @@
                         <x>200</x>
                         <y>512</y>
                         <z>0</z>
-                        <width>20</width>
-                        <height>18</height>
+                        <width>16</width>
+                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

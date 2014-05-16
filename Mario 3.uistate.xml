@@ -11,9 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>World 1-1</layout>
-        <layout>World 1-2</layout>
+        <layout active="1">World 1-2</layout>
         <layout>CustomLevel</layout>
-        <event-sheet active="1">GamePlayEvents</event-sheet>
+        <event-sheet>GamePlayEvents</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -21,7 +21,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="0">
+    <families-expanded root="1">
         <family expanded="0" name="VaiVolta" />
         <family expanded="0" name="BasePlatforms" />
         <family expanded="0" name="SpritePlatforms" />
@@ -32,5 +32,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="CanDie" />
         <family expanded="0" name="BaseWalls" />
         <family expanded="0" name="SpriteWalls" />
+        <family expanded="0" name="Item" />
     </families-expanded>
 </c2uistate>
