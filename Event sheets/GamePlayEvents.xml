@@ -570,7 +570,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4607093846203148" title="Blocos">
+        <event-group description="" sid="4607093846203148" title="Blocos">
             <sub-events>
                 <event-group collapsed="1" description="" sid="9395876816556035" title="SongBlock">
                     <sub-events>
@@ -1066,12 +1066,12 @@
                     <sub-events>
                         <event-block any="1" sid="5263079769521691">
                             <conditions>
-                                <condition id="9" name="Is overlapping at offset" sid="4879796748719483" type="Turtle">
+                                <condition id="9" name="Is overlapping at offset" sid="4879796748719483" type="VaiVolta">
                                     <param id="0" name="Object">CuboItem</param>
                                     <param id="1" name="Offset X">1</param>
                                     <param id="2" name="Offset Y">0</param>
                                 </condition>
-                                <condition id="9" name="Is overlapping at offset" sid="1793016073084708" type="Turtle">
+                                <condition id="9" name="Is overlapping at offset" sid="1793016073084708" type="VaiVolta">
                                     <param id="0" name="Object">CuboItem</param>
                                     <param id="1" name="Offset X">-1</param>
                                     <param id="2" name="Offset Y">0</param>
@@ -1086,12 +1086,12 @@
                         </event-block>
                         <event-block any="1" sid="417211958181707">
                             <conditions>
-                                <condition id="9" name="Is overlapping at offset" sid="4516752073795616" type="Turtle">
+                                <condition id="9" name="Is overlapping at offset" sid="4516752073795616" type="VaiVolta">
                                     <param id="0" name="Object">cubo</param>
                                     <param id="1" name="Offset X">1</param>
                                     <param id="2" name="Offset Y">0</param>
                                 </condition>
-                                <condition id="9" name="Is overlapping at offset" sid="4870399102117179" type="Turtle">
+                                <condition id="9" name="Is overlapping at offset" sid="4870399102117179" type="VaiVolta">
                                     <param id="0" name="Object">cubo</param>
                                     <param id="1" name="Offset X">-1</param>
                                     <param id="2" name="Offset Y">0</param>
@@ -1822,7 +1822,7 @@
                 </event-group>
                 <event-group description="" sid="410246311320999" title="Turtle">
                     <sub-events>
-                        <event-block sid="3789689492511113">
+                        <event-block collapsed="1" sid="3789689492511113">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="3920240156312" type="Turtle">
                                     <param id="0" name="Instance variable">Wings</param>
@@ -1856,7 +1856,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="2148295911648264">
+                        <event-block collapsed="1" sid="2148295911648264">
                             <conditions>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1491209006663962" type="Turtle">
                                     <param id="0" name="Instance variable">Wings</param>
@@ -1886,7 +1886,7 @@
                             </sub-events>
                         </event-block>
                         <comment>Controle de tempo enquanto está escondida</comment>
-                        <event-block collapsed="1" sid="5714017972438575">
+                        <event-block sid="2131167824223408">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="1002047336245662" type="Turtle">
                                     <param id="0" name="Instance variable">Hidden</param>
@@ -1897,89 +1897,101 @@
                                 <condition id="-14" name="Pick by unique ID" sid="2984864263613774" type="VaiVolta">
                                     <param id="0" name="Unique ID">Turtle.UID</param>
                                 </condition>
-                                <condition behavior="Platform" id="1" name="Compare speed" sid="5819268432575661" type="VaiVolta">
-                                    <param id="0" name="Comparison">0</param>
-                                    <param id="1" name="Speed">0</param>
-                                </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="7728279402285795" type="VaiVolta">
-                                    <param id="0" name="Instance variable">Enabled</param>
-                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-11" name="Add to" sid="6419288299134885" type="Turtle">
-                                    <param id="0" name="Instance variable">TimeHidden</param>
-                                    <param id="1" name="Value">dt</param>
+                                <action id="-13" name="Set boolean" sid="1778413556878975" type="VaiVolta">
+                                    <param id="0" name="Instance variable">Enabled</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="1289963065407519">
+                                <event-block collapsed="1" sid="5714017972438575">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="1356978641936942" type="Turtle">
-                                            <param id="0" name="Instance variable">TimeHidden</param>
-                                            <param id="1" name="Comparison">2</param>
-                                            <param id="2" name="Value">Turtle.MaxTimeHidden * 0.8</param>
-                                        </condition>
-                                        <condition id="12" name="Compare speed" sid="3767163648012064" type="Turtle">
+                                        <condition behavior="Platform" id="1" name="Compare speed" sid="5819268432575661" type="VaiVolta">
                                             <param id="0" name="Comparison">0</param>
-                                            <param id="1" name="Number">0</param>
+                                            <param id="1" name="Speed">0</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="7728279402285795" type="VaiVolta">
+                                            <param id="0" name="Instance variable">Enabled</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="4243823633332877" type="Turtle">
-                                            <param id="0" name="Animation">&quot;Shell&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="2634752679331516">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="9341924986689807" type="Turtle">
+                                        <action id="-11" name="Add to" sid="6419288299134885" type="Turtle">
                                             <param id="0" name="Instance variable">TimeHidden</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">Turtle.MaxTimeHidden * 0.8</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="9635825468733644" type="Turtle">
-                                            <param id="0" name="Animation">&quot;ShellLeaving&quot;</param>
-                                            <param id="1" name="From">1</param>
+                                            <param id="1" name="Value">dt</param>
                                         </action>
                                     </actions>
-                                </event-block>
-                                <event-block sid="5248874677900844">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="1545970483307436" type="Turtle">
-                                            <param id="0" name="Instance variable">TimeHidden</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">Turtle.MaxTimeHidden</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="194027852144887" type="Turtle">
-                                            <param id="0" name="Instance variable">Hidden</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="2504333730477213" type="Turtle">
-                                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action behavior="Platform" id="1" name="Set max speed" sid="6626651276104115" type="VaiVolta">
-                                            <param id="0" name="Max Speed">VaiVolta.InitialMaxSpeed</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="894548453912557" type="VaiVolta">
-                                            <param id="0" name="Instance variable">ReturnOnSign</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="1028546392054266" type="VaiVolta">
-                                            <param id="0" name="Instance variable">AutoMirror</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="1289963065407519">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="1356978641936942" type="Turtle">
+                                                    <param id="0" name="Instance variable">TimeHidden</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">Turtle.MaxTimeHidden * 0.8</param>
+                                                </condition>
+                                                <condition id="12" name="Compare speed" sid="3767163648012064" type="Turtle">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="4243823633332877" type="Turtle">
+                                                    <param id="0" name="Animation">&quot;Shell&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="2634752679331516">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="9341924986689807" type="Turtle">
+                                                    <param id="0" name="Instance variable">TimeHidden</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">Turtle.MaxTimeHidden * 0.8</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="9635825468733644" type="Turtle">
+                                                    <param id="0" name="Animation">&quot;ShellLeaving&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="5248874677900844">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="1545970483307436" type="Turtle">
+                                                    <param id="0" name="Instance variable">TimeHidden</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">Turtle.MaxTimeHidden</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="194027852144887" type="Turtle">
+                                                    <param id="0" name="Instance variable">Hidden</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="2504333730477213" type="Turtle">
+                                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action behavior="Platform" id="1" name="Set max speed" sid="6626651276104115" type="VaiVolta">
+                                                    <param id="0" name="Max Speed">VaiVolta.InitialMaxSpeed</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="894548453912557" type="VaiVolta">
+                                                    <param id="0" name="Instance variable">ReturnOnSign</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="1028546392054266" type="VaiVolta">
+                                                    <param id="0" name="Instance variable">AutoMirror</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
                         <comment>Controle de colisão</comment>
-                        <event-block sid="865293201126038">
+                        <event-block collapsed="1" sid="865293201126038">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="1806379980546806" type="Mario">
                                     <param id="0" name="Object">Turtle</param>
