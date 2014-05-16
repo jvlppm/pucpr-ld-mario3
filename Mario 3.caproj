@@ -222,8 +222,8 @@
                                 <point x="0.777778" y="1" />
                                 <point x="0.222222" y="1" />
                                 <point x="0.222222" y="0.714286" />
-                                <point x="0.222222" y="0.428571" />
-                                <point x="0.777778" y="0.428571" />
+                                <point x="0.222222" y="0.5" />
+                                <point x="0.777778" y="0.5" />
                                 <point x="0.777778" y="0.714286" />
                             </collision-poly>
                         </frame>
@@ -232,8 +232,8 @@
                                 <point x="0.777778" y="1" />
                                 <point x="0.222222" y="1" />
                                 <point x="0.222222" y="0.714286" />
-                                <point x="0.222222" y="0.428571" />
-                                <point x="0.777778" y="0.428571" />
+                                <point x="0.222222" y="0.5" />
+                                <point x="0.777778" y="0.5" />
                                 <point x="0.777778" y="0.714286" />
                             </collision-poly>
                         </frame>
@@ -242,8 +242,8 @@
                                 <point x="0.777778" y="1" />
                                 <point x="0.222222" y="1" />
                                 <point x="0.222222" y="0.714286" />
-                                <point x="0.222222" y="0.428571" />
-                                <point x="0.777778" y="0.428571" />
+                                <point x="0.222222" y="0.5" />
+                                <point x="0.777778" y="0.5" />
                                 <point x="0.777778" y="0.714286" />
                             </collision-poly>
                         </frame>
@@ -1093,6 +1093,24 @@
                 <member>NPC_FlyingGoomba</member>
                 <member>TurtleGreen</member>
                 <member>TurtleRed</member>
+            </members>
+        </family>
+        <family name="BaseWalls" plugin-id="NinePatch" sid="790928684776421">
+            <members>
+                <member>BlockWood</member>
+                <member>Floor1</member>
+                <member>MetalBlock</member>
+                <member>Pipe</member>
+                <member>PipeHorizontal</member>
+            </members>
+        </family>
+        <family name="SpriteWalls" plugin-id="Sprite" sid="8427308875309909">
+            <members>
+                <member>BrickBlock</member>
+                <member>cubo</member>
+                <member>CuboItem</member>
+                <member>SongBlock</member>
+                <member>Tijolo</member>
             </members>
         </family>
     </families>

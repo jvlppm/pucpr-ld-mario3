@@ -573,7 +573,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4607093846203148" title="Blocos">
+        <event-group collapsed="1" description="" sid="4607093846203148" title="Blocos">
             <sub-events>
                 <event-group collapsed="1" description="" sid="9395876816556035" title="SongBlock">
                     <sub-events>
@@ -1070,7 +1070,7 @@
                     <sub-events>
                         <event-block sid="8772683248126767">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="5259991655524605" type="VaiVolta">
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5259991655524605" type="VaiVolta">
                                     <param id="0" name="Instance variable">GoingRight</param>
                                 </condition>
                             </conditions>
@@ -1083,9 +1083,18 @@
                                             <param id="1" name="X">Turtle.BBoxLeft - 2</param>
                                             <param id="2" name="Y">Turtle.Y</param>
                                         </condition>
+                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="7930871317669807" type="Turtle">
+                                            <param id="0" name="Object">BrickBlock</param>
+                                            <param id="1" name="Offset X">-2</param>
+                                            <param id="2" name="Offset Y">3</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Destroy" sid="2130975680027875" type="BrickBlock" />
+                                        <action id="-13" name="Set boolean" sid="2212654174737184" type="VaiVolta">
+                                            <param id="0" name="Instance variable">GoingRight</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block any="1" sid="525075808157274">
@@ -1101,16 +1110,37 @@
                                             <param id="2" name="Y">Turtle.Y</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="8083679243785623" type="Function">
-                                            <param id="0" name="Name">&quot;HitBlock&quot;</param>
-                                            <param id="1" name="Parameter {n}">cubo.UID</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="9564024617295777" type="Function">
-                                            <param id="0" name="Name">&quot;HitBlock&quot;</param>
-                                            <param id="1" name="Parameter {n}">cuboItem.UID</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="3208311606500942">
+                                            <conditions>
+                                                <condition id="9" inverted="1" name="Is overlapping at offset" sid="6026843770364468" type="Turtle">
+                                                    <param id="0" name="Object">cubo</param>
+                                                    <param id="1" name="Offset X">-2</param>
+                                                    <param id="2" name="Offset Y">3</param>
+                                                </condition>
+                                                <condition id="9" inverted="1" name="Is overlapping at offset" sid="7962022100509767" type="Turtle">
+                                                    <param id="0" name="Object">CuboItem</param>
+                                                    <param id="1" name="Offset X">-2</param>
+                                                    <param id="2" name="Offset Y">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="8083679243785623" type="Function">
+                                                    <param id="0" name="Name">&quot;HitBlock&quot;</param>
+                                                    <param id="1" name="Parameter {n}">cubo.UID</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="9564024617295777" type="Function">
+                                                    <param id="0" name="Name">&quot;HitBlock&quot;</param>
+                                                    <param id="1" name="Parameter {n}">cuboItem.UID</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="2050779848748178" type="VaiVolta">
+                                                    <param id="0" name="Instance variable">GoingRight</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -1127,9 +1157,18 @@
                                             <param id="1" name="X">Turtle.BBoxRight + 2</param>
                                             <param id="2" name="Y">Turtle.Y</param>
                                         </condition>
+                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="2236148614340294" type="Turtle">
+                                            <param id="0" name="Object">BrickBlock</param>
+                                            <param id="1" name="Offset X">2</param>
+                                            <param id="2" name="Offset Y">3</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Destroy" sid="5333765399732464" type="BrickBlock" />
+                                        <action id="-13" name="Set boolean" sid="6220123615979268" type="VaiVolta">
+                                            <param id="0" name="Instance variable">GoingRight</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block any="1" sid="6647821706900175">
@@ -1145,16 +1184,37 @@
                                             <param id="2" name="Y">Turtle.Y</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="2349347135767444" type="Function">
-                                            <param id="0" name="Name">&quot;HitBlock&quot;</param>
-                                            <param id="1" name="Parameter {n}">cubo.UID</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="7540467859652502" type="Function">
-                                            <param id="0" name="Name">&quot;HitBlock&quot;</param>
-                                            <param id="1" name="Parameter {n}">cuboItem.UID</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="6349603232348136">
+                                            <conditions>
+                                                <condition id="9" inverted="1" name="Is overlapping at offset" sid="7196857315579653" type="Turtle">
+                                                    <param id="0" name="Object">cubo</param>
+                                                    <param id="1" name="Offset X">2</param>
+                                                    <param id="2" name="Offset Y">3</param>
+                                                </condition>
+                                                <condition id="9" inverted="1" name="Is overlapping at offset" sid="6424097493199635" type="Turtle">
+                                                    <param id="0" name="Object">CuboItem</param>
+                                                    <param id="1" name="Offset X">2</param>
+                                                    <param id="2" name="Offset Y">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="6918448509513505" type="Function">
+                                                    <param id="0" name="Name">&quot;HitBlock&quot;</param>
+                                                    <param id="1" name="Parameter {n}">cubo.UID</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="2721315334659261" type="Function">
+                                                    <param id="0" name="Name">&quot;HitBlock&quot;</param>
+                                                    <param id="1" name="Parameter {n}">cuboItem.UID</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="4570882224127319" type="VaiVolta">
+                                                    <param id="0" name="Instance variable">GoingRight</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -1393,7 +1453,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="748998548870591" title="Inimigos">
+        <event-group description="" sid="748998548870591" title="Inimigos">
             <sub-events>
                 <event-group collapsed="1" description="" sid="8204904164989713" title="Stompable">
                     <sub-events>
@@ -1474,7 +1534,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="2821346092156377" title="VaiVolta">
+                <event-group description="" sid="2821346092156377" title="VaiVolta">
                     <sub-events>
                         <event-block sid="833288381658232">
                             <conditions>
@@ -1500,7 +1560,7 @@
                                         <condition id="-8" name="Is boolean instance variable set" sid="3753516579502191" type="VaiVolta">
                                             <param id="0" name="Instance variable">GoingRight</param>
                                         </condition>
-                                        <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="3287348303471662" type="VaiVolta">
+                                        <condition behavior="Platform" disabled="1" id="10" inverted="1" name="Is by wall" sid="3287348303471662" type="VaiVolta">
                                             <param id="0" name="Side">1</param>
                                         </condition>
                                     </conditions>
@@ -1515,7 +1575,7 @@
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5173116570507789" type="VaiVolta">
                                             <param id="0" name="Instance variable">GoingRight</param>
                                         </condition>
-                                        <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="9819510483880648" type="VaiVolta">
+                                        <condition behavior="Platform" disabled="1" id="10" inverted="1" name="Is by wall" sid="9819510483880648" type="VaiVolta">
                                             <param id="0" name="Side">0</param>
                                         </condition>
                                     </conditions>
@@ -1525,39 +1585,52 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="711348634291493">
+                                <event-block any="1" sid="6227510990785938">
                                     <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="607840893989357" type="VaiVolta">
-                                            <param id="0" name="Instance variable">AutoTurn</param>
+                                        <condition id="0" name="On collision with another object" sid="7813834104835383" type="VaiVolta">
+                                            <param id="0" name="Object">BaseWalls</param>
+                                        </condition>
+                                        <condition id="0" name="On collision with another object" sid="8292586969937714" type="VaiVolta">
+                                            <param id="0" name="Object">SpriteWalls</param>
                                         </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="1513539859359789">
+                                        <event-block sid="711348634291493">
                                             <conditions>
-                                                <condition behavior="Platform" id="10" name="Is by wall" sid="5001226835289976" type="VaiVolta">
-                                                    <param id="0" name="Side">0</param>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="607840893989357" type="VaiVolta">
+                                                    <param id="0" name="Instance variable">AutoTurn</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="-13" name="Set boolean" sid="1652848745075985" type="VaiVolta">
-                                                    <param id="0" name="Instance variable">GoingRight</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="2013746270279302">
-                                            <conditions>
-                                                <condition behavior="Platform" id="10" name="Is by wall" sid="4087151043795608" type="VaiVolta">
-                                                    <param id="0" name="Side">1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-13" name="Set boolean" sid="6928637535612162" type="VaiVolta">
-                                                    <param id="0" name="Instance variable">GoingRight</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="1513539859359789">
+                                                    <conditions>
+                                                        <condition behavior="Platform" id="10" name="Is by wall" sid="5001226835289976" type="VaiVolta">
+                                                            <param id="0" name="Side">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="1652848745075985" type="VaiVolta">
+                                                            <param id="0" name="Instance variable">GoingRight</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="2013746270279302">
+                                                    <conditions>
+                                                        <condition behavior="Platform" id="10" name="Is by wall" sid="4087151043795608" type="VaiVolta">
+                                                            <param id="0" name="Side">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="6928637535612162" type="VaiVolta">
+                                                            <param id="0" name="Instance variable">GoingRight</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -1591,7 +1664,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="3294171854727859">
+                                <event-block collapsed="1" sid="3294171854727859">
                                     <conditions>
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1303459082437466" type="VaiVolta">
                                             <param id="0" name="Instance variable">CanFall</param>
@@ -1967,7 +2040,7 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block collapsed="1" sid="5714017972438575">
+                                <event-block sid="5714017972438575">
                                     <conditions>
                                         <condition behavior="Platform" id="1" name="Compare speed" sid="5819268432575661" type="VaiVolta">
                                             <param id="0" name="Comparison">0</param>
@@ -2187,7 +2260,7 @@
                                                             </conditions>
                                                             <actions>
                                                                 <action behavior="Platform" id="1" name="Set max speed" sid="5807541124857242" type="VaiVolta">
-                                                                    <param id="0" name="Max Speed">140</param>
+                                                                    <param id="0" name="Max Speed">120</param>
                                                                 </action>
                                                                 <action id="4" name="Set animation" sid="2976638939860684" type="Turtle">
                                                                     <param id="0" name="Animation">&quot;ShellRunning&quot;</param>
@@ -2653,7 +2726,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5318515743762829" title="Global">
+        <event-group description="" sid="5318515743762829" title="Global">
             <sub-events>
                 <event-block sid="1604368739676953">
                     <conditions>
@@ -2735,9 +2808,12 @@
                             <param id="0" name="Variable">ChangingLayout</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action disabled="1" id="-13" name="Set time scale" sid="1330593348315803" type="System">
+                            <param id="0" name="Time scale">0.25</param>
+                        </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="117407398332286">
+                <event-block sid="117407398332286">
                     <conditions>
                         <condition id="0" name="On function" sid="4559989034948008" type="Function">
                             <param id="0" name="Name">&quot;HitMario&quot;</param>
@@ -2811,6 +2887,10 @@
                                     <actions>
                                         <action id="-10" name="Set value" sid="2722630699534887" type="Mario">
                                             <param id="0" name="Instance variable">Item</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="4774569109676967" type="System">
+                                            <param id="0" name="Variable">CurrentMarioItem</param>
                                             <param id="1" name="Value">&quot;&quot;</param>
                                         </action>
                                         <action behavior="Flash" id="0" name="Flash" sid="9871284815838182" type="MarioStates">
