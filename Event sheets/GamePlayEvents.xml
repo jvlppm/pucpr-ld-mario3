@@ -3,13 +3,16 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GamePlayEvents</name>
     <events>
+        <variable constant="0" name="ChangingLayout" sid="4237106686453542" static="0" type="number">0</variable>
+        <variable constant="0" name="CurrentMarioItem" sid="9723909373243204" static="0" type="text"></variable>
+        <variable constant="0" name="CurrentMarioSize" sid="1251636283060318" static="0" type="text">pequeno</variable>
         <variable constant="0" name="World" sid="1123216530591473" static="0" type="number">1</variable>
         <variable constant="0" name="Level" sid="2135691049198608" static="0" type="number">1</variable>
         <variable constant="0" name="Points" sid="5750279857023693" static="0" type="number">0</variable>
         <variable constant="0" name="Lives" sid="8297701242012796" static="0" type="number">3</variable>
         <variable constant="0" name="Coins" sid="2863490799107284" static="0" type="number">0</variable>
         <variable constant="0" name="Timer" sid="2849380820232914" static="0" type="number">300</variable>
-        <event-group description="" sid="5115914260203696" title="Mario">
+        <event-group collapsed="1" description="" sid="5115914260203696" title="Mario">
             <sub-events>
                 <event-group description="" sid="2304413015275258" title="Controls">
                     <sub-events>
@@ -86,7 +89,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="9203101228386901" title="Run">
+                <event-group collapsed="1" description="" sid="9203101228386901" title="Run">
                     <sub-events>
                         <event-block collapsed="1" sid="6921157781144777">
                             <conditions>
@@ -1046,75 +1049,11 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="3134419480852875">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="8850980824546649" type="Turtle">
-                            <param id="0" name="Instance variable">Hidden</param>
-                        </condition>
-                        <condition id="-11" name="For Each" sid="8618941245020938" type="System">
-                            <param id="0" name="Object">VaiVolta</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="9588954759165985" type="VaiVolta">
-                            <param id="0" name="Unique ID">Turtle.UID</param>
-                        </condition>
-                        <condition behavior="Platform" id="1" name="Compare speed" sid="883011164619548" type="VaiVolta">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Speed">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block any="1" sid="5263079769521691">
-                            <conditions>
-                                <condition id="9" name="Is overlapping at offset" sid="4879796748719483" type="VaiVolta">
-                                    <param id="0" name="Object">CuboItem</param>
-                                    <param id="1" name="Offset X">1</param>
-                                    <param id="2" name="Offset Y">0</param>
-                                </condition>
-                                <condition id="9" name="Is overlapping at offset" sid="1793016073084708" type="VaiVolta">
-                                    <param id="0" name="Object">CuboItem</param>
-                                    <param id="1" name="Offset X">-1</param>
-                                    <param id="2" name="Offset Y">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="7123672374496964" type="Function">
-                                    <param id="0" name="Name">&quot;HitBlock&quot;</param>
-                                    <param id="1" name="Parameter {n}">Cuboitem.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block any="1" sid="417211958181707">
-                            <conditions>
-                                <condition id="9" name="Is overlapping at offset" sid="4516752073795616" type="VaiVolta">
-                                    <param id="0" name="Object">cubo</param>
-                                    <param id="1" name="Offset X">1</param>
-                                    <param id="2" name="Offset Y">0</param>
-                                </condition>
-                                <condition id="9" name="Is overlapping at offset" sid="4870399102117179" type="VaiVolta">
-                                    <param id="0" name="Object">cubo</param>
-                                    <param id="1" name="Offset X">-1</param>
-                                    <param id="2" name="Offset Y">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="8489712829571984" type="Function">
-                                    <param id="0" name="Name">&quot;HitBlock&quot;</param>
-                                    <param id="1" name="Parameter {n}">cubo.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <comment>Colisão com blocos</comment>
-                <event-block collapsed="1" sid="9112141263960371">
+                <event-block sid="9112141263960371">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="3857536949852995" type="Turtle">
                             <param id="0" name="Instance variable">Hidden</param>
-                        </condition>
-                        <condition id="12" name="Compare speed" sid="9621874290483846" type="Turtle">
-                            <param id="0" name="Comparison">1</param>
-                            <param id="1" name="Number">0</param>
                         </condition>
                         <condition id="-11" name="For Each" sid="4070260602484097" type="System">
                             <param id="0" name="Object">Turtle</param>
@@ -1122,10 +1061,14 @@
                         <condition id="-14" name="Pick by unique ID" sid="6605269488060664" type="VaiVolta">
                             <param id="0" name="Unique ID">Turtle.UID</param>
                         </condition>
+                        <condition behavior="Platform" id="1" name="Compare speed" sid="9313484214387579" type="VaiVolta">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Speed">0</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block collapsed="1" sid="8772683248126767">
+                        <event-block sid="8772683248126767">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="5259991655524605" type="VaiVolta">
                                     <param id="0" name="Instance variable">GoingRight</param>
@@ -1135,10 +1078,10 @@
                             <sub-events>
                                 <event-block sid="4441268266339371">
                                     <conditions>
-                                        <condition id="9" name="Is overlapping at offset" sid="7359586817970202" type="Turtle">
+                                        <condition id="-36" name="Pick overlapping point" sid="9311506159852326" type="System">
                                             <param id="0" name="Object">BrickBlock</param>
-                                            <param id="1" name="Offset X">-2</param>
-                                            <param id="2" name="Offset Y">0</param>
+                                            <param id="1" name="X">Turtle.BBoxLeft - 2</param>
+                                            <param id="2" name="Y">Turtle.Y</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1147,15 +1090,15 @@
                                 </event-block>
                                 <event-block any="1" sid="525075808157274">
                                     <conditions>
-                                        <condition id="9" name="Is overlapping at offset" sid="3777789845796238" type="Turtle">
+                                        <condition id="-36" name="Pick overlapping point" sid="3777789845796238" type="System">
                                             <param id="0" name="Object">cubo</param>
-                                            <param id="1" name="Offset X">Turtle.BBoxLeft -2</param>
-                                            <param id="2" name="Offset Y">Turtle.Y</param>
+                                            <param id="1" name="X">Turtle.BBoxLeft -2</param>
+                                            <param id="2" name="Y">Turtle.Y</param>
                                         </condition>
-                                        <condition id="9" name="Is overlapping at offset" sid="9867351342446696" type="Turtle">
+                                        <condition id="-36" name="Pick overlapping point" sid="5783962511200374" type="System">
                                             <param id="0" name="Object">CuboItem</param>
-                                            <param id="1" name="Offset X">Turtle.BBoxLeft -2</param>
-                                            <param id="2" name="Offset Y">Turtle.Y</param>
+                                            <param id="1" name="X">Turtle.BBoxLeft -2</param>
+                                            <param id="2" name="Y">Turtle.Y</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1163,11 +1106,15 @@
                                             <param id="0" name="Name">&quot;HitBlock&quot;</param>
                                             <param id="1" name="Parameter {n}">cubo.UID</param>
                                         </action>
+                                        <action id="0" name="Call function" sid="9564024617295777" type="Function">
+                                            <param id="0" name="Name">&quot;HitBlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">cuboItem.UID</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block collapsed="1" sid="3684156538547226">
+                        <event-block sid="3684156538547226">
                             <conditions>
                                 <condition id="-22" name="Else" sid="2015846392288309" type="System" />
                             </conditions>
@@ -1175,10 +1122,10 @@
                             <sub-events>
                                 <event-block sid="9399348052837866">
                                     <conditions>
-                                        <condition id="9" name="Is overlapping at offset" sid="3604100886062024" type="Turtle">
+                                        <condition id="-36" name="Pick overlapping point" sid="7326997876629288" type="System">
                                             <param id="0" name="Object">BrickBlock</param>
-                                            <param id="1" name="Offset X">2</param>
-                                            <param id="2" name="Offset Y">0</param>
+                                            <param id="1" name="X">Turtle.BBoxRight + 2</param>
+                                            <param id="2" name="Y">Turtle.Y</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1187,21 +1134,25 @@
                                 </event-block>
                                 <event-block any="1" sid="6647821706900175">
                                     <conditions>
-                                        <condition id="9" name="Is overlapping at offset" sid="4390160180878413" type="Turtle">
+                                        <condition id="-36" name="Pick overlapping point" sid="4988075735927141" type="System">
                                             <param id="0" name="Object">cubo</param>
-                                            <param id="1" name="Offset X">Turtle.BBoxRight + 2</param>
-                                            <param id="2" name="Offset Y">Turtle.Y</param>
+                                            <param id="1" name="X">Turtle.BBoxRight + 2</param>
+                                            <param id="2" name="Y">Turtle.Y</param>
                                         </condition>
-                                        <condition id="9" name="Is overlapping at offset" sid="5023996836379919" type="Turtle">
+                                        <condition id="-36" name="Pick overlapping point" sid="5073750237918295" type="System">
                                             <param id="0" name="Object">CuboItem</param>
-                                            <param id="1" name="Offset X">Turtle.BBoxRight + 2</param>
-                                            <param id="2" name="Offset Y">Turtle.Y</param>
+                                            <param id="1" name="X">Turtle.BBoxRight + 2</param>
+                                            <param id="2" name="Y">Turtle.Y</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Call function" sid="2349347135767444" type="Function">
                                             <param id="0" name="Name">&quot;HitBlock&quot;</param>
                                             <param id="1" name="Parameter {n}">cubo.UID</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="7540467859652502" type="Function">
+                                            <param id="0" name="Name">&quot;HitBlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">cuboItem.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1216,12 +1167,25 @@
                 <event-block sid="9454918499351548">
                     <conditions>
                         <condition id="-19" name="On destroyed" sid="7066692122673577" type="Mario" />
+                        <condition id="-14" name="Compare variable" sid="5968760380379191" type="System">
+                            <param id="0" name="Variable">ChangingLayout</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-26" name="Restart layout" sid="8690012259761999" type="System" />
                         <action id="-11" name="Subtract from" sid="1610016061530851" type="System">
                             <param id="0" name="Variable">Lives</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1832831611518942" type="System">
+                            <param id="0" name="Variable">CurrentMarioSize</param>
+                            <param id="1" name="Value">&quot;pequeno&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8496355613749915" type="System">
+                            <param id="0" name="Variable">CurrentMarioItem</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1253,9 +1217,17 @@
                                     <param id="0" name="Instance variable">Item</param>
                                     <param id="1" name="Value">&quot;Feather&quot;</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="3091315998858406" type="System">
+                                    <param id="0" name="Variable">CurrentMarioItem</param>
+                                    <param id="1" name="Value">&quot;Feather&quot;</param>
+                                </action>
                                 <action id="4" name="Set animation" sid="4077528742433866" type="Mario">
                                     <param id="0" name="Animation">&quot;grande&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="8797119151121481" type="System">
+                                    <param id="0" name="Variable">CurrentMarioSize</param>
+                                    <param id="1" name="Value">&quot;grande&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1287,8 +1259,16 @@
                                     <param id="0" name="Animation">&quot;grande&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="1883034936574404" type="System">
+                                    <param id="0" name="Variable">CurrentMarioSize</param>
+                                    <param id="1" name="Value">&quot;grande&quot;</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="4668779522755108" type="Mario">
                                     <param id="0" name="Instance variable">Item</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2026686646657375" type="System">
+                                    <param id="0" name="Variable">CurrentMarioItem</param>
                                     <param id="1" name="Value">&quot;&quot;</param>
                                 </action>
                             </actions>
@@ -1413,7 +1393,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="748998548870591" title="Inimigos">
+        <event-group collapsed="1" description="" sid="748998548870591" title="Inimigos">
             <sub-events>
                 <event-group collapsed="1" description="" sid="8204904164989713" title="Stompable">
                     <sub-events>
@@ -1433,88 +1413,6 @@
                                     <param id="1" name="Parameter {n}">Stompable.UID</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="8261350456528397">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="1524697913977127" type="Turtle">
-                                    <param id="0" name="Object">Stompable</param>
-                                </condition>
-                                <condition id="2" name="Is playing" sid="9596758052724141" type="Turtle">
-                                    <param id="0" name="Animation">&quot;ShellRunning&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="5206106595205554" type="Function">
-                                    <param id="0" name="Name">&quot;Kill&quot;</param>
-                                    <param id="1" name="Parameter {n}">Stompable.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block collapsed="1" sid="2014480418633909">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="7064012637348626" type="Turtle">
-                                    <param id="0" name="Object">Turtle</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="4230392816224543">
-                                    <conditions>
-                                        <condition id="-13" name="Pick nth instance" sid="2115723894696487" type="System">
-                                            <param id="0" name="Object">Turtle</param>
-                                            <param id="1" name="Instance">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="744379502279354" type="Function">
-                                            <param id="0" name="Name">&quot;InstantKill&quot;</param>
-                                            <param id="1" name="Parameter {n}">Turtle.UID</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="2468551147291027">
-                                            <conditions>
-                                                <condition id="-14" name="Pick by unique ID" sid="6513879727185492" type="VaiVolta">
-                                                    <param id="0" name="Unique ID">Turtle.UID</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-14" name="Toggle boolean" sid="1127300338824368" type="VaiVolta">
-                                                    <param id="0" name="Instance variable">GoingRight</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block sid="2431418260067265">
-                                    <conditions>
-                                        <condition id="-13" name="Pick nth instance" sid="3347283060025543" type="System">
-                                            <param id="0" name="Object">Turtle</param>
-                                            <param id="1" name="Instance">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="2502643645817289" type="Function">
-                                            <param id="0" name="Name">&quot;InstantKill&quot;</param>
-                                            <param id="1" name="Parameter {n}">Turtle.UID</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="9274297442255887">
-                                            <conditions>
-                                                <condition id="-14" name="Pick by unique ID" sid="6121171592130184" type="VaiVolta">
-                                                    <param id="0" name="Unique ID">Turtle.UID</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-14" name="Toggle boolean" sid="8372432591954719" type="VaiVolta">
-                                                    <param id="0" name="Instance variable">GoingRight</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                         <event-block sid="6528588247974667">
                             <conditions>
@@ -1820,8 +1718,172 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="410246311320999" title="Turtle">
+                <event-group collapsed="1" description="" sid="410246311320999" title="Turtle">
                     <sub-events>
+                        <event-block sid="8261350456528397">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="1524697913977127" type="Turtle">
+                                    <param id="0" name="Object">Stompable</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="9596758052724141" type="Turtle">
+                                    <param id="0" name="Animation">&quot;ShellRunning&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5206106595205554" type="Function">
+                                    <param id="0" name="Name">&quot;Kill&quot;</param>
+                                    <param id="1" name="Parameter {n}">Stompable.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <variable constant="0" name="Turtle1Hidden" sid="9796424763219363" static="0" type="number">0</variable>
+                        <variable constant="0" name="Turtle2Hidden" sid="1589875048973972" static="0" type="number">0</variable>
+                        <variable constant="0" name="Turtle1Speed" sid="9150066417661704" static="0" type="number">0</variable>
+                        <variable constant="0" name="Turtle2Speed" sid="253702386961131" static="0" type="number">0</variable>
+                        <event-block collapsed="1" sid="2014480418633909">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="7064012637348626" type="Turtle">
+                                    <param id="0" name="Object">Turtle</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4230392816224543">
+                                    <conditions>
+                                        <condition id="-13" name="Pick nth instance" sid="2115723894696487" type="System">
+                                            <param id="0" name="Object">Turtle</param>
+                                            <param id="1" name="Instance">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="744379502279354" type="System">
+                                            <param id="0" name="Variable">Turtle1Hidden</param>
+                                            <param id="1" name="Value">Turtle.Hidden</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="5907081550067626">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="4575095463935192" type="VaiVolta">
+                                                    <param id="0" name="Unique ID">Turtle.UID</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="7857017644127048" type="System">
+                                                    <param id="0" name="Variable">Turtle1Speed</param>
+                                                    <param id="1" name="Value">VaiVolta.Platform.Speed</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="4746966038323998">
+                                    <conditions>
+                                        <condition id="-13" name="Pick nth instance" sid="285625156307734" type="System">
+                                            <param id="0" name="Object">Turtle</param>
+                                            <param id="1" name="Instance">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="2235002543798572" type="System">
+                                            <param id="0" name="Variable">Turtle2Hidden</param>
+                                            <param id="1" name="Value">Turtle.Hidden</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="3299905580550584">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="9877995125455903" type="VaiVolta">
+                                                    <param id="0" name="Unique ID">Turtle.UID</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="6439259261563253" type="System">
+                                                    <param id="0" name="Variable">Turtle2Speed</param>
+                                                    <param id="1" name="Value">VaiVolta.Platform.Speed</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="3608302611855203">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="9915290793352731" type="System">
+                                            <param id="0" name="Variable">Turtle2Hidden</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="1359813791713549" type="System">
+                                            <param id="0" name="Variable">Turtle2Speed</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-13" name="Pick nth instance" sid="3275639678700041" type="System">
+                                            <param id="0" name="Object">Turtle</param>
+                                            <param id="1" name="Instance">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="446427857524568" type="Function">
+                                            <param id="0" name="Name">&quot;InstantKill&quot;</param>
+                                            <param id="1" name="Parameter {n}">Turtle.UID</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="4013722733450153">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="21319038929205" type="VaiVolta">
+                                                    <param id="0" name="Unique ID">Turtle.UID</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-14" name="Toggle boolean" sid="8203236781216226" type="VaiVolta">
+                                                    <param id="0" name="Instance variable">GoingRight</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="2431418260067265">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="72884481503027" type="System">
+                                            <param id="0" name="Variable">Turtle1Hidden</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="5923544093949001" type="System">
+                                            <param id="0" name="Variable">Turtle1Speed</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-13" name="Pick nth instance" sid="3347283060025543" type="System">
+                                            <param id="0" name="Object">Turtle</param>
+                                            <param id="1" name="Instance">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="2502643645817289" type="Function">
+                                            <param id="0" name="Name">&quot;InstantKill&quot;</param>
+                                            <param id="1" name="Parameter {n}">Turtle.UID</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="9274297442255887">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="6121171592130184" type="VaiVolta">
+                                                    <param id="0" name="Unique ID">Turtle.UID</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-14" name="Toggle boolean" sid="8372432591954719" type="VaiVolta">
+                                                    <param id="0" name="Instance variable">GoingRight</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block collapsed="1" sid="3789689492511113">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="3920240156312" type="Turtle">
@@ -1886,7 +1948,7 @@
                             </sub-events>
                         </event-block>
                         <comment>Controle de tempo enquanto está escondida</comment>
-                        <event-block sid="2131167824223408">
+                        <event-block collapsed="1" sid="2131167824223408">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="1002047336245662" type="Turtle">
                                     <param id="0" name="Instance variable">Hidden</param>
@@ -2448,6 +2510,27 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="8598358707625405">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="2626302196739612" type="Turtle">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="1284502113786341" type="Turtle">
+                                    <param id="0" name="Instance variable">Hidden</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="2810340356957945" type="Turtle">
+                                    <param id="0" name="Instance variable">Wings</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="2898453900958014" type="Turtle">
+                                    <param id="0" name="Animation">&quot;ShellRunning&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
@@ -2640,6 +2723,18 @@
                             <param id="0" name="Variable">Timer</param>
                             <param id="1" name="Value">300</param>
                         </action>
+                        <action id="4" name="Set animation" sid="7967739002683189" type="Mario">
+                            <param id="0" name="Animation">CurrentMarioSize</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9161823011560625" type="Mario">
+                            <param id="0" name="Instance variable">Item</param>
+                            <param id="1" name="Value">CurrentMarioItem</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6179764790199382" type="System">
+                            <param id="0" name="Variable">ChangingLayout</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block collapsed="1" sid="117407398332286">
@@ -2688,6 +2783,18 @@
                                             <param id="0" name="Animation">&quot;pequeno&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
+                                        <action id="-9" name="Set value" sid="5047393133191738" type="System">
+                                            <param id="0" name="Variable">CurrentMarioSize</param>
+                                            <param id="1" name="Value">&quot;pequeno&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="2319993357228858" type="Mario">
+                                            <param id="0" name="Instance variable">Item</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="4700503033642773" type="System">
+                                            <param id="0" name="Variable">CurrentMarioItem</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="5585061219990334">
@@ -2728,13 +2835,18 @@
                         <action id="-9" name="Destroy" sid="5137772602276989" type="Mario" />
                     </actions>
                 </event-block>
-                <event-block sid="680810680820674">
+                <event-block collapsed="1" sid="680810680820674">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2549817382262483" type="Mario">
                             <param id="0" name="Object">EndOfLevel</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="5346796207450953" type="System">
+                            <param id="0" name="Variable">ChangingLayout</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="9138115429043002">
                             <conditions>
@@ -2807,40 +2919,40 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="3852645975958675">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1971407342710576" type="Function">
+                            <param id="0" name="Name">&quot;GameOver&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="2305894119109072" type="System">
+                            <param id="0" name="Layout">World 1-1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="829883570039619" type="System">
+                            <param id="0" name="Variable">Points</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2879816064570748" type="System">
+                            <param id="0" name="Variable">Lives</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1841841324545494" type="System">
+                            <param id="0" name="Variable">Coins</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8570410688269278" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3666391374465034" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="3852645975958675">
-            <conditions>
-                <condition id="0" name="On function" sid="1971407342710576" type="Function">
-                    <param id="0" name="Name">&quot;GameOver&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="2305894119109072" type="System">
-                    <param id="0" name="Layout">World 1-1</param>
-                </action>
-                <action id="-9" name="Set value" sid="829883570039619" type="System">
-                    <param id="0" name="Variable">Points</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-9" name="Set value" sid="2879816064570748" type="System">
-                    <param id="0" name="Variable">Lives</param>
-                    <param id="1" name="Value">3</param>
-                </action>
-                <action id="-9" name="Set value" sid="1841841324545494" type="System">
-                    <param id="0" name="Variable">Coins</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-9" name="Set value" sid="8570410688269278" type="System">
-                    <param id="0" name="Variable">Level</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-9" name="Set value" sid="3666391374465034" type="System">
-                    <param id="0" name="Variable">World</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
         <event-group collapsed="1" description="" sid="6728220366541151" title="Camera">
             <sub-events>
                 <event-block sid="3214168021449811">
@@ -2952,7 +3064,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1418648498937071" title="Platforms">
+        <event-group collapsed="1" description="" sid="1418648498937071" title="Platforms">
             <sub-events>
                 <event-block sid="3392479233237644">
                     <conditions>
