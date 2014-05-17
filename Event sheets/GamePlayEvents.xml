@@ -13,7 +13,7 @@
         <variable constant="0" name="Lives" sid="8297701242012796" static="0" type="number">3</variable>
         <variable constant="0" name="Coins" sid="2863490799107284" static="0" type="number">0</variable>
         <variable constant="0" name="Timer" sid="2849380820232914" static="0" type="number">300</variable>
-        <event-group description="" sid="5115914260203696" title="Mario">
+        <event-group collapsed="1" description="" sid="5115914260203696" title="Mario">
             <sub-events>
                 <event-group description="" sid="2304413015275258" title="Controls">
                     <sub-events>
@@ -151,7 +151,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="6368221568250601">
+                        <event-block collapsed="1" sid="6368221568250601">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="4141550879110788" type="Keyboard">
                                     <param id="0" name="Key">38 (Up arrow)</param>
@@ -181,7 +181,7 @@
                                             <param id="1" name="Value">&quot;FallingSlowly&quot;</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="3377125580334984" type="Mario">
-                                            <param id="0" name="Instance variable">SlowFallCounter</param>
+                                            <param id="0" name="Instance variable">CustomCounter</param>
                                             <param id="1" name="Value">0.35</param>
                                         </action>
                                     </actions>
@@ -208,7 +208,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="9389778382064223">
+                        <event-block collapsed="1" sid="9389778382064223">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="8951717533460956" type="Mario">
                                     <param id="0" name="Instance variable">CustomAction</param>
@@ -218,7 +218,7 @@
                             </conditions>
                             <actions>
                                 <action id="-12" name="Subtract from" sid="6075346115972258" type="Mario">
-                                    <param id="0" name="Instance variable">SlowFallCounter</param>
+                                    <param id="0" name="Instance variable">CustomCounter</param>
                                     <param id="1" name="Value">dt</param>
                                 </action>
                             </actions>
@@ -237,7 +237,7 @@
                                     <conditions>
                                         <condition behavior="Platform" id="9" name="On landed" sid="9840357608011198" type="Mario" />
                                         <condition id="-7" name="Compare instance variable" sid="4910774528338038" type="Mario">
-                                            <param id="0" name="Instance variable">SlowFallCounter</param>
+                                            <param id="0" name="Instance variable">CustomCounter</param>
                                             <param id="1" name="Comparison">3</param>
                                             <param id="2" name="Value">0</param>
                                         </condition>
@@ -255,7 +255,7 @@
                 </event-group>
                 <event-group description="" sid="9203101228386901" title="Run">
                     <sub-events>
-                        <event-block sid="6921157781144777">
+                        <event-block collapsed="1" sid="6921157781144777">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="1332199978924407" type="Mario">
                                     <param id="0" name="Instance variable">RunTime</param>
@@ -284,7 +284,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="6264929019738394">
+                        <event-block collapsed="1" sid="6264929019738394">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="7260080252952295" type="Mario">
                                     <param id="0" name="Instance variable">RunTime</param>
@@ -424,9 +424,9 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="677378389262257" title="Animations">
+                <event-group collapsed="1" description="" sid="677378389262257" title="Animations">
                     <sub-events>
-                        <event-group description="" sid="7439610593452538" title="States">
+                        <event-group collapsed="1" description="" sid="7439610593452538" title="States">
                             <sub-events>
                                 <event-block sid="566779265082759">
                                     <conditions>
@@ -503,7 +503,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="915042074610917" title="Direction">
+                        <event-group collapsed="1" description="" sid="915042074610917" title="Direction">
                             <sub-events>
                                 <event-block sid="9070070418319609">
                                     <conditions>
@@ -567,7 +567,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-group description="" sid="7943296425537845" title="Speed">
+                                <event-group collapsed="1" description="" sid="7943296425537845" title="Speed">
                                     <sub-events>
                                         <event-block any="1" sid="1534594239648643">
                                             <conditions>
@@ -581,7 +581,7 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="5648511117830314">
+                                        <event-block collapsed="1" sid="5648511117830314">
                                             <conditions>
                                                 <condition id="2" inverted="1" name="Is playing" sid="6799682515981495" type="MarioFeather">
                                                     <param id="0" name="Animation">&quot;Flying&quot;</param>
@@ -630,7 +630,7 @@
                                         </event-block>
                                     </sub-events>
                                 </event-group>
-                                <event-group description="" sid="9130376418275246" title="Jump">
+                                <event-group collapsed="1" description="" sid="9130376418275246" title="Jump">
                                     <sub-events>
                                         <event-block sid="1709669356306603">
                                             <conditions>
@@ -695,7 +695,7 @@
                                         </event-block>
                                     </sub-events>
                                 </event-group>
-                                <event-group description="" sid="1508817693464832" title="Slide">
+                                <event-group collapsed="1" description="" sid="1508817693464832" title="Slide">
                                     <sub-events>
                                         <event-block sid="8007849784790859">
                                             <conditions>
@@ -766,9 +766,9 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4607093846203148" title="Blocos">
+        <event-group collapsed="1" description="" sid="4607093846203148" title="Blocos">
             <sub-events>
-                <event-group description="" sid="9395876816556035" title="SongBlock">
+                <event-group collapsed="1" description="" sid="9395876816556035" title="SongBlock">
                     <sub-events>
                         <event-block sid="142420477216781">
                             <conditions>
@@ -781,7 +781,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="2453655139455621">
+                        <event-block collapsed="1" sid="2453655139455621">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="4048905309371269" type="SongBlock">
                                     <param id="0" name="Instance variable">State</param>
@@ -899,7 +899,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="6813086835748718">
+                        <event-block collapsed="1" sid="6813086835748718">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="4079558242922525" type="SongBlock">
                                     <param id="0" name="Instance variable">State</param>
@@ -1017,7 +1017,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="9185174513658645">
+                        <event-block collapsed="1" sid="9185174513658645">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="1893799481832723" type="BrickBlock">
                                     <param id="0" name="Instance variable">State</param>
@@ -1056,7 +1056,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="1855375927931384">
+                        <event-block collapsed="1" sid="1855375927931384">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="5816428935576929" type="BrickBlock">
                                     <param id="0" name="Instance variable">State</param>
@@ -1112,7 +1112,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-block sid="840130739477035">
+                <event-block collapsed="1" sid="840130739477035">
                     <conditions>
                         <condition id="0" name="On function" sid="2272285741163069" type="Function">
                             <param id="0" name="Name">&quot;HitBlock&quot;</param>
@@ -1433,7 +1433,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8779966539198683" title="Itens">
+        <event-group collapsed="1" description="" sid="8779966539198683" title="Itens">
             <sub-events>
                 <event-block sid="9454918499351548">
                     <conditions>
@@ -1662,7 +1662,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="9915798958321101">
+                <event-block collapsed="1" sid="9915798958321101">
                     <conditions>
                         <condition id="9" name="Is overlapping at offset" sid="2396465578439212" type="Mario">
                             <param id="0" name="Object">P</param>
@@ -1727,7 +1727,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="3012166139145076">
+                <event-block collapsed="1" sid="3012166139145076">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="5824124667374602" type="Moeda">
                             <param id="0" name="Instance variable">IsBlockTransformed</param>
@@ -1763,7 +1763,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="675972798541545">
+                <event-block collapsed="1" sid="675972798541545">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="5572416044256363" type="BrickBlock">
                             <param id="0" name="Instance variable">IsCoinTransformed</param>
@@ -1801,9 +1801,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="748998548870591" title="Inimigos">
+        <event-group collapsed="1" description="" sid="748998548870591" title="Inimigos">
             <sub-events>
-                <event-group description="" sid="8204904164989713" title="Stompable">
+                <event-group collapsed="1" description="" sid="8204904164989713" title="Stompable">
                     <sub-events>
                         <event-block sid="1250548672559899">
                             <conditions>
@@ -1862,7 +1862,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="4174781749143904" title="Hurt">
+                <event-group collapsed="1" description="" sid="4174781749143904" title="Hurt">
                     <sub-events>
                         <event-block sid="5167900520537703">
                             <conditions>
@@ -2006,7 +2006,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="3294171854727859">
+                                <event-block collapsed="1" sid="3294171854727859">
                                     <conditions>
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1303459082437466" type="VaiVolta">
                                             <param id="0" name="Instance variable">CanFall</param>
@@ -2155,7 +2155,7 @@
                         <variable constant="0" name="Turtle2Hidden" sid="1589875048973972" static="0" type="number">0</variable>
                         <variable constant="0" name="Turtle1Speed" sid="9150066417661704" static="0" type="number">0</variable>
                         <variable constant="0" name="Turtle2Speed" sid="253702386961131" static="0" type="number">0</variable>
-                        <event-block sid="2014480418633909">
+                        <event-block collapsed="1" sid="2014480418633909">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="7064012637348626" type="Turtle">
                                     <param id="0" name="Object">Turtle</param>
@@ -2299,7 +2299,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="3789689492511113">
+                        <event-block collapsed="1" sid="3789689492511113">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="3920240156312" type="Turtle">
                                     <param id="0" name="Instance variable">Wings</param>
@@ -2333,7 +2333,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="2148295911648264">
+                        <event-block collapsed="1" sid="2148295911648264">
                             <conditions>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1491209006663962" type="Turtle">
                                     <param id="0" name="Instance variable">Wings</param>
@@ -2363,7 +2363,7 @@
                             </sub-events>
                         </event-block>
                         <comment>Controle de tempo enquanto está escondida</comment>
-                        <event-block sid="2131167824223408">
+                        <event-block collapsed="1" sid="2131167824223408">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="1002047336245662" type="Turtle">
                                     <param id="0" name="Instance variable">Hidden</param>
@@ -2468,7 +2468,7 @@
                             </sub-events>
                         </event-block>
                         <comment>Controle de colisão com o Mario</comment>
-                        <event-block sid="865293201126038">
+                        <event-block collapsed="1" sid="865293201126038">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="1806379980546806" type="Mario">
                                     <param id="0" name="Object">Turtle</param>
@@ -2493,7 +2493,7 @@
                                         </action>
                                     </actions>
                                     <sub-events>
-                                        <event-block sid="7308418754065128">
+                                        <event-block collapsed="1" sid="7308418754065128">
                                             <conditions>
                                                 <condition id="-11" name="For Each" sid="1897237025084288" type="System">
                                                     <param id="0" name="Object">VaiVolta</param>
@@ -2690,7 +2690,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="8422656694119811" title="FlyingGoomba">
+                <event-group collapsed="1" description="" sid="8422656694119811" title="FlyingGoomba">
                     <sub-events>
                         <event-block sid="2180600070395272">
                             <conditions>
@@ -2753,7 +2753,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="5149017173574432" title="GoombaSpawner">
+                <event-group collapsed="1" description="" sid="5149017173574432" title="GoombaSpawner">
                     <sub-events>
                         <event-block sid="5980496056092753">
                             <conditions>
@@ -2792,7 +2792,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="6219701862713953">
+                        <event-block collapsed="1" sid="6219701862713953">
                             <conditions>
                                 <condition id="-11" name="For Each" sid="1425312947685085" type="System">
                                     <param id="0" name="Object">GoombaSpawner</param>
@@ -2876,7 +2876,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="7684062520144482">
+                <event-block collapsed="1" sid="7684062520144482">
                     <conditions>
                         <condition id="0" name="On function" sid="785559591547587" type="Function">
                             <param id="0" name="Name">&quot;InstantKill&quot;</param>
@@ -2950,7 +2950,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6801123633094392" title="HUD">
+        <event-group collapsed="1" description="" sid="6801123633094392" title="HUD">
             <sub-events>
                 <event-block sid="8846351411309227">
                     <conditions>
@@ -3068,7 +3068,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5318515743762829" title="Global">
+        <event-group collapsed="1" description="" sid="5318515743762829" title="Global">
             <sub-events>
                 <event-block sid="1604368739676953">
                     <conditions>
@@ -3155,7 +3155,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="117407398332286">
+                <event-block collapsed="1" sid="117407398332286">
                     <conditions>
                         <condition id="0" name="On function" sid="4559989034948008" type="Function">
                             <param id="0" name="Name">&quot;HitMario&quot;</param>
@@ -3257,7 +3257,7 @@
                         <action id="-9" name="Destroy" sid="5137772602276989" type="Mario" />
                     </actions>
                 </event-block>
-                <event-block sid="680810680820674">
+                <event-block collapsed="1" sid="680810680820674">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2549817382262483" type="Mario">
                             <param id="0" name="Object">EndOfLevel</param>
@@ -3497,7 +3497,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1418648498937071" title="Platforms">
+        <event-group collapsed="1" description="" sid="1418648498937071" title="Platforms">
             <sub-events>
                 <event-block sid="3392479233237644">
                     <conditions>
@@ -3564,9 +3564,13 @@
             </sub-events>
         </event-group>
         <variable constant="0" name="InitialGravity" sid="658692699480489" static="0" type="number">0</variable>
+        <variable constant="0" name="SlideDirectionX" sid="2924352028800666" static="0" type="number">0</variable>
+        <variable constant="0" name="SlideDirectionY" sid="8829928001693425" static="0" type="number">0</variable>
+        <variable constant="0" name="PipeCode" sid="7743159505408719" static="0" type="number">0</variable>
+        <variable constant="0" name="NextLayoutName" sid="7839068821101288" static="0" type="text"></variable>
         <event-group description="" sid="2026718617825691" title="Pipes">
             <sub-events>
-                <event-block sid="2277397148010479">
+                <event-block collapsed="1" sid="2277397148010479">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="6796908915178933" type="System" />
                     </conditions>
@@ -3596,6 +3600,18 @@
                                     <param id="0" name="Name">&quot;InsidePipe&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
+                                <action id="-9" name="Set value" sid="9905662486535595" type="System">
+                                    <param id="0" name="Variable">SlideDirectionY</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5795445519242558" type="System">
+                                    <param id="0" name="Variable">SlideDirectionX</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="2549533334512424" type="Mario">
+                                    <param id="0" name="Instance variable">CustomCounter</param>
+                                    <param id="1" name="Value">Mario.Height + 1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="2347713335789288">
@@ -3622,107 +3638,61 @@
                                     <param id="0" name="Name">&quot;InsidePipe&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="6199947946651101">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="8715846781981576" type="Mario">
-                            <param id="0" name="Instance variable">CustomAction</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;PipeEnter&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="5603547992468393">
-                            <conditions>
-                                <condition id="-36" name="Pick overlapping point" sid="6380425100772739" type="System">
-                                    <param id="0" name="Object">PipeDown</param>
-                                    <param id="1" name="X">Mario.X</param>
-                                    <param id="2" name="Y">Mario.BBoxTop + 1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="1296256253606574" type="Mario">
-                                    <param id="0" name="Instance variable">CustomAction</param>
-                                    <param id="1" name="Value">&quot;&quot;</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="6999627101273164" type="System">
-                                    <param id="0" name="Variable">LastPipeCode</param>
-                                    <param id="1" name="Value">PipeDown.Code</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="7689725118285786" type="System">
-                                    <param id="0" name="Variable">ChangingLayout</param>
+                                <action id="-9" name="Set value" sid="4903132445901796" type="System">
+                                    <param id="0" name="Variable">SlideDirectionY</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-25" name="Go to layout (by name)" sid="2207914128145704" type="System">
-                                    <param id="0" name="Layout">PipeDown.LayoutName</param>
+                                <action id="-9" name="Set value" sid="7163001067508032" type="System">
+                                    <param id="0" name="Variable">SlideDirectionX</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="-26" name="Restart layout" sid="6905296910468678" type="System" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="2924393938712139">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="8424941644957468" type="System" />
-                                <condition id="-36" name="Pick overlapping point" sid="9335462346023082" type="System">
-                                    <param id="0" name="Object">PipeDown</param>
-                                    <param id="1" name="X">Mario.X</param>
-                                    <param id="2" name="Y">Mario.BBoxBottom</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Set Y" sid="531400927506417" type="Mario">
-                                    <param id="0" name="Y">Mario.Y + dt * 12</param>
+                                <action id="-10" name="Set value" sid="4064152633745368" type="Mario">
+                                    <param id="0" name="Instance variable">CustomCounter</param>
+                                    <param id="1" name="Value">Mario.Height + 1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="7417907727733297">
+                        <event-block sid="8447555199733994">
                             <conditions>
-                                <condition id="-36" name="Pick overlapping point" sid="7912236215227079" type="System">
-                                    <param id="0" name="Object">PipeUp</param>
-                                    <param id="1" name="X">Mario.X</param>
-                                    <param id="2" name="Y">Mario.BBoxBottom</param>
+                                <condition id="-7" name="Compare instance variable" sid="6754319453286512" type="PipeLeft">
+                                    <param id="0" name="Instance variable">Code</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">LastPipeCode</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="6604359155864538" type="PipeLeft">
+                                    <param id="0" name="Instance variable">CanLeave</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="6081166117259644" type="Mario">
+                                <action id="-3" name="Set position" sid="8646147845986913" type="Mario">
+                                    <param id="0" name="X">PipeLeft.BBoxRight - 1</param>
+                                    <param id="1" name="Y">PipeUp.Y + PipeUp.Height</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="410054321668515" type="Mario">
                                     <param id="0" name="Instance variable">CustomAction</param>
-                                    <param id="1" name="Value">&quot;&quot;</param>
+                                    <param id="1" name="Value">&quot;PipeLeave&quot;</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="805353773377778" type="System">
-                                    <param id="0" name="Variable">LastPipeCode</param>
-                                    <param id="1" name="Value">PipeUp.Code</param>
+                                <action id="0" name="Call function" sid="9438355831215161" type="Function">
+                                    <param id="0" name="Name">&quot;InsidePipe&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="-9" name="Set value" sid="8019549614482092" type="System">
-                                    <param id="0" name="Variable">ChangingLayout</param>
+                                <action id="-9" name="Set value" sid="7034804328045553" type="System">
+                                    <param id="0" name="Variable">SlideDirectionY</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="7536701604436752" type="System">
+                                    <param id="0" name="Variable">SlideDirectionX</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-25" name="Go to layout (by name)" sid="8787982139512747" type="System">
-                                    <param id="0" name="Layout">PipeUp.LayoutName</param>
-                                </action>
-                                <action id="-26" name="Restart layout" sid="6897027264932132" type="System" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="6001091229487884">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="2725041815711686" type="System" />
-                                <condition id="-36" name="Pick overlapping point" sid="6796867648427672" type="System">
-                                    <param id="0" name="Object">PipeUp</param>
-                                    <param id="1" name="X">Mario.X</param>
-                                    <param id="2" name="Y">Mario.BBoxTop - 1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Set Y" sid="1776973535963372" type="Mario">
-                                    <param id="0" name="Y">Mario.Y - dt * 12</param>
+                                <action id="-10" name="Set value" sid="8796966318218088" type="Mario">
+                                    <param id="0" name="Instance variable">CustomCounter</param>
+                                    <param id="1" name="Value">Mario.Width + 1</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="2455663757812549">
+                <event-block collapsed="1" sid="2455663757812549">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="9097034806190912" type="Mario">
                             <param id="0" name="Instance variable">CustomAction</param>
@@ -3732,27 +3702,31 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="7605990286788045">
+                        <event-block sid="4945464633502345">
                             <conditions>
-                                <condition id="-36" name="Pick overlapping point" sid="8826801644740873" type="System">
-                                    <param id="0" name="Object">PipeDown</param>
-                                    <param id="1" name="X">Mario.X</param>
-                                    <param id="2" name="Y">Mario.BBoxBottom</param>
+                                <condition id="-7" name="Compare instance variable" sid="2483074111199248" type="Mario">
+                                    <param id="0" name="Instance variable">CustomCounter</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Set Y" sid="7853018769522269" type="Mario">
-                                    <param id="0" name="Y">Mario.Y - dt * 12</param>
+                                <action id="-12" name="Subtract from" sid="8615907195015483" type="Mario">
+                                    <param id="0" name="Instance variable">CustomCounter</param>
+                                    <param id="1" name="Value">dt * 12</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="1585182992074491" type="Mario">
+                                    <param id="0" name="X">Mario.X + dt * 12 * SlideDirectionX</param>
+                                    <param id="1" name="Y">Mario.Y + dt * 12 * SlideDirectionY</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="8694706679332112">
+                        <event-block sid="8707303634822084">
                             <conditions>
-                                <condition id="-22" name="Else" sid="6335524840495341" type="System" />
-                                <condition id="-36" name="Pick overlapping point" sid="6292326908490556" type="System">
-                                    <param id="0" name="Object">PipeDown</param>
-                                    <param id="1" name="X">Mario.X</param>
-                                    <param id="2" name="Y">Mario.BBoxBottom + 5</param>
+                                <condition id="-7" name="Compare instance variable" sid="7005983226993107" type="Mario">
+                                    <param id="0" name="Instance variable">CustomCounter</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -3762,33 +3736,60 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="9876571731890209">
+                    </sub-events>
+                </event-block>
+                <event-block collapsed="1" sid="3307038212560678">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4769935657215608" type="Mario">
+                            <param id="0" name="Instance variable">CustomAction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;PipeEnter&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4180049064478815">
                             <conditions>
-                                <condition id="-36" name="Pick overlapping point" sid="9046818418089742" type="System">
-                                    <param id="0" name="Object">PipeUp</param>
-                                    <param id="1" name="X">Mario.X</param>
-                                    <param id="2" name="Y">Mario.BBoxTop</param>
+                                <condition id="-7" name="Compare instance variable" sid="5739163113015172" type="Mario">
+                                    <param id="0" name="Instance variable">CustomCounter</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Set Y" sid="4621243276524089" type="Mario">
-                                    <param id="0" name="Y">Mario.Y + dt * 12</param>
+                                <action id="-12" name="Subtract from" sid="2018376027331365" type="Mario">
+                                    <param id="0" name="Instance variable">CustomCounter</param>
+                                    <param id="1" name="Value">dt * 12</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="1314304535587599" type="Mario">
+                                    <param id="0" name="X">Mario.X + dt * 12 * SlideDirectionX</param>
+                                    <param id="1" name="Y">Mario.Y + dt * 12 * SlideDirectionY</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="5996827230703332">
+                        <event-block sid="2991713939859249">
                             <conditions>
-                                <condition id="-22" name="Else" sid="5363185965154493" type="System" />
-                                <condition id="-36" name="Pick overlapping point" sid="8339107681208097" type="System">
-                                    <param id="0" name="Object">PipeUp</param>
-                                    <param id="1" name="X">Mario.X</param>
-                                    <param id="2" name="Y">Mario.BBoxTop - 5</param>
+                                <condition id="-7" name="Compare instance variable" sid="566183857672683" type="Mario">
+                                    <param id="0" name="Instance variable">CustomCounter</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="6324409769997808" type="Function">
-                                    <param id="0" name="Name">&quot;OutOfPipe&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
+                                <action id="-10" name="Set value" sid="1296256253606574" type="Mario">
+                                    <param id="0" name="Instance variable">CustomAction</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="7689725118285786" type="System">
+                                    <param id="0" name="Variable">ChangingLayout</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6999627101273164" type="System">
+                                    <param id="0" name="Variable">LastPipeCode</param>
+                                    <param id="1" name="Value">PipeCode</param>
+                                </action>
+                                <action id="-25" name="Go to layout (by name)" sid="2207914128145704" type="System">
+                                    <param id="0" name="Layout">NextLayoutName</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -3797,16 +3798,16 @@
                 <event-block sid="4950740008668918">
                     <conditions>
                         <condition id="-36" name="Pick overlapping point" sid="590558400542406" type="System">
-                            <param id="0" name="Object">PipeDown</param>
-                            <param id="1" name="X">Mario.X</param>
-                            <param id="2" name="Y">Mario.BBoxBottom + 1</param>
+                            <param id="0" name="Object">PipeLeft</param>
+                            <param id="1" name="X">Mario.BBoxLeft - 1</param>
+                            <param id="2" name="Y">Mario.Y</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="8877248077919135" type="Mario">
-                            <param id="0" name="Instance variable">CustomAction</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Crouched&quot;</param>
+                        <condition id="-8" name="Compare two values" sid="8877248077919135" type="System">
+                            <param id="0" name="First value">Mario.Platform.VectorX</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">0</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="7857510095047254" type="PipeDown">
+                        <condition id="-7" name="Compare instance variable" sid="7857510095047254" type="PipeLeft">
                             <param id="0" name="Instance variable">LayoutName</param>
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Value">&quot;&quot;</param>
@@ -3814,8 +3815,8 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="693876778716753" type="Mario">
-                            <param id="0" name="X">PipeDown.X + PipeDown.Width / 2</param>
-                            <param id="1" name="Y">PipeDown.BBoxTop + 1</param>
+                            <param id="0" name="X">PipeLeft.X + PipeLeft.Width + Mario.Width / 2</param>
+                            <param id="1" name="Y">PipeLeft.Y + PipeLeft.Height - (PipeLeft.Height - Mario.Height) / 2</param>
                         </action>
                         <action id="-10" name="Set value" sid="7272435954366276" type="Mario">
                             <param id="0" name="Instance variable">CustomAction</param>
@@ -3824,6 +3825,79 @@
                         <action id="0" name="Call function" sid="1326677707535564" type="Function">
                             <param id="0" name="Name">&quot;InsidePipe&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2715164660300711" type="System">
+                            <param id="0" name="Variable">PipeCode</param>
+                            <param id="1" name="Value">PipeLeft.Code</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6962218260216768" type="System">
+                            <param id="0" name="Variable">NextLayoutName</param>
+                            <param id="1" name="Value">PipeLeft.LayoutName</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7189217681327863" type="Mario">
+                            <param id="0" name="Instance variable">CustomCounter</param>
+                            <param id="1" name="Value">Mario.Width + 1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4220710764278286" type="System">
+                            <param id="0" name="Variable">SlideDirectionX</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2589760408934537" type="System">
+                            <param id="0" name="Variable">SlideDirectionY</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7547517051268588">
+                    <conditions>
+                        <condition id="-36" name="Pick overlapping point" sid="450262725702093" type="System">
+                            <param id="0" name="Object">PipeDown</param>
+                            <param id="1" name="X">Mario.X</param>
+                            <param id="2" name="Y">Mario.BBoxBottom + 1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2435794702654236" type="Mario">
+                            <param id="0" name="Instance variable">CustomAction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Crouched&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9198222448934869" type="PipeDown">
+                            <param id="0" name="Instance variable">LayoutName</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="4860521267752781" type="Mario">
+                            <param id="0" name="X">PipeDown.X + PipeDown.Width / 2</param>
+                            <param id="1" name="Y">PipeDown.BBoxTop + 1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6369801083853357" type="Mario">
+                            <param id="0" name="Instance variable">CustomAction</param>
+                            <param id="1" name="Value">&quot;PipeEnter&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="8857388212402306" type="Function">
+                            <param id="0" name="Name">&quot;InsidePipe&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1291811235708856" type="System">
+                            <param id="0" name="Variable">PipeCode</param>
+                            <param id="1" name="Value">PipeDown.Code</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5605528081694705" type="System">
+                            <param id="0" name="Variable">NextLayoutName</param>
+                            <param id="1" name="Value">PipeDown.LayoutName</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7894278615693272" type="Mario">
+                            <param id="0" name="Instance variable">CustomCounter</param>
+                            <param id="1" name="Value">Mario.Height</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3659517370983423" type="System">
+                            <param id="0" name="Variable">SlideDirectionX</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8591203375811399" type="System">
+                            <param id="0" name="Variable">SlideDirectionY</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -3853,6 +3927,26 @@
                         <action id="0" name="Call function" sid="6094394795758009" type="Function">
                             <param id="0" name="Name">&quot;InsidePipe&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5142257114483727" type="System">
+                            <param id="0" name="Variable">PipeCode</param>
+                            <param id="1" name="Value">PipeUp.Code</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8771953413716136" type="System">
+                            <param id="0" name="Variable">NextLayoutName</param>
+                            <param id="1" name="Value">PipeUp.LayoutName</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3184111274604062" type="Mario">
+                            <param id="0" name="Instance variable">CustomCounter</param>
+                            <param id="1" name="Value">Mario.Height</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9273902029452268" type="System">
+                            <param id="0" name="Variable">SlideDirectionX</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5883393206748238" type="System">
+                            <param id="0" name="Variable">SlideDirectionY</param>
+                            <param id="1" name="Value">-1</param>
                         </action>
                     </actions>
                 </event-block>

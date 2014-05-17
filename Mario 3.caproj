@@ -364,7 +364,7 @@
                     <instance-variable name="GoingRight" sid="6460610714809156" type="boolean" />
                     <instance-variable name="Item" sid="8564338116134208" type="string" />
                     <instance-variable name="CustomAction" sid="8045406423992461" type="string" />
-                    <instance-variable name="SlowFallCounter" sid="1917245463331891" type="number" />
+                    <instance-variable name="CustomCounter" sid="1917245463331891" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="9255735361066924">
@@ -507,7 +507,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="Platforms">
+        <object-folder expanded="1" name="Platforms">
             <object-type name="BlockWood" sid="8926877800790454">
                 <plugin id="NinePatch" />
                 <behaviors>
@@ -808,6 +808,25 @@
                 </effects>
                 <texture />
             </object-type>
+            <object-type name="PipeLeft" sid="2329008280378176">
+                <plugin id="NinePatch" />
+                <instance-variables>
+                    <instance-variable name="Code" sid="687040446246948" type="number" />
+                    <instance-variable name="CanLeave" sid="6547955350812496" type="boolean" />
+                    <instance-variable name="LayoutName" sid="3550794125920232" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="2790795478468192">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="BlackWhite">
+                        <effect id="blacknwhite" />
+                    </effect-type>
+                </effects>
+                <texture />
+            </object-type>
         </object-folder>
         <object-folder expanded="0" name="References">
             <object-type name="Level1" sid="7490041033544774">
@@ -823,6 +842,22 @@
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="682090261487009" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Level1a" sid="3392904917841363">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3776003955158246" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Level2a" sid="5674589607506426">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7605556013263857" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1053,14 +1088,6 @@
         <object-type name="Function" sid="2131010694619834">
             <plugin id="Function" />
         </object-type>
-        <object-type name="Level1a" sid="3392904917841363">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3776003955158246" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="MetalBlockBlue" sid="9911806985194511">
             <plugin id="NinePatch" />
             <behaviors>
@@ -1108,6 +1135,7 @@
                 <member>MetalBlockBlue</member>
                 <member>PipeDown</member>
                 <member>PipeHorizontal</member>
+                <member>PipeLeft</member>
                 <member>PipeUp</member>
                 <member>PlatformBlue</member>
                 <member>PlatformGreen</member>
@@ -1183,6 +1211,7 @@
                 <member>MetalBlockBlue</member>
                 <member>PipeDown</member>
                 <member>PipeHorizontal</member>
+                <member>PipeLeft</member>
                 <member>PipeUp</member>
             </members>
         </family>
@@ -1208,9 +1237,10 @@
         <layout>World 1-1.xml</layout>
         <layout>World 1-1 a.xml</layout>
         <layout>World 1-2.xml</layout>
+        <layout>World 1-2 a.xml</layout>
         <layout>CustomLevel.xml</layout>
     </layout-folder>
-    <event-folder expanded="1">
+    <event-folder expanded="0">
         <event-sheet>GamePlayEvents.xml</event-sheet>
     </event-folder>
     <global-instances>

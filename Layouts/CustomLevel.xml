@@ -489,7 +489,7 @@
                         <GoingRight>true</GoingRight>
                         <Item></Item>
                         <CustomAction></CustomAction>
-                        <SlowFallCounter>0</SlowFallCounter>
+                        <CustomCounter>0</CustomCounter>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">

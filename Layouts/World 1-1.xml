@@ -2734,7 +2734,7 @@
                         <GoingRight>true</GoingRight>
                         <Item></Item>
                         <CustomAction></CustomAction>
-                        <SlowFallCounter>0</SlowFallCounter>
+                        <CustomCounter>0</CustomCounter>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -2753,8 +2753,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>56</x>
-                        <y>400</y>
+                        <x>80</x>
+                        <y>408</y>
                         <z>0</z>
                         <width>28</width>
                         <height>28</height>

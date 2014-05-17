@@ -449,7 +449,7 @@
                         <GoingRight>true</GoingRight>
                         <Item></Item>
                         <CustomAction></CustomAction>
-                        <SlowFallCounter>0</SlowFallCounter>
+                        <CustomCounter>0</CustomCounter>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -621,8 +621,8 @@
                     </properties>
                     <instance-variables>
                         <Code>0</Code>
-                        <CanLeave>false</CanLeave>
-                        <LayoutName>World 1-2</LayoutName>
+                        <CanLeave>true</CanLeave>
+                        <LayoutName></LayoutName>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -659,8 +659,8 @@
                     </properties>
                     <instance-variables>
                         <Code>0</Code>
-                        <CanLeave>true</CanLeave>
-                        <LayoutName></LayoutName>
+                        <CanLeave>false</CanLeave>
+                        <LayoutName>World 1-2 a</LayoutName>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">

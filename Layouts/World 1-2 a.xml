@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>World 1-1 a</name>
-    <sid>9141602978127523</sid>
+    <name>World 1-2 a</name>
+    <sid>5879848332878913</sid>
     <event-sheet>GamePlayEvents</event-sheet>
     <size>
-        <width>512</width>
-        <height>192</height>
+        <width>256</width>
+        <height>472</height>
     </size>
     <margins>
         <horizontal>128</horizontal>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Reference" sid="7349613018044192">
+        <layer name="Reference" sid="1808404949245879">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -27,7 +27,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Level1a" uid="285">
+                <instance type="Level2a" uid="343">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -37,11 +37,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>256</x>
-                        <y>96</y>
+                        <x>128</x>
+                        <y>216</y>
                         <z>0</z>
-                        <width>512</width>
-                        <height>192</height>
+                        <width>256</width>
+                        <height>432</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -52,7 +52,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Level" sid="8322745394901342">
+        <layer name="Level" sid="7435075813762003">
             <initially-visible>1</initially-visible>
             <background-color>156,252,240</background-color>
             <transparent>1</transparent>
@@ -66,7 +66,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="PipeUp" uid="340">
+                <instance type="PipeUp" uid="344">
                     <properties>
                         <left-margin>0</left-margin>
                         <right-margin>0</right-margin>
@@ -105,8 +105,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
-                        <y>0</y>
+                        <x>112</x>
+                        <y>64</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -116,7 +116,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Moeda" uid="333">
+                <instance type="Moeda" uid="345">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -132,8 +132,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>136</x>
-                        <y>256</y>
+                        <x>112</x>
+                        <y>464</y>
                         <z>0</z>
                         <width>12</width>
                         <height>16</height>
@@ -144,7 +144,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pena" uid="378">
+                <instance type="Pena" uid="346">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -194,8 +194,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
-                        <y>256</y>
+                        <x>136</x>
+                        <y>464</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -206,7 +206,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="cogumelo" uid="382">
+                <instance type="cogumelo" uid="347">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -242,8 +242,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>192</x>
-                        <y>256</y>
+                        <x>168</x>
+                        <y>464</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -254,7 +254,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MarioPequeno" uid="400">
+                <instance type="MarioPequeno" uid="348">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -267,8 +267,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>40</x>
-                        <y>296</y>
+                        <x>16</x>
+                        <y>504</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -279,7 +279,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MarioGrande" uid="401">
+                <instance type="MarioGrande" uid="349">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -292,8 +292,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>72</x>
-                        <y>296</y>
+                        <x>48</x>
+                        <y>504</y>
                         <z>0</z>
                         <width>28</width>
                         <height>28</height>
@@ -304,7 +304,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MarioFeather" uid="408">
+                <instance type="MarioFeather" uid="350">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -317,8 +317,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>104</x>
-                        <y>296</y>
+                        <x>80</x>
+                        <y>504</y>
                         <z>0</z>
                         <width>24</width>
                         <height>28</height>
@@ -329,7 +329,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MarioScrollTarget" uid="426">
+                <instance type="MarioScrollTarget" uid="351">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -349,8 +349,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>16</x>
-                        <y>248</y>
+                        <x>-8</x>
+                        <y>456</y>
                         <z>0</z>
                         <width>15</width>
                         <height>15</height>
@@ -361,7 +361,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MetalBlockBlue" uid="286">
+                <instance type="MetalBlockBlue" uid="352">
                     <properties>
                         <left-margin>0</left-margin>
                         <right-margin>0</right-margin>
@@ -386,7 +386,7 @@
                         <x>0</x>
                         <y>0</y>
                         <z>0</z>
-                        <width>128</width>
+                        <width>64</width>
                         <height>192</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -394,7 +394,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MetalBlockBlue" uid="288">
+                <instance type="MetalBlockBlue" uid="356">
                     <properties>
                         <left-margin>0</left-margin>
                         <right-margin>0</right-margin>
@@ -416,73 +416,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
-                        <y>160</y>
-                        <z>0</z>
-                        <width>384</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="MetalBlockBlue" uid="317">
-                    <properties>
-                        <left-margin>0</left-margin>
-                        <right-margin>0</right-margin>
-                        <top-margin>0</top-margin>
-                        <bottom-margin>0</bottom-margin>
-                        <edges>Tile</edges>
-                        <fill>Tile</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>336</x>
-                        <y>64</y>
-                        <z>0</z>
-                        <width>176</width>
-                        <height>96</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="MetalBlockBlue" uid="318">
-                    <properties>
-                        <left-margin>0</left-margin>
-                        <right-margin>0</right-margin>
-                        <top-margin>0</top-margin>
-                        <bottom-margin>0</bottom-margin>
-                        <edges>Tile</edges>
-                        <fill>Tile</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>384</x>
+                        <x>64</x>
                         <y>0</y>
                         <z>0</z>
                         <width>128</width>
@@ -493,591 +427,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MetalBlockBlue" uid="319">
-                    <properties>
-                        <left-margin>0</left-margin>
-                        <right-margin>0</right-margin>
-                        <top-margin>0</top-margin>
-                        <bottom-margin>0</bottom-margin>
-                        <edges>Tile</edges>
-                        <fill>Tile</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>160</x>
-                        <y>0</y>
-                        <z>0</z>
-                        <width>192</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="MetalBlockBlue" uid="320">
-                    <properties>
-                        <left-margin>0</left-margin>
-                        <right-margin>0</right-margin>
-                        <top-margin>0</top-margin>
-                        <bottom-margin>0</bottom-margin>
-                        <edges>Tile</edges>
-                        <fill>Tile</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>320</x>
-                        <y>80</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>80</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="MetalBlockBlue" uid="323">
-                    <properties>
-                        <left-margin>0</left-margin>
-                        <right-margin>0</right-margin>
-                        <top-margin>0</top-margin>
-                        <bottom-margin>0</bottom-margin>
-                        <edges>Tile</edges>
-                        <fill>Tile</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>304</x>
-                        <y>96</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="MetalBlockBlue" uid="324">
-                    <properties>
-                        <left-margin>0</left-margin>
-                        <right-margin>0</right-margin>
-                        <top-margin>0</top-margin>
-                        <bottom-margin>0</bottom-margin>
-                        <edges>Tile</edges>
-                        <fill>Tile</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>288</x>
-                        <y>112</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>48</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="MetalBlockBlue" uid="325">
-                    <properties>
-                        <left-margin>0</left-margin>
-                        <right-margin>0</right-margin>
-                        <top-margin>0</top-margin>
-                        <bottom-margin>0</bottom-margin>
-                        <edges>Tile</edges>
-                        <fill>Tile</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>272</x>
-                        <y>128</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="MetalBlockBlue" uid="326">
-                    <properties>
-                        <left-margin>0</left-margin>
-                        <right-margin>0</right-margin>
-                        <top-margin>0</top-margin>
-                        <bottom-margin>0</bottom-margin>
-                        <edges>Tile</edges>
-                        <fill>Tile</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>256</x>
-                        <y>144</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Moeda" uid="327">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Tempo>0</Tempo>
-                        <Destrói>false</Destrói>
-                        <IsBlockTransformed>false</IsBlockTransformed>
-                        <BlockTimeOut>15</BlockTimeOut>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>216</x>
-                        <y>48</y>
-                        <z>0</z>
-                        <width>12</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Moeda" uid="328">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Tempo>0</Tempo>
-                        <Destrói>false</Destrói>
-                        <IsBlockTransformed>false</IsBlockTransformed>
-                        <BlockTimeOut>15</BlockTimeOut>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>232</x>
-                        <y>32</y>
-                        <z>0</z>
-                        <width>12</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Moeda" uid="329">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Tempo>0</Tempo>
-                        <Destrói>false</Destrói>
-                        <IsBlockTransformed>false</IsBlockTransformed>
-                        <BlockTimeOut>15</BlockTimeOut>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>248</x>
-                        <y>32</y>
-                        <z>0</z>
-                        <width>12</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Moeda" uid="330">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Tempo>0</Tempo>
-                        <Destrói>false</Destrói>
-                        <IsBlockTransformed>false</IsBlockTransformed>
-                        <BlockTimeOut>15</BlockTimeOut>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>264</x>
-                        <y>48</y>
-                        <z>0</z>
-                        <width>12</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Moeda" uid="331">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Tempo>0</Tempo>
-                        <Destrói>false</Destrói>
-                        <IsBlockTransformed>false</IsBlockTransformed>
-                        <BlockTimeOut>15</BlockTimeOut>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>264</x>
-                        <y>64</y>
-                        <z>0</z>
-                        <width>12</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Moeda" uid="332">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Tempo>0</Tempo>
-                        <Destrói>false</Destrói>
-                        <IsBlockTransformed>false</IsBlockTransformed>
-                        <BlockTimeOut>15</BlockTimeOut>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>248</x>
-                        <y>80</y>
-                        <z>0</z>
-                        <width>12</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Moeda" uid="334">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Tempo>0</Tempo>
-                        <Destrói>false</Destrói>
-                        <IsBlockTransformed>false</IsBlockTransformed>
-                        <BlockTimeOut>15</BlockTimeOut>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>232</x>
-                        <y>80</y>
-                        <z>0</z>
-                        <width>12</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Moeda" uid="335">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Tempo>0</Tempo>
-                        <Destrói>false</Destrói>
-                        <IsBlockTransformed>false</IsBlockTransformed>
-                        <BlockTimeOut>15</BlockTimeOut>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>264</x>
-                        <y>96</y>
-                        <z>0</z>
-                        <width>12</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Moeda" uid="336">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Tempo>0</Tempo>
-                        <Destrói>false</Destrói>
-                        <IsBlockTransformed>false</IsBlockTransformed>
-                        <BlockTimeOut>15</BlockTimeOut>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>264</x>
-                        <y>112</y>
-                        <z>0</z>
-                        <width>12</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Moeda" uid="337">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Tempo>0</Tempo>
-                        <Destrói>false</Destrói>
-                        <IsBlockTransformed>false</IsBlockTransformed>
-                        <BlockTimeOut>15</BlockTimeOut>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>248</x>
-                        <y>128</y>
-                        <z>0</z>
-                        <width>12</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Moeda" uid="338">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Tempo>0</Tempo>
-                        <Destrói>false</Destrói>
-                        <IsBlockTransformed>false</IsBlockTransformed>
-                        <BlockTimeOut>15</BlockTimeOut>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>232</x>
-                        <y>128</y>
-                        <z>0</z>
-                        <width>12</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Moeda" uid="339">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Tempo>0</Tempo>
-                        <Destrói>false</Destrói>
-                        <IsBlockTransformed>false</IsBlockTransformed>
-                        <BlockTimeOut>15</BlockTimeOut>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>216</x>
-                        <y>112</y>
-                        <z>0</z>
-                        <width>12</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="PipeUp" uid="341">
-                    <properties>
-                        <left-margin>0</left-margin>
-                        <right-margin>0</right-margin>
-                        <top-margin>0</top-margin>
-                        <bottom-margin>16</bottom-margin>
-                        <edges>Stretch</edges>
-                        <fill>Stretch</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <instance-variables>
-                        <Code>0</Code>
-                        <CanLeave>false</CanLeave>
-                        <LayoutName>World 1-1</LayoutName>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="BlackWhite">
-                            <parameters>
-                                <threshold>0.3</threshold>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="Inverse">
-                            <parameters>
-                                <intensity>1</intensity>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>352</x>
-                        <y>0</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Mario" uid="342">
+                <instance type="Mario" uid="375">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>grande</initial-animation>
@@ -1111,8 +461,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>144</x>
-                        <y>64</y>
+                        <x>128</x>
+                        <y>128</y>
                         <z>0</z>
                         <width>28</width>
                         <height>28</height>
@@ -1123,10 +473,747 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="MetalBlockBlue" uid="387">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>0</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>192</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>192</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MetalBlockBlue" uid="388">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>0</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>240</x>
+                        <y>192</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>240</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MetalBlockBlue" uid="353">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>0</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>416</y>
+                        <z>0</z>
+                        <width>240</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MetalBlockBlue" uid="354">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>0</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>192</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>192</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Moeda" uid="355">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Tempo>0</Tempo>
+                        <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>104</x>
+                        <y>344</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Moeda" uid="357">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Tempo>0</Tempo>
+                        <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>104</x>
+                        <y>360</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Moeda" uid="358">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Tempo>0</Tempo>
+                        <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>104</x>
+                        <y>376</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Moeda" uid="359">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Tempo>0</Tempo>
+                        <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>104</x>
+                        <y>392</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Moeda" uid="360">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Tempo>0</Tempo>
+                        <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>104</x>
+                        <y>408</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Moeda" uid="361">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Tempo>0</Tempo>
+                        <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>120</x>
+                        <y>408</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Moeda" uid="362">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Tempo>0</Tempo>
+                        <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>120</x>
+                        <y>392</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Moeda" uid="363">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Tempo>0</Tempo>
+                        <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>120</x>
+                        <y>376</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Moeda" uid="364">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Tempo>0</Tempo>
+                        <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>120</x>
+                        <y>360</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Moeda" uid="365">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Tempo>0</Tempo>
+                        <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>120</x>
+                        <y>344</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Moeda" uid="366">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Tempo>0</Tempo>
+                        <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>136</x>
+                        <y>344</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Moeda" uid="367">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Tempo>0</Tempo>
+                        <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>136</x>
+                        <y>360</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Moeda" uid="368">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Tempo>0</Tempo>
+                        <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>136</x>
+                        <y>376</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Moeda" uid="369">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Tempo>0</Tempo>
+                        <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>136</x>
+                        <y>392</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Moeda" uid="370">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Tempo>0</Tempo>
+                        <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>136</x>
+                        <y>408</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Moeda" uid="371">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Tempo>0</Tempo>
+                        <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>152</x>
+                        <y>408</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Moeda" uid="372">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Tempo>0</Tempo>
+                        <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>152</x>
+                        <y>392</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Moeda" uid="373">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Tempo>0</Tempo>
+                        <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>152</x>
+                        <y>376</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Moeda" uid="374">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Tempo>0</Tempo>
+                        <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>152</x>
+                        <y>360</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Moeda" uid="389">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Tempo>0</Tempo>
+                        <Destrói>false</Destrói>
+                        <IsBlockTransformed>false</IsBlockTransformed>
+                        <BlockTimeOut>15</BlockTimeOut>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>152</x>
+                        <y>344</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PipeLeft" uid="390">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>16</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Stretch</edges>
+                        <fill>Stretch</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <instance-variables>
+                        <Code>0</Code>
+                        <CanLeave>false</CanLeave>
+                        <LayoutName>World 1-2</LayoutName>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="BlackWhite">
+                            <parameters>
+                                <threshold>0.5</threshold>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>384</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
-        <layer name="HUD" sid="5225571168653496">
+        <layer name="HUD" sid="2111240176681584">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -1140,7 +1227,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="StatusBar" uid="447">
+                <instance type="StatusBar" uid="376">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1162,7 +1249,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="IndicatorSpeed" uid="448">
+                <instance type="IndicatorSpeed" uid="377">
                     <properties>
                         <left-margin>0</left-margin>
                         <right-margin>0</right-margin>
@@ -1188,7 +1275,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="RunningIndicator" uid="449">
+                <instance type="RunningIndicator" uid="379">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1210,7 +1297,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="IndicatorSpeedActive" uid="450">
+                <instance type="IndicatorSpeedActive" uid="380">
                     <properties>
                         <left-margin>0</left-margin>
                         <right-margin>0</right-margin>
@@ -1236,7 +1323,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NumberFont" uid="451">
+                <instance type="NumberFont" uid="381">
                     <properties>
                         <character-width>8</character-width>
                         <character-height>8</character-height>
@@ -1271,7 +1358,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NumberFont" uid="452">
+                <instance type="NumberFont" uid="383">
                     <properties>
                         <character-width>8</character-width>
                         <character-height>8</character-height>
@@ -1306,7 +1393,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NumberFont" uid="453">
+                <instance type="NumberFont" uid="384">
                     <properties>
                         <character-width>8</character-width>
                         <character-height>8</character-height>
@@ -1341,7 +1428,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NumberFont" uid="454">
+                <instance type="NumberFont" uid="385">
                     <properties>
                         <character-width>8</character-width>
                         <character-height>8</character-height>
@@ -1376,7 +1463,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NumberFont" uid="455">
+                <instance type="NumberFont" uid="386">
                     <properties>
                         <character-width>8</character-width>
                         <character-height>8</character-height>
