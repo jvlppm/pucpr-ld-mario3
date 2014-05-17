@@ -913,6 +913,11 @@
                         <hotspot>Top-left</hotspot>
                         <seams>Overlap</seams>
                     </properties>
+                    <instance-variables>
+                        <Code>0</Code>
+                        <CanEnter>false</CanEnter>
+                        <CanLeave>false</CanLeave>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
                             <properties>
@@ -1123,6 +1128,11 @@
                         <hotspot>Top-left</hotspot>
                         <seams>Overlap</seams>
                     </properties>
+                    <instance-variables>
+                        <Code>0</Code>
+                        <CanEnter>false</CanEnter>
+                        <CanLeave>false</CanLeave>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
                             <properties>
@@ -1156,6 +1166,11 @@
                         <hotspot>Top-left</hotspot>
                         <seams>Overlap</seams>
                     </properties>
+                    <instance-variables>
+                        <Code>0</Code>
+                        <CanEnter>false</CanEnter>
+                        <CanLeave>false</CanLeave>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
                             <properties>

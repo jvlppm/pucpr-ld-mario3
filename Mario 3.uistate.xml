@@ -21,7 +21,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1">
+    <families-expanded root="0">
         <family expanded="0" name="VaiVolta" />
         <family expanded="0" name="BasePlatforms" />
         <family expanded="0" name="SpritePlatforms" />
@@ -31,7 +31,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="Turtle" />
         <family expanded="0" name="CanDie" />
         <family expanded="0" name="BaseWalls" />
-        <family expanded="1" name="SpriteWalls" />
+        <family expanded="0" name="SpriteWalls" />
         <family expanded="0" name="Item" />
     </families-expanded>
 </c2uistate>

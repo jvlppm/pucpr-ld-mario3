@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GamePlayEvents</name>
     <events>
+        <variable constant="0" name="LastPipeCode" sid="6490732503493715" static="0" type="number">-1</variable>
         <variable constant="0" name="ChangingLayout" sid="4237106686453542" static="0" type="number">0</variable>
         <variable constant="0" name="CurrentMarioItem" sid="9723909373243204" static="0" type="text"></variable>
         <variable constant="0" name="CurrentMarioSize" sid="1251636283060318" static="0" type="text">pequeno</variable>
@@ -12,7 +13,7 @@
         <variable constant="0" name="Lives" sid="8297701242012796" static="0" type="number">3</variable>
         <variable constant="0" name="Coins" sid="2863490799107284" static="0" type="number">0</variable>
         <variable constant="0" name="Timer" sid="2849380820232914" static="0" type="number">300</variable>
-        <event-group description="" sid="5115914260203696" title="Mario">
+        <event-group collapsed="1" description="" sid="5115914260203696" title="Mario">
             <sub-events>
                 <event-group description="" sid="2304413015275258" title="Controls">
                     <sub-events>
@@ -714,7 +715,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4607093846203148" title="Blocos">
+        <event-group collapsed="1" description="" sid="4607093846203148" title="Blocos">
             <sub-events>
                 <event-group collapsed="1" description="" sid="9395876816556035" title="SongBlock">
                     <sub-events>
@@ -1381,7 +1382,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8779966539198683" title="Itens">
+        <event-group collapsed="1" description="" sid="8779966539198683" title="Itens">
             <sub-events>
                 <event-block sid="9454918499351548">
                     <conditions>
@@ -3016,7 +3017,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5318515743762829" title="Global">
+        <event-group description="" sid="5318515743762829" title="Global">
             <sub-events>
                 <event-block sid="1604368739676953">
                     <conditions>
@@ -3103,7 +3104,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="117407398332286">
+                <event-block collapsed="1" sid="117407398332286">
                     <conditions>
                         <condition id="0" name="On function" sid="4559989034948008" type="Function">
                             <param id="0" name="Name">&quot;HitMario&quot;</param>
@@ -3497,6 +3498,137 @@
                             <param id="0" name="Y">VerticalPlatform.Y + VerticalPlatform.MoveY * dt</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <variable constant="0" name="InitialGravity" sid="658692699480489" static="0" type="number">0</variable>
+        <event-group description="" sid="2026718617825691" title="Pipes">
+            <sub-events>
+                <event-block sid="2277397148010479">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="6796908915178933" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4295515219495749">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9804093235848729" type="Pipe">
+                                    <param id="0" name="Instance variable">Code</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">LastPipeCode</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="725356368138031" type="Pipe">
+                                    <param id="0" name="Instance variable">CanLeave</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="511833447029156" type="Mario">
+                                    <param id="0" name="X">Pipe.X + Pipe.Width / 2</param>
+                                    <param id="1" name="Y">Pipe.BBoxTop + Mario.Height</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="9929992806283507" type="Mario">
+                                    <param id="0" name="Instance variable">CustomAction</param>
+                                    <param id="1" name="Value">&quot;Pipe&quot;</param>
+                                </action>
+                                <action id="11" name="Set collisions enabled" sid="9051843324787473" type="Mario">
+                                    <param id="0" name="Collisions">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2171680805875487" type="System">
+                                    <param id="0" name="Variable">InitialGravity</param>
+                                    <param id="1" name="Value">Mario.Platform.Gravity</param>
+                                </action>
+                                <action behavior="Platform" id="5" name="Set gravity" sid="5004539913997098" type="Mario">
+                                    <param id="0" name="Gravity">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="4395788497225418" type="MarioPequeno">
+                                    <param id="0" name="Animation">&quot;Pipe&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="9019578925046364" type="MarioGrande">
+                                    <param id="0" name="Animation">&quot;Pipe&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="9124330735434414" type="MarioFeather">
+                                    <param id="0" name="Animation">&quot;Pipe&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="6680746167064734" type="MarioPequeno">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Object">Pipe</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="6720694303879043" type="MarioGrande">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Object">Pipe</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="7584384869890823" type="MarioFeather">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Object">Pipe</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6199947946651101">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8715846781981576" type="Mario">
+                            <param id="0" name="Instance variable">CustomAction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Pipe&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2924393938712139">
+                            <conditions>
+                                <condition id="-36" name="Pick overlapping point" sid="6380425100772739" type="System">
+                                    <param id="0" name="Object">Pipe</param>
+                                    <param id="1" name="X">Mario.X</param>
+                                    <param id="2" name="Y">Mario.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="531400927506417" type="Mario">
+                                    <param id="0" name="Y">Mario.Y - dt * 12</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5603547992468393">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3900318189364183" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="1296256253606574" type="Mario">
+                                    <param id="0" name="Instance variable">CustomAction</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="11" name="Set collisions enabled" sid="2791750300427003" type="Mario">
+                                    <param id="0" name="Collisions">1</param>
+                                </action>
+                                <action behavior="Platform" id="5" name="Set gravity" sid="9872169563973342" type="Mario">
+                                    <param id="0" name="Gravity">InitialGravity</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="2947444614220015" type="MarioPequeno">
+                                    <param id="0" name="Animation">&quot;Stopped&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="1262557314975931" type="MarioGrande">
+                                    <param id="0" name="Animation">&quot;Stopped&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="5836200465190012" type="MarioFeather">
+                                    <param id="0" name="Animation">&quot;Stopped&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6999627101273164" type="System">
+                                    <param id="0" name="Variable">LastPipeCode</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="1347817898387665" type="MarioPequeno" />
+                                <action id="-24" name="Move to top" sid="2434767437073147" type="MarioGrande" />
+                                <action id="-24" name="Move to top" sid="1002250118936713" type="MarioFeather" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
