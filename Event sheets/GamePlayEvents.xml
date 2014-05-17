@@ -36,7 +36,70 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="6368221568250601">
+                        <event-block sid="4689105380948102">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="2821962313310402" type="Keyboard">
+                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="8752337957686192" type="Mario">
+                                    <param id="0" name="Instance variable">CustomAction</param>
+                                    <param id="1" name="Value">&quot;Crouched&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="4677763924198231" type="MarioGrande">
+                                    <param id="0" name="Animation">&quot;Crouched&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="8953494354769959" type="MarioFeather">
+                                    <param id="0" name="Animation">&quot;Crouched&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="6478951970584096" type="Mario">
+                                    <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1856161243097064">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1703561842784203" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="8503530309750019" type="Mario">
+                                    <param id="0" name="Instance variable">CustomAction</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Crouched&quot;</param>
+                                </condition>
+                                <condition id="9" inverted="1" name="Is overlapping at offset" sid="2183278153833031" type="Mario">
+                                    <param id="0" name="Object">BaseWalls</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">-5</param>
+                                </condition>
+                                <condition id="9" inverted="1" name="Is overlapping at offset" sid="2796017849922816" type="Mario">
+                                    <param id="0" name="Object">SpriteWalls</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">-5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="9287701091952509" type="Mario">
+                                    <param id="0" name="Instance variable">CustomAction</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="5655735521651483" type="MarioGrande">
+                                    <param id="0" name="Animation">&quot;Stopped&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="6418758602504397" type="MarioFeather">
+                                    <param id="0" name="Animation">&quot;Stopped&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="7885713976583352" type="Mario">
+                                    <param id="0" name="Animation">CurrentMarioSize</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block collapsed="1" sid="6368221568250601">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="4141550879110788" type="Keyboard">
                                     <param id="0" name="Key">38 (Up arrow)</param>
@@ -93,7 +156,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="9389778382064223">
+                        <event-block collapsed="1" sid="9389778382064223">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="8951717533460956" type="Mario">
                                     <param id="0" name="Instance variable">CustomAction</param>
@@ -309,14 +372,16 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="677378389262257" title="Animations">
+                <event-group collapsed="1" description="" sid="677378389262257" title="Animations">
                     <sub-events>
                         <event-group collapsed="1" description="" sid="7439610593452538" title="States">
                             <sub-events>
                                 <event-block sid="566779265082759">
                                     <conditions>
-                                        <condition id="2" name="Is playing" sid="6721532304265594" type="Mario">
-                                            <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                                        <condition id="-14" name="Compare variable" sid="6721532304265594" type="System">
+                                            <param id="0" name="Variable">CurrentMarioSize</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;pequeno&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -334,8 +399,10 @@
                                 </event-block>
                                 <event-block sid="9962957594086399">
                                     <conditions>
-                                        <condition id="2" inverted="1" name="Is playing" sid="9790068549544749" type="Mario">
-                                            <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                                        <condition id="-14" inverted="1" name="Compare variable" sid="3640587922988701" type="System">
+                                            <param id="0" name="Variable">CurrentMarioSize</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;pequeno&quot;</param>
                                         </condition>
                                         <condition id="-7" name="Compare instance variable" sid="8756059627954778" type="Mario">
                                             <param id="0" name="Instance variable">Item</param>
@@ -358,8 +425,10 @@
                                 </event-block>
                                 <event-block sid="4473016840563417">
                                     <conditions>
-                                        <condition id="2" inverted="1" name="Is playing" sid="4111030213581204" type="Mario">
-                                            <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                                        <condition id="-14" inverted="1" name="Compare variable" sid="8346476852489705" type="System">
+                                            <param id="0" name="Variable">CurrentMarioSize</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;pequeno&quot;</param>
                                         </condition>
                                         <condition id="-7" name="Compare instance variable" sid="3021502228523667" type="Mario">
                                             <param id="0" name="Instance variable">Item</param>
@@ -382,7 +451,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="915042074610917" title="Direction">
+                        <event-group collapsed="1" description="" sid="915042074610917" title="Direction">
                             <sub-events>
                                 <event-block sid="9070070418319609">
                                     <conditions>
@@ -436,7 +505,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-block collapsed="1" sid="4033855542564109">
+                        <event-block sid="4033855542564109">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="5118540149500176" type="Mario">
                                     <param id="0" name="Instance variable">CustomAction</param>
@@ -630,7 +699,7 @@
                                 </event-group>
                             </sub-events>
                         </event-block>
-                        <event-block sid="7261633573367301">
+                        <event-block disabled="1" sid="7261633573367301">
                             <conditions>
                                 <condition id="5" name="On any finished" sid="2152125729732454" type="Mario" />
                             </conditions>
@@ -645,7 +714,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4607093846203148" title="Blocos">
+        <event-group description="" sid="4607093846203148" title="Blocos">
             <sub-events>
                 <event-group collapsed="1" description="" sid="9395876816556035" title="SongBlock">
                     <sub-events>
@@ -834,7 +903,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="1659742495593519" title="BrickBlock">
+                <event-group description="" sid="1659742495593519" title="BrickBlock">
                     <sub-events>
                         <event-block sid="4895374918524696">
                             <conditions>
@@ -847,25 +916,28 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block collapsed="1" sid="9465687990168308">
+                        <event-block sid="9465687990168308">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="1234544170297053" type="BrickBlock">
                                     <param id="0" name="Instance variable">State</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Stopped&quot;</param>
                                 </condition>
-                                <condition id="9" name="Is overlapping at offset" sid="6134334767453021" type="Mario">
+                                <condition id="-36" name="Pick overlapping point" sid="567727612546649" type="System">
                                     <param id="0" name="Object">BrickBlock</param>
-                                    <param id="1" name="Offset X">0</param>
-                                    <param id="2" name="Offset Y">-1</param>
+                                    <param id="1" name="X">Mario.X</param>
+                                    <param id="2" name="Y">Mario.BBoxTop - 1</param>
                                 </condition>
+                                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="1037999176460188" type="Mario" />
                             </conditions>
                             <actions />
                             <sub-events>
                                 <event-block sid="4382954611297345">
                                     <conditions>
-                                        <condition id="2" name="Is playing" sid="3364187385074986" type="Mario">
-                                            <param id="0" name="Animation">&quot;pequeno&quot;</param>
+                                        <condition id="-14" name="Compare variable" sid="3364187385074986" type="System">
+                                            <param id="0" name="Variable">CurrentMarioSize</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;pequeno&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1309,7 +1381,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8779966539198683" title="Itens">
+        <event-group description="" sid="8779966539198683" title="Itens">
             <sub-events>
                 <event-block sid="9454918499351548">
                     <conditions>
@@ -1549,6 +1621,7 @@
                         <condition id="1" inverted="1" name="Is overlapping another object" sid="1836009759110026" type="P">
                             <param id="0" name="Object">BrickBlock</param>
                         </condition>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="552735334601659" type="P" />
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="7939380894426843" type="P" />

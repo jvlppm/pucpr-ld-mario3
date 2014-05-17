@@ -48,7 +48,7 @@
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-folder expanded="0" name="NPC">
             <object-type name="Goomba" sid="9082171431307416">
                 <plugin id="Sprite" />
@@ -350,7 +350,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="Mario">
+        <object-folder expanded="1" name="Mario">
             <object-type name="Mario" sid="5704343719027084">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -428,6 +428,9 @@
                         <frame duration="1" hotspotX="0.666667" hotspotY="1" />
                         <frame duration="1" hotspotX="0.666667" hotspotY="1" />
                     </animation>
+                    <animation framecount="1" loop="0" name="Crouched" pingpong="0" repeatcount="1" repeatto="0" sid="253855854156932" speed="5">
+                        <frame duration="1" hotspotX="0.625" hotspotY="1" />
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="MarioPequeno" sid="1915403175652171">
@@ -481,6 +484,9 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
                     <animation framecount="1" loop="0" name="Turning" pingpong="0" repeatcount="1" repeatto="0" sid="6020175783676136" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Crouched" pingpong="0" repeatcount="1" repeatto="0" sid="862113302483093" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
                 </animation-folder>
@@ -779,7 +785,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="Items">
+        <object-folder expanded="0" name="Items">
             <object-type name="cogumelo" sid="6862354282984705">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">

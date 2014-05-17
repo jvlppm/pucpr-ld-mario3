@@ -31,7 +31,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="Turtle" />
         <family expanded="0" name="CanDie" />
         <family expanded="0" name="BaseWalls" />
-        <family expanded="0" name="SpriteWalls" />
+        <family expanded="1" name="SpriteWalls" />
         <family expanded="0" name="Item" />
     </families-expanded>
 </c2uistate>
