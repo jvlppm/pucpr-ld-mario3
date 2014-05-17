@@ -607,7 +607,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pipe" uid="167">
+                <instance type="PipeDown" uid="167">
                     <properties>
                         <left-margin>8</left-margin>
                         <right-margin>8</right-margin>
@@ -645,7 +645,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pipe" uid="168">
+                <instance type="PipeDown" uid="168">
                     <properties>
                         <left-margin>8</left-margin>
                         <right-margin>8</right-margin>
@@ -716,7 +716,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pipe" uid="171">
+                <instance type="PipeDown" uid="171">
                     <properties>
                         <left-margin>8</left-margin>
                         <right-margin>8</right-margin>
@@ -776,7 +776,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pipe" uid="174">
+                <instance type="PipeDown" uid="174">
                     <properties>
                         <left-margin>8</left-margin>
                         <right-margin>8</right-margin>
@@ -1947,7 +1947,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pipe" uid="172">
+                <instance type="PipeDown" uid="172">
                     <properties>
                         <left-margin>8</left-margin>
                         <right-margin>8</right-margin>
@@ -1985,7 +1985,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pipe" uid="170">
+                <instance type="PipeDown" uid="170">
                     <properties>
                         <left-margin>8</left-margin>
                         <right-margin>8</right-margin>
@@ -2208,7 +2208,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pipe" uid="212">
+                <instance type="PipeDown" uid="212">
                     <properties>
                         <left-margin>8</left-margin>
                         <right-margin>8</right-margin>
@@ -2246,7 +2246,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pipe" uid="213">
+                <instance type="PipeDown" uid="213">
                     <properties>
                         <left-margin>8</left-margin>
                         <right-margin>8</right-margin>

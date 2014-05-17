@@ -683,7 +683,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <GoingRight>false</GoingRight>
+                        <GoingRight>true</GoingRight>
                         <CanFall>false</CanFall>
                         <AutoMirror>false</AutoMirror>
                         <JumpHeight>0</JumpHeight>
@@ -901,7 +901,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pipe" uid="240">
+                <instance type="PipeDown" uid="240">
                     <properties>
                         <left-margin>8</left-margin>
                         <right-margin>8</right-margin>
@@ -1116,7 +1116,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pipe" uid="249">
+                <instance type="PipeDown" uid="249">
                     <properties>
                         <left-margin>8</left-margin>
                         <right-margin>8</right-margin>
@@ -1154,7 +1154,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pipe" uid="251">
+                <instance type="PipeDown" uid="251">
                     <properties>
                         <left-margin>8</left-margin>
                         <right-margin>8</right-margin>

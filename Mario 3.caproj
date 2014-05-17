@@ -25,7 +25,10 @@
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="blacknwhite">Black &amp; White</effect>
+        <effect author="Scirra" id="inverse">Inverse</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -462,6 +465,9 @@
                     <animation framecount="1" loop="0" name="Pipe" pingpong="0" repeatcount="1" repeatto="0" sid="7832192137944554" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
+                    <animation framecount="1" loop="0" name="Crouched" pingpong="0" repeatcount="1" repeatto="0" sid="3268924260160452" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="MarioGrande" sid="2763920965125373">
@@ -501,7 +507,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="Platforms">
+        <object-folder expanded="0" name="Platforms">
             <object-type name="BlockWood" sid="8926877800790454">
                 <plugin id="NinePatch" />
                 <behaviors>
@@ -556,7 +562,7 @@
                 </behaviors>
                 <texture />
             </object-type>
-            <object-type name="Pipe" sid="533445546638381">
+            <object-type name="PipeDown" sid="533445546638381">
                 <plugin id="NinePatch" />
                 <instance-variables>
                     <instance-variable name="Code" sid="5547882998523953" type="number" />
@@ -779,6 +785,28 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="PipeUp" sid="8513517574882574">
+                <plugin id="NinePatch" />
+                <instance-variables>
+                    <instance-variable name="Code" sid="7629684801452986" type="number" />
+                    <instance-variable name="CanLeave" sid="4718309767764362" type="boolean" />
+                    <instance-variable name="LayoutName" sid="1666148097382732" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="3232591339470666">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="BlackWhite">
+                        <effect id="blacknwhite" />
+                    </effect-type>
+                    <effect-type name="Inverse">
+                        <effect id="inverse" />
+                    </effect-type>
+                </effects>
+                <texture />
             </object-type>
         </object-folder>
         <object-folder expanded="0" name="References">
@@ -1025,6 +1053,23 @@
         <object-type name="Function" sid="2131010694619834">
             <plugin id="Function" />
         </object-type>
+        <object-type name="Level1a" sid="3392904917841363">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3776003955158246" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MetalBlockBlue" sid="9911806985194511">
+            <plugin id="NinePatch" />
+            <behaviors>
+                <behavior-type name="Solid" sid="5386605026180849">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="VaiVolta" plugin-id="Sprite" sid="6258472206151774">
@@ -1060,8 +1105,10 @@
                 <member>Floor1</member>
                 <member>Grass</member>
                 <member>MetalBlock</member>
-                <member>Pipe</member>
+                <member>MetalBlockBlue</member>
+                <member>PipeDown</member>
                 <member>PipeHorizontal</member>
+                <member>PipeUp</member>
                 <member>PlatformBlue</member>
                 <member>PlatformGreen</member>
                 <member>PlatformPink</member>
@@ -1133,8 +1180,10 @@
                 <member>BlockWood</member>
                 <member>Floor1</member>
                 <member>MetalBlock</member>
-                <member>Pipe</member>
+                <member>MetalBlockBlue</member>
+                <member>PipeDown</member>
                 <member>PipeHorizontal</member>
+                <member>PipeUp</member>
             </members>
         </family>
         <family name="SpriteWalls" plugin-id="Sprite" sid="8427308875309909">
@@ -1157,6 +1206,7 @@
     </families>
     <layout-folder expanded="1">
         <layout>World 1-1.xml</layout>
+        <layout>World 1-1 a.xml</layout>
         <layout>World 1-2.xml</layout>
         <layout>CustomLevel.xml</layout>
     </layout-folder>
