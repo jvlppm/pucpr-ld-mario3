@@ -448,6 +448,8 @@
                         <MaxRunTime>3</MaxRunTime>
                         <GoingRight>true</GoingRight>
                         <Item></Item>
+                        <CustomAction></CustomAction>
+                        <SlowFallCounter>0</SlowFallCounter>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">

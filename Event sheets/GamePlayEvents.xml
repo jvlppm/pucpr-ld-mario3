@@ -12,7 +12,7 @@
         <variable constant="0" name="Lives" sid="8297701242012796" static="0" type="number">3</variable>
         <variable constant="0" name="Coins" sid="2863490799107284" static="0" type="number">0</variable>
         <variable constant="0" name="Timer" sid="2849380820232914" static="0" type="number">300</variable>
-        <event-group collapsed="1" description="" sid="5115914260203696" title="Mario">
+        <event-group description="" sid="5115914260203696" title="Mario">
             <sub-events>
                 <event-group description="" sid="2304413015275258" title="Controls">
                     <sub-events>
@@ -54,14 +54,20 @@
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1866973475704148" type="Mario">
                                             <param id="0" name="Instance variable">Running</param>
                                         </condition>
+                                        <condition behavior="Platform" id="4" name="Is falling" sid="3256750186549882" type="Mario" />
                                     </conditions>
                                     <actions>
-                                        <action behavior="Platform" id="9" name="Set vector Y" sid="4697534606293424" type="Mario">
-                                            <param id="0" name="Vector Y">0</param>
-                                        </action>
                                         <action id="4" name="Set animation" sid="6161591412975633" type="MarioFeather">
                                             <param id="0" name="Animation">&quot;FallingSlowly&quot;</param>
                                             <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="351175036091833" type="Mario">
+                                            <param id="0" name="Instance variable">CustomAction</param>
+                                            <param id="1" name="Value">&quot;FallingSlowly&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="3377125580334984" type="Mario">
+                                            <param id="0" name="Instance variable">SlowFallCounter</param>
+                                            <param id="1" name="Value">0.35</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -82,6 +88,49 @@
                                         <action id="-10" name="Set value" sid="5703864013650004" type="Mario">
                                             <param id="0" name="Instance variable">RunTime</param>
                                             <param id="1" name="Value">Mario.RequiredRunTime + (Mario.MaxRunTime - Mario.RequiredRunTime) * 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="9389778382064223">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8951717533460956" type="Mario">
+                                    <param id="0" name="Instance variable">CustomAction</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;FallingSlowly&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="6075346115972258" type="Mario">
+                                    <param id="0" name="Instance variable">SlowFallCounter</param>
+                                    <param id="1" name="Value">dt</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="26205175892361">
+                                    <conditions>
+                                        <condition behavior="Platform" id="4" name="Is falling" sid="4505921265171763" type="Mario" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="8256807114020527" type="Mario">
+                                            <param id="0" name="Vector Y">30</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="2875741768599541">
+                                    <conditions>
+                                        <condition behavior="Platform" id="9" name="On landed" sid="9840357608011198" type="Mario" />
+                                        <condition id="-7" name="Compare instance variable" sid="4910774528338038" type="Mario">
+                                            <param id="0" name="Instance variable">SlowFallCounter</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="5883290777419786" type="Mario">
+                                            <param id="0" name="Instance variable">CustomAction</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -387,195 +436,218 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group collapsed="1" description="" sid="7943296425537845" title="Speed">
+                        <event-block collapsed="1" sid="4033855542564109">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5118540149500176" type="Mario">
+                                    <param id="0" name="Instance variable">CustomAction</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
                             <sub-events>
-                                <event-block any="1" sid="1534594239648643">
-                                    <conditions>
-                                        <condition behavior="Platform" id="7" name="On stopped" sid="4685523092809774" type="Mario" />
-                                        <condition behavior="Platform" id="9" name="On landed" sid="2326681869420824" type="Mario" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="2144654656901493" type="MarioStates">
-                                            <param id="0" name="Animation">&quot;Stopped&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="5648511117830314">
-                                    <conditions>
-                                        <condition id="2" inverted="1" name="Is playing" sid="6799682515981495" type="MarioFeather">
-                                            <param id="0" name="Animation">&quot;Flying&quot;</param>
-                                        </condition>
-                                        <condition id="2" inverted="1" name="Is playing" sid="7022039165047809" type="MarioFeather">
-                                            <param id="0" name="Animation">&quot;FallingSlowly&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
+                                <event-group collapsed="1" description="" sid="7943296425537845" title="Speed">
                                     <sub-events>
-                                        <event-block sid="9605172985590216">
+                                        <event-block any="1" sid="1534594239648643">
                                             <conditions>
-                                                <condition behavior="Platform" id="0" name="Is moving" sid="6508071446769671" type="Mario" />
+                                                <condition behavior="Platform" id="7" name="On stopped" sid="4685523092809774" type="Mario" />
+                                                <condition behavior="Platform" id="9" name="On landed" sid="2326681869420824" type="Mario" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="2144654656901493" type="MarioStates">
+                                                    <param id="0" name="Animation">&quot;Stopped&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block collapsed="1" sid="5648511117830314">
+                                            <conditions>
+                                                <condition id="2" inverted="1" name="Is playing" sid="6799682515981495" type="MarioFeather">
+                                                    <param id="0" name="Animation">&quot;Flying&quot;</param>
+                                                </condition>
+                                                <condition id="2" inverted="1" name="Is playing" sid="7022039165047809" type="MarioFeather">
+                                                    <param id="0" name="Animation">&quot;FallingSlowly&quot;</param>
+                                                </condition>
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="2034674833937604">
+                                                <event-block sid="9605172985590216">
                                                     <conditions>
-                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5784290353456275" type="Mario">
-                                                            <param id="0" name="Instance variable">Running</param>
+                                                        <condition behavior="Platform" id="0" name="Is moving" sid="6508071446769671" type="Mario" />
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="2034674833937604">
+                                                            <conditions>
+                                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5784290353456275" type="Mario">
+                                                                    <param id="0" name="Instance variable">Running</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="2815078202486494" type="MarioStates">
+                                                                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="3312058179454252">
+                                                            <conditions>
+                                                                <condition id="-8" name="Is boolean instance variable set" sid="1450638977741553" type="Mario">
+                                                                    <param id="0" name="Instance variable">Running</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="2466231427491546" type="MarioStates">
+                                                                    <param id="0" name="Animation">&quot;Running&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
+                                <event-group collapsed="1" description="" sid="9130376418275246" title="Jump">
+                                    <sub-events>
+                                        <event-block sid="1709669356306603">
+                                            <conditions>
+                                                <condition behavior="Platform" id="4" name="Is falling" sid="4939855717011225" type="Mario" />
+                                                <condition id="2" inverted="1" name="Is playing" sid="6916091639339067" type="MarioFeather">
+                                                    <param id="0" name="Animation">&quot;FallingSlowly&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="6688918328620702" type="MarioStates">
+                                                    <param id="0" name="Animation">&quot;Falling&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="4114595350735069">
+                                            <conditions>
+                                                <condition id="2" inverted="1" name="Is playing" sid="5691625928953541" type="MarioFeather">
+                                                    <param id="0" name="Animation">&quot;Flying&quot;</param>
+                                                </condition>
+                                                <condition id="2" inverted="1" name="Is playing" sid="5463842882758515" type="MarioFeather">
+                                                    <param id="0" name="Animation">&quot;FallingSlowly&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="6004183434332175">
+                                                    <conditions>
+                                                        <condition behavior="Platform" id="3" name="Is jumping" sid="2410122412710017" type="Mario" />
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="3806041476729617">
+                                                            <conditions>
+                                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8219375354774732" type="Mario">
+                                                                    <param id="0" name="Instance variable">Running</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="7551862634834197" type="MarioStates">
+                                                                    <param id="0" name="Animation">&quot;Jumping&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="9527237974029952">
+                                                            <conditions>
+                                                                <condition id="-8" name="Is boolean instance variable set" sid="938351682964103" type="Mario">
+                                                                    <param id="0" name="Instance variable">Running</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="4666586306877295" type="MarioStates">
+                                                                    <param id="0" name="Animation">&quot;JumpingRunning&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
+                                <event-group collapsed="1" description="" sid="1508817693464832" title="Slide">
+                                    <sub-events>
+                                        <event-block sid="8007849784790859">
+                                            <conditions>
+                                                <condition behavior="Platform" id="2" name="Is on floor" sid="8417317686203923" type="Mario" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="3105728016383146">
+                                                    <conditions>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2840185757525397" type="Mario">
+                                                            <param id="0" name="Instance variable">GoingRight</param>
+                                                        </condition>
+                                                        <condition id="-8" name="Compare two values" sid="1422071049007985" type="System">
+                                                            <param id="0" name="First value">Mario.Platform.VectorX</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Second value">0</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="4" name="Set animation" sid="2815078202486494" type="MarioStates">
-                                                            <param id="0" name="Animation">&quot;Walking&quot;</param>
+                                                        <action id="4" name="Set animation" sid="7677924060776883" type="MarioStates">
+                                                            <param id="0" name="Animation">&quot;Turning&quot;</param>
                                                             <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="7" name="Set mirrored" sid="8787334532475398" type="MarioStates">
+                                                            <param id="0" name="State">1</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="3312058179454252">
+                                                <event-block sid="9865993118186413">
                                                     <conditions>
-                                                        <condition id="-8" name="Is boolean instance variable set" sid="1450638977741553" type="Mario">
-                                                            <param id="0" name="Instance variable">Running</param>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="5969163872398578" type="Mario">
+                                                            <param id="0" name="Instance variable">GoingRight</param>
+                                                        </condition>
+                                                        <condition id="-8" name="Compare two values" sid="1328298926646444" type="System">
+                                                            <param id="0" name="First value">Mario.Platform.VectorX</param>
+                                                            <param id="1" name="Comparison">2</param>
+                                                            <param id="2" name="Second value">0</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="4" name="Set animation" sid="2466231427491546" type="MarioStates">
-                                                            <param id="0" name="Animation">&quot;Running&quot;</param>
+                                                        <action id="4" name="Set animation" sid="7847643477341812" type="MarioStates">
+                                                            <param id="0" name="Animation">&quot;Turning&quot;</param>
                                                             <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="7" name="Set mirrored" sid="6000536617092934" type="MarioStates">
+                                                            <param id="0" name="State">0</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
                                     </sub-events>
-                                </event-block>
+                                </event-group>
                             </sub-events>
-                        </event-group>
-                        <event-group collapsed="1" description="" sid="9130376418275246" title="Jump">
-                            <sub-events>
-                                <event-block sid="1709669356306603">
-                                    <conditions>
-                                        <condition behavior="Platform" id="4" name="Is falling" sid="4939855717011225" type="Mario" />
-                                        <condition id="2" inverted="1" name="Is playing" sid="6916091639339067" type="MarioFeather">
-                                            <param id="0" name="Animation">&quot;FallingSlowly&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="6688918328620702" type="MarioStates">
-                                            <param id="0" name="Animation">&quot;Falling&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="4114595350735069">
-                                    <conditions>
-                                        <condition id="2" inverted="1" name="Is playing" sid="5691625928953541" type="MarioFeather">
-                                            <param id="0" name="Animation">&quot;Flying&quot;</param>
-                                        </condition>
-                                        <condition id="2" inverted="1" name="Is playing" sid="5463842882758515" type="MarioFeather">
-                                            <param id="0" name="Animation">&quot;FallingSlowly&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="6004183434332175">
-                                            <conditions>
-                                                <condition behavior="Platform" id="3" name="Is jumping" sid="2410122412710017" type="Mario" />
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="3806041476729617">
-                                                    <conditions>
-                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8219375354774732" type="Mario">
-                                                            <param id="0" name="Instance variable">Running</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="7551862634834197" type="MarioStates">
-                                                            <param id="0" name="Animation">&quot;Jumping&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="9527237974029952">
-                                                    <conditions>
-                                                        <condition id="-8" name="Is boolean instance variable set" sid="938351682964103" type="Mario">
-                                                            <param id="0" name="Instance variable">Running</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="4666586306877295" type="MarioStates">
-                                                            <param id="0" name="Animation">&quot;JumpingRunning&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                        <event-group description="" sid="1508817693464832" title="Slide">
-                            <sub-events>
-                                <event-block sid="8007849784790859">
-                                    <conditions>
-                                        <condition behavior="Platform" id="2" name="Is on floor" sid="8417317686203923" type="Mario" />
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="3105728016383146">
-                                            <conditions>
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2840185757525397" type="Mario">
-                                                    <param id="0" name="Instance variable">GoingRight</param>
-                                                </condition>
-                                                <condition id="-8" name="Compare two values" sid="1422071049007985" type="System">
-                                                    <param id="0" name="First value">Mario.Platform.VectorX</param>
-                                                    <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Second value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="4" name="Set animation" sid="7677924060776883" type="MarioStates">
-                                                    <param id="0" name="Animation">&quot;Turning&quot;</param>
-                                                    <param id="1" name="From">1</param>
-                                                </action>
-                                                <action id="7" name="Set mirrored" sid="8787334532475398" type="MarioStates">
-                                                    <param id="0" name="State">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="9865993118186413">
-                                            <conditions>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="5969163872398578" type="Mario">
-                                                    <param id="0" name="Instance variable">GoingRight</param>
-                                                </condition>
-                                                <condition id="-8" name="Compare two values" sid="1328298926646444" type="System">
-                                                    <param id="0" name="First value">Mario.Platform.VectorX</param>
-                                                    <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Second value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="4" name="Set animation" sid="7847643477341812" type="MarioStates">
-                                                    <param id="0" name="Animation">&quot;Turning&quot;</param>
-                                                    <param id="1" name="From">1</param>
-                                                </action>
-                                                <action id="7" name="Set mirrored" sid="6000536617092934" type="MarioStates">
-                                                    <param id="0" name="State">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
+                        </event-block>
+                        <event-block sid="7261633573367301">
+                            <conditions>
+                                <condition id="5" name="On any finished" sid="2152125729732454" type="Mario" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="7056220049401944" type="Mario">
+                                    <param id="0" name="Instance variable">CustomAction</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4607093846203148" title="Blocos">
+        <event-group collapsed="1" description="" sid="4607093846203148" title="Blocos">
             <sub-events>
-                <event-group description="" sid="9395876816556035" title="SongBlock">
+                <event-group collapsed="1" description="" sid="9395876816556035" title="SongBlock">
                     <sub-events>
                         <event-block sid="142420477216781">
                             <conditions>
