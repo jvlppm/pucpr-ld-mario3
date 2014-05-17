@@ -915,8 +915,8 @@
                     </properties>
                     <instance-variables>
                         <Code>0</Code>
-                        <CanEnter>false</CanEnter>
                         <CanLeave>false</CanLeave>
+                        <LayoutName></LayoutName>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1130,8 +1130,8 @@
                     </properties>
                     <instance-variables>
                         <Code>0</Code>
-                        <CanEnter>false</CanEnter>
                         <CanLeave>false</CanLeave>
+                        <LayoutName></LayoutName>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1168,8 +1168,8 @@
                     </properties>
                     <instance-variables>
                         <Code>0</Code>
-                        <CanEnter>false</CanEnter>
                         <CanLeave>false</CanLeave>
+                        <LayoutName></LayoutName>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">

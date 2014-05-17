@@ -350,7 +350,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="Mario">
+        <object-folder expanded="0" name="Mario">
             <object-type name="Mario" sid="5704343719027084">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -501,7 +501,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="Platforms">
+        <object-folder expanded="1" name="Platforms">
             <object-type name="BlockWood" sid="8926877800790454">
                 <plugin id="NinePatch" />
                 <behaviors>
@@ -560,8 +560,8 @@
                 <plugin id="NinePatch" />
                 <instance-variables>
                     <instance-variable name="Code" sid="5547882998523953" type="number" />
-                    <instance-variable name="CanEnter" sid="9479818868115645" type="boolean" />
                     <instance-variable name="CanLeave" sid="1268395009126532" type="boolean" />
+                    <instance-variable name="LayoutName" sid="7664955885644393" type="string" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Solid" sid="4006815677109467">
